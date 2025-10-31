@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\DT_ProjectFinal.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\DT_ProjectFinal.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\DT_ProjectFinalEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.vsconfig" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\DT_ProjectFinal">
+      <UniqueIdentifier>{631D43A9-205D-365B-B72C-591D8A95FFE4}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\DT_ProjectFinal\DT_ProjectFinal.Build.cs">
+      <Filter>Source\DT_ProjectFinal</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\DT_ProjectFinal\DT_ProjectFinal.cpp">
+      <Filter>Source\DT_ProjectFinal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT_ProjectFinal\DT_ProjectFinal.h">
+      <Filter>Source\DT_ProjectFinal</Filter>
+    </ClInclude>
+    <Filter Include="Source\DT_ProjectFinal\CarParts">
+      <UniqueIdentifier>{F7923BAC-FD10-3A04-9404-7286E09F25DF}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DT_ProjectFinal\CarParts\DTFCarParts.cpp">
+      <Filter>Source\DT_ProjectFinal\CarParts</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT_ProjectFinal\CarParts\DTFCarParts.h">
+      <Filter>Source\DT_ProjectFinal\CarParts</Filter>
+    </ClInclude>
+    <Filter Include="Source\DT_ProjectFinal\Component">
+      <UniqueIdentifier>{2000193A-477A-3F4C-8EB0-649D74F7B95B}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DT_ProjectFinal\Component\DTFPartIdentifierComponent.cpp">
+      <Filter>Source\DT_ProjectFinal\Component</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT_ProjectFinal\Component\DTFPartIdentifierComponent.h">
+      <Filter>Source\DT_ProjectFinal\Component</Filter>
+    </ClInclude>
+    <Filter Include="Source\DT_ProjectFinal\DataAsset">
+      <UniqueIdentifier>{1E93ACB0-1578-3B8F-A14F-8E9CDB6B4198}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DT_ProjectFinal\DataAsset\DTFDataAsset.cpp">
+      <Filter>Source\DT_ProjectFinal\DataAsset</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT_ProjectFinal\DataAsset\DTFDataAsset.h">
+      <Filter>Source\DT_ProjectFinal\DataAsset</Filter>
+    </ClInclude>
+    <Filter Include="Source\DT_ProjectFinal\Interface">
+      <UniqueIdentifier>{686122F5-91EF-3121-801F-FD2B7A2B860D}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DT_ProjectFinal\Interface\UPartInterface.cpp">
+      <Filter>Source\DT_ProjectFinal\Interface</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT_ProjectFinal\Interface\UPartInterface.h">
+      <Filter>Source\DT_ProjectFinal\Interface</Filter>
+    </ClInclude>
+    <Filter Include="Source\DT_ProjectFinal\Manager">
+      <UniqueIdentifier>{369385F5-B611-3D1D-88E0-853F08B3432B}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DT_ProjectFinal\Manager\DTFGameInstance.cpp">
+      <Filter>Source\DT_ProjectFinal\Manager</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT_ProjectFinal\Manager\DTFGameInstance.h">
+      <Filter>Source\DT_ProjectFinal\Manager</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\DT_ProjectFinal\Manager\DTFGameModeBase.cpp">
+      <Filter>Source\DT_ProjectFinal\Manager</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT_ProjectFinal\Manager\DTFGameModeBase.h">
+      <Filter>Source\DT_ProjectFinal\Manager</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\DT_ProjectFinal\Manager\DTFSpawnManager.cpp">
+      <Filter>Source\DT_ProjectFinal\Manager</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT_ProjectFinal\Manager\DTFSpawnManager.h">
+      <Filter>Source\DT_ProjectFinal\Manager</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\DT_ProjectFinal\Manager\DTFUIManager.cpp">
+      <Filter>Source\DT_ProjectFinal\Manager</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT_ProjectFinal\Manager\DTFUIManager.h">
+      <Filter>Source\DT_ProjectFinal\Manager</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
