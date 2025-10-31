@@ -1736,3 +1736,1113 @@ The dependency '/Game/Map/UEDPIE_0_DT_FinalProject.DT_FinalProject:PersistentLev
 [2025.10.31-04.37.33:844][420]LogSavePackage: Moving 'D:/DT_ProjectFinal/DT_ProjectFinal/Saved/DT_FinalProject_Auto271F4F02E4FC1B061DDCBB0AFA2F58B7B.tmp' to 'D:/DT_ProjectFinal/DT_ProjectFinal/Saved/Autosaves/Game/Map/DT_FinalProject_Auto2.umap'
 [2025.10.31-04.37.33:845][420]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Map/DT_FinalProject' took 0.184
 [2025.10.31-04.37.33:845][420]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.184
+[2025.10.31-04.38.09:694][554]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.10.31-04.38.09:698][554]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.10.31-04.38.09:698][554]LogPlayLevel: Creating play world package: /Game/Map/UEDPIE_0_DT_FinalProject
+[2025.10.31-04.38.09:745][554]LogPlayLevel: PIE: StaticDuplicateObject took: (0.046862s)
+[2025.10.31-04.38.09:745][554]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Map/DT_FinalProject.DT_FinalProject to /Game/Map/UEDPIE_0_DT_FinalProject.DT_FinalProject (0.046903s)
+[2025.10.31-04.38.09:768][554]LogUObjectHash: Compacting FUObjectHashTables data took   0.61ms
+[2025.10.31-04.38.09:769][554]LogChaosDD: Creating Chaos Debug Draw Scene for world DT_FinalProject
+[2025.10.31-04.38.09:771][554]LogPlayLevel: PIE: World Init took: (0.001985s)
+[2025.10.31-04.38.09:772][554]LogAudio: Display: Creating Audio Device:                 Id: 4, Scope: Unique, Realtime: True
+[2025.10.31-04.38.09:772][554]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.10.31-04.38.09:772][554]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.10.31-04.38.09:772][554]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.10.31-04.38.09:772][554]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.10.31-04.38.09:772][554]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.10.31-04.38.09:772][554]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.10.31-04.38.09:772][554]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.10.31-04.38.09:772][554]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.10.31-04.38.09:772][554]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.10.31-04.38.09:772][554]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.10.31-04.38.09:772][554]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.10.31-04.38.09:774][554]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.10.31-04.38.09:826][554]LogAudioMixer: Display: Using Audio Hardware Device LED MONITOR(NVIDIA High Definition Audio)
+[2025.10.31-04.38.09:826][554]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.10.31-04.38.09:826][554]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.10.31-04.38.09:826][554]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.10.31-04.38.09:827][554]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=4
+[2025.10.31-04.38.09:827][554]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=4
+[2025.10.31-04.38.09:829][554]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=4
+[2025.10.31-04.38.09:829][554]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=4
+[2025.10.31-04.38.09:829][554]LogInit: FAudioDevice initialized with ID 4.
+[2025.10.31-04.38.09:829][554]LogAudio: Display: Audio Device (ID: 4) registered with world 'DT_FinalProject'.
+[2025.10.31-04.38.09:829][554]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 4
+[2025.10.31-04.38.09:833][554]LogLoad: Game class is 'DTF_GameModeBase_C'
+[2025.10.31-04.38.09:837][554]LogWorld: Bringing World /Game/Map/UEDPIE_0_DT_FinalProject.DT_FinalProject up for play (max tick rate 0) at 2025.10.31-13.38.09
+[2025.10.31-04.38.09:837][554]LogWorld: Bringing up level for play took: 0.004272
+[2025.10.31-04.38.09:839][554]LogOnline: OSS: Created online subsystem instance for: :Context_10
+[2025.10.31-04.38.09:841][554]LogBlueprintUserMessages: [BP_RobotArm_C_1] Robot Arm : Idling
+[2025.10.31-04.38.09:842][554]LogBlueprintUserMessages: [BP_RobotArm_C_2] Robot Arm : Idling
+[2025.10.31-04.38.09:842][554]LogTemp: Found 3 Frame spawn points
+[2025.10.31-04.38.09:842][554]LogTemp: Found 3 Line spawn points
+[2025.10.31-04.38.09:842][554]LogTemp: Warning: IsValid
+[2025.10.31-04.38.09:842][554]LogTemp: Warning: Get By Index 1
+[2025.10.31-04.38.09:842][554]LogTemp: Warning: LinePoints index 1 range
+[2025.10.31-04.38.09:842][554]LogTemp: Warning: Spawn
+[2025.10.31-04.38.09:842][554]LogTemp: Warning: PartMesh
+[2025.10.31-04.38.09:843][554]LogTemp: Warning: Spawn
+[2025.10.31-04.38.09:843][554]LogTemp: Warning: PartMesh
+[2025.10.31-04.38.09:843][554]LogTemp: Warning: Spawn
+[2025.10.31-04.38.09:843][554]LogTemp: Warning: PartMesh
+[2025.10.31-04.38.09:843][554]LogTemp: Warning: Spawn
+[2025.10.31-04.38.09:843][554]LogTemp: Warning: PartMesh
+[2025.10.31-04.38.09:844][554]LogTemp: Warning: Spawn
+[2025.10.31-04.38.09:844][554]LogTemp: Warning: PartMesh
+[2025.10.31-04.38.09:844][554]LogTemp: Warning: Spawn
+[2025.10.31-04.38.09:844][554]LogTemp: Warning: PartMesh
+[2025.10.31-04.38.09:844][554]LogTemp: Warning: Spawn
+[2025.10.31-04.38.09:844][554]LogTemp: Warning: PartMesh
+[2025.10.31-04.38.09:844][554]LogTemp: Warning: Spawn
+[2025.10.31-04.38.09:844][554]LogTemp: Warning: PartMesh
+[2025.10.31-04.38.09:845][554]LogTemp: Warning: Spawn
+[2025.10.31-04.38.09:845][554]LogTemp: Warning: PartMesh
+[2025.10.31-04.38.09:845][554]LogTemp: Warning: Spawn
+[2025.10.31-04.38.09:845][554]LogTemp: Warning: PartMesh
+[2025.10.31-04.38.09:845][554]LogTemp: Warning: Spawn
+[2025.10.31-04.38.09:845][554]LogTemp: Warning: PartMesh
+[2025.10.31-04.38.09:846][554]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2025.10.31-04.38.09:846][554]LogViewport: Display: Viewport HideCursorDuringCapture Changed, False -> True
+[2025.10.31-04.38.09:846][554]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> CaptureDuringMouseDown
+[2025.10.31-04.38.09:847][554]PIE: Server logged in
+[2025.10.31-04.38.09:849][554]PIE: Play in editor total start time 0.151 seconds.
+[2025.10.31-04.38.09:850][554]LogControlRig: Warning: The dependency '/Game/Map/UEDPIE_0_DT_FinalProject.DT_FinalProject:PersistentLevel.BP_RobotArm_C_1.SkeletalMesh' is a parent component of dependent '/Game/Map/UEDPIE_0_DT_FinalProject.DT_FinalProject:PersistentLevel.BP_RobotArm_C_1.ControlRig'.
+The dependency '/Game/Map/UEDPIE_0_DT_FinalProject.DT_FinalProject:PersistentLevel.BP_RobotArm_C_1.ControlRig' depends on dependent '/Game/Map/UEDPIE_0_DT_FinalProject.DT_FinalProject:PersistentLevel.BP_RobotArm_C_1.SkeletalMesh'. This would cause a cycle.
+[2025.10.31-04.38.09:853][554]LogControlRig: Warning: The dependency '/Game/Map/UEDPIE_0_DT_FinalProject.DT_FinalProject:PersistentLevel.BP_RobotArm_C_2.SkeletalMesh' is a parent component of dependent '/Game/Map/UEDPIE_0_DT_FinalProject.DT_FinalProject:PersistentLevel.BP_RobotArm_C_2.ControlRig'.
+The dependency '/Game/Map/UEDPIE_0_DT_FinalProject.DT_FinalProject:PersistentLevel.BP_RobotArm_C_2.ControlRig' depends on dependent '/Game/Map/UEDPIE_0_DT_FinalProject.DT_FinalProject:PersistentLevel.BP_RobotArm_C_2.SkeletalMesh'. This would cause a cycle.
+[2025.10.31-04.38.09:911][555]LogRenderer: Recreating Persistent SBTs due to initializer changes: 
+		NumShaderSlotsPerGeometrySegment changed: current: 1 - new: 2
+		NumGeometrySegments changed: current: 0 - new: 512
+[2025.10.31-04.38.55:123][123]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.10.31-04.38.55:123][123]LogWorld: BeginTearingDown for /Game/Map/UEDPIE_0_DT_FinalProject
+[2025.10.31-04.38.55:124][123]LogWorld: UWorld::CleanupWorld for DT_FinalProject, bSessionEnded=true, bCleanupResources=true
+[2025.10.31-04.38.55:125][123]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.10.31-04.38.55:126][123]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.10.31-04.38.55:128][123]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.10.31-04.38.55:146][123]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.10.31-04.38.55:147][123]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 4
+[2025.10.31-04.38.55:147][123]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=4, StreamState=4
+[2025.10.31-04.38.55:149][123]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=4, StreamState=2
+[2025.10.31-04.38.55:160][123]LogUObjectHash: Compacting FUObjectHashTables data took   0.70ms
+[2025.10.31-04.38.55:251][124]LogPlayLevel: Display: Destroying online subsystem :Context_10
+[2025.10.31-04.39.19:577][287]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 10420.895508
+[2025.10.31-04.39.19:844][303]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.10.31-04.39.19:844][303]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 10421.145508, Update Interval: 334.900970
+[2025.10.31-04.40.36:088][821]LogAssetEditorSubsystem: Opening Asset editor for StaticMesh /Game/Meshes/MergeMesh/SM_MERGED_SM_Handrail_001.SM_MERGED_SM_Handrail_001
+[2025.10.31-04.40.36:179][821]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_7
+[2025.10.31-04.40.38:831][917]LogAssetEditorSubsystem: Opening Asset editor for StaticMesh /Game/Meshes/MergeMesh/SM_MERGED_SM_GoodsShelves_001.SM_MERGED_SM_GoodsShelves_001
+[2025.10.31-04.40.38:840][917]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_8
+[2025.10.31-04.43.09:405][745]LogAssetEditorSubsystem: Opening Asset editor for StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_008.SM_GoodsShelves_008
+[2025.10.31-04.43.09:414][745]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_9
+[2025.10.31-04.45.36:937][167]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 10797.977539
+[2025.10.31-04.45.37:204][183]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.10.31-04.45.37:204][183]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 10798.227539, Update Interval: 355.035858
+[2025.10.31-04.45.37:531][194]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.10.31-04.45.37:582][194]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Map/DT_FinalProject" FILE="D:/DT_ProjectFinal/DT_ProjectFinal/Content/Map/DT_FinalProject.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.10.31-04.45.37:682][194]LogUObjectHash: Compacting FUObjectHashTables data took   0.65ms
+[2025.10.31-04.45.37:846][194]LogSavePackage: Moving output files for package: /Game/Map/DT_FinalProject
+[2025.10.31-04.45.37:847][194]LogSavePackage: Moving 'D:/DT_ProjectFinal/DT_ProjectFinal/Saved/DT_FinalProjectB6595AB24DFB2834D2A29CBE937F93A6.tmp' to 'D:/DT_ProjectFinal/DT_ProjectFinal/Content/Map/DT_FinalProject.umap'
+[2025.10.31-04.45.37:858][194]LogFileHelpers: Saving map 'DT_FinalProject' took 0.277
+[2025.10.31-04.45.37:863][194]LogFileHelpers: InternalPromptForCheckoutAndSave took 333.416 ms (total: 612.783 ms)
+[2025.10.31-04.45.37:915][194]LogContentValidation: Display: Starting to validate 1 assets
+[2025.10.31-04.45.37:915][194]LogContentValidation: Enabled validators:
+[2025.10.31-04.45.37:915][194]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.10.31-04.45.37:915][194]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.10.31-04.45.37:915][194]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.10.31-04.45.37:915][194]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.10.31-04.45.37:915][194]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.10.31-04.45.37:915][194]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.10.31-04.45.37:915][194]AssetCheck: /Game/Map/DT_FinalProject Validating asset
+[2025.10.31-04.45.57:067][315]Cmd: ACTOR HIDE SELECTED
+[2025.10.31-04.46.25:133][906]LogStreaming: Display: FlushAsyncLoading(346): 1 QueuedPackages, 0 AsyncPackages
+[2025.10.31-04.46.25:134][906]LogAssetEditorSubsystem: Opening Asset editor for StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_003.SM_GoodsShelves_003
+[2025.10.31-04.46.25:150][906]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_10
+[2025.10.31-04.46.29:350][ 83]LogStreaming: Display: FlushAsyncLoading(347): 1 QueuedPackages, 0 AsyncPackages
+[2025.10.31-04.46.29:351][ 83]LogAssetEditorSubsystem: Opening Asset editor for StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_004.SM_GoodsShelves_004
+[2025.10.31-04.46.29:369][ 83]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_11
+[2025.10.31-04.46.34:829][323]LogAssetEditorSubsystem: Opening Asset editor for StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_006.SM_GoodsShelves_006
+[2025.10.31-04.46.34:838][323]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_12
+[2025.10.31-04.46.40:083][562]LogStreaming: Display: FlushAsyncLoading(348): 1 QueuedPackages, 0 AsyncPackages
+[2025.10.31-04.46.40:084][562]LogAssetEditorSubsystem: Opening Asset editor for StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_005.SM_GoodsShelves_005
+[2025.10.31-04.46.40:100][562]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_13
+[2025.10.31-04.47.04:467][894]LogAssetEditorSubsystem: Opening Asset editor for StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_002.SM_GoodsShelves_002
+[2025.10.31-04.47.04:476][894]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_14
+[2025.10.31-04.47.19:245][673]LogDerivedDataCache: C:/Users/User/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:00.000 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 0 files in 1 folders with total size 0 MiB.
+[2025.10.31-04.47.24:639][976]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_002.SM_GoodsShelves_002
+[2025.10.31-04.47.24:639][976]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_002.SM_GoodsShelves_002
+[2025.10.31-04.47.24:640][976]LogActorFactory: Actor Factory spawned StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_002.SM_GoodsShelves_002 as actor: StaticMeshActor /Game/Map/DT_FinalProject.DT_FinalProject:PersistentLevel.StaticMeshActor_33
+[2025.10.31-04.47.33:529][503]LogUObjectHash: Compacting FUObjectHashTables data took   0.62ms
+[2025.10.31-04.47.33:532][503]LogEditorActor: Deleted 0 Actors (0.120 secs)
+[2025.10.31-04.47.33:537][503]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_002.SM_GoodsShelves_002
+[2025.10.31-04.47.33:537][503]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_002.SM_GoodsShelves_002
+[2025.10.31-04.47.33:539][503]LogActorFactory: Actor Factory spawned StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_002.SM_GoodsShelves_002 as actor: StaticMeshActor /Game/Map/DT_FinalProject.DT_FinalProject:PersistentLevel.StaticMeshActor_34
+[2025.10.31-04.48.53:156][168]Cmd: DUPLICATE
+[2025.10.31-04.48.53:156][168]Cmd: ACTOR DUPLICATE
+[2025.10.31-04.49.01:126][621]Cmd: TRANSACTION UNDO
+[2025.10.31-04.49.01:126][621]LogEditorTransaction: Undo Move Elements
+[2025.10.31-04.49.07:281][867]Cmd: DUPLICATE
+[2025.10.31-04.49.07:281][867]Cmd: ACTOR DUPLICATE
+[2025.10.31-04.49.11:751][118]Cmd: DUPLICATE
+[2025.10.31-04.49.11:751][118]Cmd: ACTOR DUPLICATE
+[2025.10.31-04.49.25:072][856]Cmd: DELETE
+[2025.10.31-04.49.25:073][856]Cmd: ACTOR DELETE
+[2025.10.31-04.49.25:079][856]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-04.49.25:101][856]LogUObjectHash: Compacting FUObjectHashTables data took   0.63ms
+[2025.10.31-04.49.25:106][856]LogEditorActor: Deleted 1 Actors (0.033 secs)
+[2025.10.31-04.49.57:322][712]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_003.SM_GoodsShelves_003
+[2025.10.31-04.49.57:322][712]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_003.SM_GoodsShelves_003
+[2025.10.31-04.49.57:323][712]LogActorFactory: Actor Factory spawned StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_003.SM_GoodsShelves_003 as actor: StaticMeshActor /Game/Map/DT_FinalProject.DT_FinalProject:PersistentLevel.StaticMeshActor_38
+[2025.10.31-04.49.59:697][854]LogUObjectHash: Compacting FUObjectHashTables data took   0.30ms
+[2025.10.31-04.49.59:700][854]LogEditorActor: Deleted 0 Actors (0.021 secs)
+[2025.10.31-04.49.59:704][854]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_003.SM_GoodsShelves_003
+[2025.10.31-04.49.59:704][854]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_003.SM_GoodsShelves_003
+[2025.10.31-04.49.59:706][854]LogActorFactory: Actor Factory spawned StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_003.SM_GoodsShelves_003 as actor: StaticMeshActor /Game/Map/DT_FinalProject.DT_FinalProject:PersistentLevel.StaticMeshActor_39
+[2025.10.31-04.50.03:557][ 63]Cmd: DUPLICATE
+[2025.10.31-04.50.03:557][ 63]Cmd: ACTOR DUPLICATE
+[2025.10.31-04.50.22:634][122]Cmd: DUPLICATE
+[2025.10.31-04.50.22:634][122]Cmd: ACTOR DUPLICATE
+[2025.10.31-04.50.30:327][537]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_001.SM_GoodsShelves_001
+[2025.10.31-04.50.30:327][537]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_001.SM_GoodsShelves_001
+[2025.10.31-04.50.30:328][537]LogActorFactory: Actor Factory spawned StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_001.SM_GoodsShelves_001 as actor: StaticMeshActor /Game/Map/DT_FinalProject.DT_FinalProject:PersistentLevel.StaticMeshActor_42
+[2025.10.31-04.50.32:781][684]LogUObjectHash: Compacting FUObjectHashTables data took   0.63ms
+[2025.10.31-04.50.32:784][684]LogEditorActor: Deleted 0 Actors (0.021 secs)
+[2025.10.31-04.50.32:789][684]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_001.SM_GoodsShelves_001
+[2025.10.31-04.50.32:789][684]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_001.SM_GoodsShelves_001
+[2025.10.31-04.50.32:791][684]LogActorFactory: Actor Factory spawned StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_001.SM_GoodsShelves_001 as actor: StaticMeshActor /Game/Map/DT_FinalProject.DT_FinalProject:PersistentLevel.StaticMeshActor_43
+[2025.10.31-04.50.49:359][568]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_006.SM_GoodsShelves_006
+[2025.10.31-04.50.49:359][568]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_006.SM_GoodsShelves_006
+[2025.10.31-04.50.49:360][568]LogActorFactory: Actor Factory spawned StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_006.SM_GoodsShelves_006 as actor: StaticMeshActor /Game/Map/DT_FinalProject.DT_FinalProject:PersistentLevel.StaticMeshActor_44
+[2025.10.31-04.50.51:463][694]LogUObjectHash: Compacting FUObjectHashTables data took   0.30ms
+[2025.10.31-04.50.51:466][694]LogEditorActor: Deleted 0 Actors (0.020 secs)
+[2025.10.31-04.50.51:471][694]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_006.SM_GoodsShelves_006
+[2025.10.31-04.50.51:471][694]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_006.SM_GoodsShelves_006
+[2025.10.31-04.50.51:473][694]LogActorFactory: Actor Factory spawned StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_006.SM_GoodsShelves_006 as actor: StaticMeshActor /Game/Map/DT_FinalProject.DT_FinalProject:PersistentLevel.StaticMeshActor_45
+[2025.10.31-04.50.52:791][759]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_005.SM_GoodsShelves_005
+[2025.10.31-04.50.52:791][759]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_005.SM_GoodsShelves_005
+[2025.10.31-04.50.52:792][759]LogActorFactory: Actor Factory spawned StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_005.SM_GoodsShelves_005 as actor: StaticMeshActor /Game/Map/DT_FinalProject.DT_FinalProject:PersistentLevel.StaticMeshActor_46
+[2025.10.31-04.50.58:298][ 88]LogUObjectHash: Compacting FUObjectHashTables data took   0.31ms
+[2025.10.31-04.50.58:301][ 88]LogEditorActor: Deleted 0 Actors (0.021 secs)
+[2025.10.31-04.50.58:305][ 88]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_005.SM_GoodsShelves_005
+[2025.10.31-04.50.58:305][ 88]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_005.SM_GoodsShelves_005
+[2025.10.31-04.50.58:307][ 88]LogActorFactory: Actor Factory spawned StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_005.SM_GoodsShelves_005 as actor: StaticMeshActor /Game/Map/DT_FinalProject.DT_FinalProject:PersistentLevel.StaticMeshActor_47
+[2025.10.31-04.51.00:223][175]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_003.SM_GoodsShelves_003
+[2025.10.31-04.51.00:223][175]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_003.SM_GoodsShelves_003
+[2025.10.31-04.51.00:224][175]LogActorFactory: Actor Factory spawned StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_003.SM_GoodsShelves_003 as actor: StaticMeshActor /Game/Map/DT_FinalProject.DT_FinalProject:PersistentLevel.StaticMeshActor_48
+[2025.10.31-04.51.02:864][333]LogUObjectHash: Compacting FUObjectHashTables data took   0.49ms
+[2025.10.31-04.51.02:867][333]LogEditorActor: Deleted 0 Actors (0.021 secs)
+[2025.10.31-04.51.03:600][378]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_003.SM_GoodsShelves_003
+[2025.10.31-04.51.03:600][378]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_003.SM_GoodsShelves_003
+[2025.10.31-04.51.03:601][378]LogActorFactory: Actor Factory spawned StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_003.SM_GoodsShelves_003 as actor: StaticMeshActor /Game/Map/DT_FinalProject.DT_FinalProject:PersistentLevel.StaticMeshActor_49
+[2025.10.31-04.51.04:331][421]LogUObjectHash: Compacting FUObjectHashTables data took   0.30ms
+[2025.10.31-04.51.04:332][421]LogEditorActor: Deleted 0 Actors (0.019 secs)
+[2025.10.31-04.51.04:337][421]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_003.SM_GoodsShelves_003
+[2025.10.31-04.51.04:337][421]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_003.SM_GoodsShelves_003
+[2025.10.31-04.51.04:339][421]LogActorFactory: Actor Factory spawned StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_003.SM_GoodsShelves_003 as actor: StaticMeshActor /Game/Map/DT_FinalProject.DT_FinalProject:PersistentLevel.StaticMeshActor_50
+[2025.10.31-04.51.19:308][263]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_004.SM_GoodsShelves_004
+[2025.10.31-04.51.19:308][263]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_004.SM_GoodsShelves_004
+[2025.10.31-04.51.19:309][263]LogActorFactory: Actor Factory spawned StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_004.SM_GoodsShelves_004 as actor: StaticMeshActor /Game/Map/DT_FinalProject.DT_FinalProject:PersistentLevel.StaticMeshActor_51
+[2025.10.31-04.51.19:736][288]LogUObjectHash: Compacting FUObjectHashTables data took   0.30ms
+[2025.10.31-04.51.19:739][288]LogEditorActor: Deleted 0 Actors (0.021 secs)
+[2025.10.31-04.51.19:743][288]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_004.SM_GoodsShelves_004
+[2025.10.31-04.51.19:744][288]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_004.SM_GoodsShelves_004
+[2025.10.31-04.51.19:745][288]LogActorFactory: Actor Factory spawned StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_004.SM_GoodsShelves_004 as actor: StaticMeshActor /Game/Map/DT_FinalProject.DT_FinalProject:PersistentLevel.StaticMeshActor_52
+[2025.10.31-04.51.23:073][480]Cmd: DELETE
+[2025.10.31-04.51.23:073][480]Cmd: ACTOR DELETE
+[2025.10.31-04.51.23:080][480]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-04.51.23:099][480]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2025.10.31-04.51.23:102][480]LogEditorActor: Deleted 1 Actors (0.029 secs)
+[2025.10.31-04.51.28:996][810]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_005.SM_GoodsShelves_005
+[2025.10.31-04.51.28:996][810]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_005.SM_GoodsShelves_005
+[2025.10.31-04.51.28:997][810]LogActorFactory: Actor Factory spawned StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_005.SM_GoodsShelves_005 as actor: StaticMeshActor /Game/Map/DT_FinalProject.DT_FinalProject:PersistentLevel.StaticMeshActor_53
+[2025.10.31-04.51.29:864][862]LogUObjectHash: Compacting FUObjectHashTables data took   0.31ms
+[2025.10.31-04.51.29:867][862]LogEditorActor: Deleted 0 Actors (0.020 secs)
+[2025.10.31-04.51.29:871][862]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_005.SM_GoodsShelves_005
+[2025.10.31-04.51.29:871][862]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_005.SM_GoodsShelves_005
+[2025.10.31-04.51.29:873][862]LogActorFactory: Actor Factory spawned StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_005.SM_GoodsShelves_005 as actor: StaticMeshActor /Game/Map/DT_FinalProject.DT_FinalProject:PersistentLevel.StaticMeshActor_54
+[2025.10.31-04.51.32:024][986]Cmd: DELETE
+[2025.10.31-04.51.32:024][986]Cmd: ACTOR DELETE
+[2025.10.31-04.51.32:031][986]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-04.51.32:051][986]LogUObjectHash: Compacting FUObjectHashTables data took   0.31ms
+[2025.10.31-04.51.32:054][986]LogEditorActor: Deleted 1 Actors (0.029 secs)
+[2025.10.31-04.51.56:010][332]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_006.SM_GoodsShelves_006
+[2025.10.31-04.51.56:010][332]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_006.SM_GoodsShelves_006
+[2025.10.31-04.51.56:011][332]LogActorFactory: Actor Factory spawned StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_006.SM_GoodsShelves_006 as actor: StaticMeshActor /Game/Map/DT_FinalProject.DT_FinalProject:PersistentLevel.StaticMeshActor_55
+[2025.10.31-04.52.06:150][940]LogUObjectHash: Compacting FUObjectHashTables data took   0.30ms
+[2025.10.31-04.52.06:153][940]LogEditorActor: Deleted 0 Actors (0.023 secs)
+[2025.10.31-04.52.06:158][940]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_006.SM_GoodsShelves_006
+[2025.10.31-04.52.06:158][940]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_006.SM_GoodsShelves_006
+[2025.10.31-04.52.06:159][940]LogActorFactory: Actor Factory spawned StaticMesh /Game/Meshes/GoodsShelves/SM_GoodsShelves_006.SM_GoodsShelves_006 as actor: StaticMeshActor /Game/Map/DT_FinalProject.DT_FinalProject:PersistentLevel.StaticMeshActor_56
+[2025.10.31-04.52.19:457][696]Cmd: DUPLICATE
+[2025.10.31-04.52.19:457][696]Cmd: ACTOR DUPLICATE
+[2025.10.31-04.52.26:262][ 67]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 11207.061523
+[2025.10.31-04.52.26:548][ 76]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.10.31-04.52.26:548][ 76]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 11207.316406, Update Interval: 344.023560
+[2025.10.31-04.52.26:549][ 77]Cmd: DELETE
+[2025.10.31-04.52.26:549][ 77]Cmd: ACTOR DELETE
+[2025.10.31-04.52.26:556][ 77]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-04.52.26:575][ 77]LogUObjectHash: Compacting FUObjectHashTables data took   0.65ms
+[2025.10.31-04.52.26:579][ 77]LogEditorActor: Deleted 1 Actors (0.030 secs)
+[2025.10.31-04.53.30:902][848]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.10.31-04.53.30:952][848]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Map/DT_FinalProject" FILE="D:/DT_ProjectFinal/DT_ProjectFinal/Content/Map/DT_FinalProject.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.10.31-04.53.30:992][848]LogUObjectHash: Compacting FUObjectHashTables data took   0.33ms
+[2025.10.31-04.53.31:157][848]LogSavePackage: Moving output files for package: /Game/Map/DT_FinalProject
+[2025.10.31-04.53.31:157][848]LogSavePackage: Moving 'D:/DT_ProjectFinal/DT_ProjectFinal/Saved/DT_FinalProject2437AFDB4005C6583043E28F2F38550A.tmp' to 'D:/DT_ProjectFinal/DT_ProjectFinal/Content/Map/DT_FinalProject.umap'
+[2025.10.31-04.53.31:172][848]LogFileHelpers: Saving map 'DT_FinalProject' took 0.220
+[2025.10.31-04.53.31:180][848]LogFileHelpers: InternalPromptForCheckoutAndSave took 277.804 ms (total: 890.588 ms)
+[2025.10.31-04.53.31:235][848]LogContentValidation: Display: Starting to validate 1 assets
+[2025.10.31-04.53.31:235][848]LogContentValidation: Enabled validators:
+[2025.10.31-04.53.31:235][848]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.10.31-04.53.31:235][848]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.10.31-04.53.31:235][848]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.10.31-04.53.31:235][848]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.10.31-04.53.31:235][848]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.10.31-04.53.31:235][848]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.10.31-04.53.31:236][848]AssetCheck: /Game/Map/DT_FinalProject Validating asset
+[2025.10.31-04.59.02:911][728]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 11602.899414
+[2025.10.31-04.59.03:161][743]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.10.31-04.59.03:161][743]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 11603.130859, Update Interval: 333.901184
+[2025.10.31-05.04.14:608][112]Cmd: ELEMENT MIRROR X=-1
+[2025.10.31-05.04.33:831][263]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2025.10.31-05.04.37:926][502]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2025.10.31-05.05.03:313][  6]Cmd: TRANSACTION UNDO
+[2025.10.31-05.05.03:313][  6]LogEditorTransaction: Undo Move Elements
+[2025.10.31-05.05.05:067][  6]Cmd: TRANSACTION UNDO
+[2025.10.31-05.05.05:067][  6]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.05.10:130][149]Cmd: TRANSACTION UNDO
+[2025.10.31-05.05.10:130][149]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.05.13:279][214]Cmd: TRANSACTION UNDO
+[2025.10.31-05.05.13:279][214]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.05.31:413][163]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 11990.649414
+[2025.10.31-05.05.31:663][178]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.10.31-05.05.31:663][178]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 11990.883789, Update Interval: 314.555511
+[2025.10.31-05.05.32:229][213]Cmd: TRANSACTION UNDO
+[2025.10.31-05.05.32:229][213]LogEditorTransaction: Undo Clicking on Elements
+[2025.10.31-05.05.35:614][291]Cmd: TRANSACTION UNDO
+[2025.10.31-05.05.35:615][291]LogEditorTransaction: Undo Move Elements
+[2025.10.31-05.05.53:144][201]Cmd: TRANSACTION UNDO
+[2025.10.31-05.05.53:144][201]LogEditorTransaction: Undo Move Elements
+[2025.10.31-05.05.56:329][249]Cmd: TRANSACTION UNDO
+[2025.10.31-05.05.56:329][249]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.06.00:165][342]Cmd: TRANSACTION UNDO
+[2025.10.31-05.06.00:165][342]LogEditorTransaction: Undo Clicking on Elements
+[2025.10.31-05.06.02:967][386]Cmd: TRANSACTION UNDO
+[2025.10.31-05.06.02:967][386]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.06.05:979][444]Cmd: TRANSACTION UNDO
+[2025.10.31-05.06.05:979][444]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.06.09:212][516]Cmd: TRANSACTION UNDO
+[2025.10.31-05.06.09:212][516]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.06.11:610][537]Cmd: TRANSACTION UNDO
+[2025.10.31-05.06.11:610][537]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.06.14:313][574]Cmd: TRANSACTION UNDO
+[2025.10.31-05.06.14:313][574]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.06.16:730][595]Cmd: TRANSACTION UNDO
+[2025.10.31-05.06.16:730][595]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.06.20:162][672]Cmd: TRANSACTION UNDO
+[2025.10.31-05.06.20:162][672]LogEditorTransaction: Undo Move Elements
+[2025.10.31-05.06.23:498][749]Cmd: TRANSACTION UNDO
+[2025.10.31-05.06.23:498][749]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.06.25:907][768]Cmd: TRANSACTION UNDO
+[2025.10.31-05.06.25:907][768]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.06.28:259][784]Cmd: TRANSACTION UNDO
+[2025.10.31-05.06.28:259][784]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.06.30:862][814]Cmd: TRANSACTION UNDO
+[2025.10.31-05.06.30:863][814]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.06.33:316][837]Cmd: TRANSACTION UNDO
+[2025.10.31-05.06.33:316][837]LogEditorTransaction: Undo Clicking on Elements
+[2025.10.31-05.06.35:898][866]Cmd: TRANSACTION UNDO
+[2025.10.31-05.06.35:898][866]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.06.38:360][891]Cmd: TRANSACTION UNDO
+[2025.10.31-05.06.38:360][891]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.06.40:913][917]Cmd: TRANSACTION UNDO
+[2025.10.31-05.06.40:913][917]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.06.43:480][948]Cmd: TRANSACTION UNDO
+[2025.10.31-05.06.43:480][948]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.06.45:882][966]Cmd: TRANSACTION UNDO
+[2025.10.31-05.06.45:882][966]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.06.48:118][974]Cmd: TRANSACTION UNDO
+[2025.10.31-05.06.48:118][974]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.06.50:630][997]Cmd: TRANSACTION UNDO
+[2025.10.31-05.06.50:630][997]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.06.52:997][ 14]Cmd: TRANSACTION UNDO
+[2025.10.31-05.06.52:997][ 14]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.06.54:717][ 14]Cmd: TRANSACTION UNDO
+[2025.10.31-05.06.54:717][ 14]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.06.56:469][ 14]Cmd: TRANSACTION UNDO
+[2025.10.31-05.06.56:469][ 14]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.06.59:062][ 24]Cmd: TRANSACTION UNDO
+[2025.10.31-05.06.59:062][ 24]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.07.01:347][ 42]Cmd: TRANSACTION UNDO
+[2025.10.31-05.07.01:347][ 42]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.07.03:898][ 68]Cmd: TRANSACTION UNDO
+[2025.10.31-05.07.03:898][ 68]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.07.06:364][ 93]Cmd: TRANSACTION UNDO
+[2025.10.31-05.07.06:364][ 93]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.07.08:869][118]Cmd: TRANSACTION UNDO
+[2025.10.31-05.07.08:869][118]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.07.11:479][155]Cmd: TRANSACTION UNDO
+[2025.10.31-05.07.11:479][155]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.07.13:860][171]Cmd: TRANSACTION UNDO
+[2025.10.31-05.07.13:860][171]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.07.15:562][171]Cmd: TRANSACTION UNDO
+[2025.10.31-05.07.15:562][171]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.07.18:147][193]Cmd: TRANSACTION UNDO
+[2025.10.31-05.07.18:147][193]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.07.20:648][213]Cmd: TRANSACTION UNDO
+[2025.10.31-05.07.20:648][213]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.07.23:092][236]Cmd: TRANSACTION UNDO
+[2025.10.31-05.07.23:092][236]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.07.26:363][310]Cmd: TRANSACTION UNDO
+[2025.10.31-05.07.26:363][310]LogEditorTransaction: Undo Mirroring Elements
+[2025.10.31-05.07.29:379][369]Cmd: TRANSACTION UNDO
+[2025.10.31-05.07.29:379][369]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.07.32:163][411]Cmd: TRANSACTION UNDO
+[2025.10.31-05.07.32:163][411]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.07.35:446][485]Cmd: TRANSACTION UNDO
+[2025.10.31-05.07.35:446][485]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.07.37:998][512]Cmd: TRANSACTION UNDO
+[2025.10.31-05.07.37:999][512]LogEditorTransaction: Undo Clicking on Elements
+[2025.10.31-05.07.40:964][565]Cmd: TRANSACTION UNDO
+[2025.10.31-05.07.40:964][565]LogEditorTransaction: Undo Set Item Visibility
+[2025.10.31-05.08.05:597][894]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2025.10.31-05.08.07:929][ 28]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2025.10.31-05.08.10:464][181]Cmd: TRANSACTION UNDO
+[2025.10.31-05.08.10:464][181]LogEditorTransaction: Undo Move Elements
+[2025.10.31-05.08.14:080][271]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2025.10.31-05.08.16:551][417]Cmd: TRANSACTION UNDO
+[2025.10.31-05.08.16:551][417]LogEditorTransaction: Undo Move Elements
+[2025.10.31-05.08.20:142][507]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2025.10.31-05.08.21:614][594]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2025.10.31-05.08.23:632][717]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2025.10.31-05.08.27:783][962]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2025.10.31-05.08.35:012][390]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2025.10.31-05.08.38:155][580]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.10.31-05.08.38:208][580]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Map/DT_FinalProject" FILE="D:/DT_ProjectFinal/DT_ProjectFinal/Content/Map/DT_FinalProject.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.10.31-05.08.38:254][580]LogUObjectHash: Compacting FUObjectHashTables data took   0.39ms
+[2025.10.31-05.08.38:421][580]LogSavePackage: Moving output files for package: /Game/Map/DT_FinalProject
+[2025.10.31-05.08.38:421][580]LogSavePackage: Moving 'D:/DT_ProjectFinal/DT_ProjectFinal/Saved/DT_FinalProjectC2EE27374452C57D53084BAD5DC02189.tmp' to 'D:/DT_ProjectFinal/DT_ProjectFinal/Content/Map/DT_FinalProject.umap'
+[2025.10.31-05.08.38:434][580]LogFileHelpers: Saving map 'DT_FinalProject' took 0.226
+[2025.10.31-05.08.38:439][580]LogFileHelpers: InternalPromptForCheckoutAndSave took 284.223 ms (total: 1.17 sec)
+[2025.10.31-05.08.38:490][580]LogContentValidation: Display: Starting to validate 1 assets
+[2025.10.31-05.08.38:490][580]LogContentValidation: Enabled validators:
+[2025.10.31-05.08.38:490][580]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.10.31-05.08.38:490][580]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.10.31-05.08.38:490][580]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.10.31-05.08.38:490][580]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.10.31-05.08.38:490][580]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.10.31-05.08.38:490][580]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.10.31-05.08.38:491][580]AssetCheck: /Game/Map/DT_FinalProject Validating asset
+[2025.10.31-05.08.41:019][730]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2025.10.31-05.08.52:797][408]Cmd: DELETE
+[2025.10.31-05.08.52:798][408]Cmd: ACTOR DELETE
+[2025.10.31-05.08.52:804][408]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.08.52:825][408]LogUObjectHash: Compacting FUObjectHashTables data took   0.36ms
+[2025.10.31-05.08.52:828][408]LogEditorActor: Deleted 1 Actors (0.030 secs)
+[2025.10.31-05.08.54:964][538]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2025.10.31-05.08.58:174][730]Cmd: TRANSACTION UNDO
+[2025.10.31-05.08.58:174][730]LogEditorTransaction: Undo Move Elements
+[2025.10.31-05.09.01:668][812]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2025.10.31-05.09.08:918][227]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.10.31-05.09.08:993][227]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Map/DT_FinalProject" FILE="D:/DT_ProjectFinal/DT_ProjectFinal/Content/Map/DT_FinalProject.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.10.31-05.09.09:030][227]LogUObjectHash: Compacting FUObjectHashTables data took   0.30ms
+[2025.10.31-05.09.09:206][227]LogSavePackage: Moving output files for package: /Game/Map/DT_FinalProject
+[2025.10.31-05.09.09:206][227]LogSavePackage: Moving 'D:/DT_ProjectFinal/DT_ProjectFinal/Saved/DT_FinalProjectC6BA6234451A286AD0C1ED9844B683C8.tmp' to 'D:/DT_ProjectFinal/DT_ProjectFinal/Content/Map/DT_FinalProject.umap'
+[2025.10.31-05.09.09:219][227]LogFileHelpers: Saving map 'DT_FinalProject' took 0.227
+[2025.10.31-05.09.09:224][227]LogFileHelpers: InternalPromptForCheckoutAndSave took 305.257 ms (total: 1.48 sec)
+[2025.10.31-05.09.09:274][227]LogContentValidation: Display: Starting to validate 1 assets
+[2025.10.31-05.09.09:274][227]LogContentValidation: Enabled validators:
+[2025.10.31-05.09.09:274][227]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.10.31-05.09.09:274][227]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.10.31-05.09.09:274][227]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.10.31-05.09.09:274][227]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.10.31-05.09.09:274][227]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.10.31-05.09.09:274][227]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.10.31-05.09.09:275][227]AssetCheck: /Game/Map/DT_FinalProject Validating asset
+[2025.10.31-05.09.49:437][598]Cmd: DUPLICATE
+[2025.10.31-05.09.49:437][598]Cmd: ACTOR DUPLICATE
+[2025.10.31-05.11.14:598][435]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2025.10.31-05.11.28:962][228]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.10.31-05.11.28:993][228]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Map/DT_FinalProject" FILE="D:/DT_ProjectFinal/DT_ProjectFinal/Content/Map/DT_FinalProject.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.10.31-05.11.29:036][228]LogUObjectHash: Compacting FUObjectHashTables data took   0.80ms
+[2025.10.31-05.11.29:206][228]LogSavePackage: Moving output files for package: /Game/Map/DT_FinalProject
+[2025.10.31-05.11.29:207][228]LogSavePackage: Moving 'D:/DT_ProjectFinal/DT_ProjectFinal/Saved/DT_FinalProject1157D5874165108850DFD88FFE88D6D5.tmp' to 'D:/DT_ProjectFinal/DT_ProjectFinal/Content/Map/DT_FinalProject.umap'
+[2025.10.31-05.11.29:219][228]LogFileHelpers: Saving map 'DT_FinalProject' took 0.227
+[2025.10.31-05.11.29:225][228]LogFileHelpers: InternalPromptForCheckoutAndSave took 262.695 ms (total: 1.74 sec)
+[2025.10.31-05.11.29:275][228]LogContentValidation: Display: Starting to validate 1 assets
+[2025.10.31-05.11.29:275][228]LogContentValidation: Enabled validators:
+[2025.10.31-05.11.29:275][228]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.10.31-05.11.29:275][228]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.10.31-05.11.29:275][228]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.10.31-05.11.29:275][228]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.10.31-05.11.29:275][228]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.10.31-05.11.29:275][228]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.10.31-05.11.29:275][228]AssetCheck: /Game/Map/DT_FinalProject Validating asset
+[2025.10.31-05.11.30:831][317]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 12349.797852
+[2025.10.31-05.11.31:514][358]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.10.31-05.11.31:514][358]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 12350.462891, Update Interval: 344.029053
+[2025.10.31-05.11.38:749][759]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2025.10.31-05.11.53:581][591]Cmd: DELETE
+[2025.10.31-05.11.53:581][591]Cmd: ACTOR DELETE
+[2025.10.31-05.11.53:588][591]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.11.53:589][591]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.11.53:611][591]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2025.10.31-05.11.53:615][591]LogEditorActor: Deleted 2 Actors (0.034 secs)
+[2025.10.31-05.12.08:817][460]Cmd: DELETE
+[2025.10.31-05.12.08:817][460]Cmd: ACTOR DELETE
+[2025.10.31-05.12.08:824][460]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.12.08:843][460]LogUObjectHash: Compacting FUObjectHashTables data took   0.31ms
+[2025.10.31-05.12.08:847][460]LogEditorActor: Deleted 1 Actors (0.030 secs)
+[2025.10.31-05.12.13:498][736]Cmd: DELETE
+[2025.10.31-05.12.13:498][736]Cmd: ACTOR DELETE
+[2025.10.31-05.12.13:505][736]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.12.13:526][736]LogUObjectHash: Compacting FUObjectHashTables data took   0.31ms
+[2025.10.31-05.12.13:530][736]LogEditorActor: Deleted 1 Actors (0.031 secs)
+[2025.10.31-05.12.29:661][647]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.10.31-05.12.29:711][647]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Map/DT_FinalProject" FILE="D:/DT_ProjectFinal/DT_ProjectFinal/Content/Map/DT_FinalProject.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.10.31-05.12.29:752][647]LogUObjectHash: Compacting FUObjectHashTables data took   0.40ms
+[2025.10.31-05.12.29:914][647]LogSavePackage: Moving output files for package: /Game/Map/DT_FinalProject
+[2025.10.31-05.12.29:914][647]LogSavePackage: Moving 'D:/DT_ProjectFinal/DT_ProjectFinal/Saved/DT_FinalProjectFE91179C4A54125E6BF3D1ADE90BA4B7.tmp' to 'D:/DT_ProjectFinal/DT_ProjectFinal/Content/Map/DT_FinalProject.umap'
+[2025.10.31-05.12.29:928][647]LogFileHelpers: Saving map 'DT_FinalProject' took 0.218
+[2025.10.31-05.12.29:940][647]LogFileHelpers: InternalPromptForCheckoutAndSave took 279.865 ms (total: 2.02 sec)
+[2025.10.31-05.12.29:993][647]LogContentValidation: Display: Starting to validate 1 assets
+[2025.10.31-05.12.29:993][647]LogContentValidation: Enabled validators:
+[2025.10.31-05.12.29:993][647]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.10.31-05.12.29:993][647]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.10.31-05.12.29:993][647]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.10.31-05.12.29:993][647]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.10.31-05.12.29:993][647]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.10.31-05.12.29:993][647]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.10.31-05.12.29:993][647]AssetCheck: /Game/Map/DT_FinalProject Validating asset
+[2025.10.31-05.12.55:115][ 93]LogStreaming: Display: FlushAsyncLoading(349): 1 QueuedPackages, 0 AsyncPackages
+[2025.10.31-05.12.55:191][ 93]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/DiamondPlate/SM_DiamondPlate_001.SM_DiamondPlate_001
+[2025.10.31-05.12.55:191][ 93]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/DiamondPlate/SM_DiamondPlate_001.SM_DiamondPlate_001
+[2025.10.31-05.12.55:194][ 93]LogActorFactory: Actor Factory spawned StaticMesh /Game/Meshes/DiamondPlate/SM_DiamondPlate_001.SM_DiamondPlate_001 as actor: StaticMeshActor /Game/Map/DT_FinalProject.DT_FinalProject:PersistentLevel.StaticMeshActor_68
+[2025.10.31-05.12.57:873][253]LogUObjectHash: Compacting FUObjectHashTables data took   0.36ms
+[2025.10.31-05.12.57:877][253]LogEditorActor: Deleted 0 Actors (0.022 secs)
+[2025.10.31-05.12.57:882][253]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/DiamondPlate/SM_DiamondPlate_001.SM_DiamondPlate_001
+[2025.10.31-05.12.57:882][253]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/DiamondPlate/SM_DiamondPlate_001.SM_DiamondPlate_001
+[2025.10.31-05.12.57:885][253]LogActorFactory: Actor Factory spawned StaticMesh /Game/Meshes/DiamondPlate/SM_DiamondPlate_001.SM_DiamondPlate_001 as actor: StaticMeshActor /Game/Map/DT_FinalProject.DT_FinalProject:PersistentLevel.StaticMeshActor_69
+[2025.10.31-05.13.12:442][ 72]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2025.10.31-05.13.43:886][855]Cmd: DELETE
+[2025.10.31-05.13.43:886][855]Cmd: ACTOR DELETE
+[2025.10.31-05.13.43:892][855]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.13.43:911][855]LogUObjectHash: Compacting FUObjectHashTables data took   0.35ms
+[2025.10.31-05.13.43:916][855]LogEditorActor: Deleted 1 Actors (0.030 secs)
+[2025.10.31-05.13.44:372][872]LogStreaming: Display: FlushAsyncLoading(350): 1 QueuedPackages, 0 AsyncPackages
+[2025.10.31-05.13.44:453][873]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/DiamondPlate/SM_DiamondPlate_002.SM_DiamondPlate_002
+[2025.10.31-05.13.44:453][873]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/DiamondPlate/SM_DiamondPlate_002.SM_DiamondPlate_002
+[2025.10.31-05.13.44:456][873]LogActorFactory: Actor Factory spawned StaticMesh /Game/Meshes/DiamondPlate/SM_DiamondPlate_002.SM_DiamondPlate_002 as actor: StaticMeshActor /Game/Map/DT_FinalProject.DT_FinalProject:PersistentLevel.StaticMeshActor_70
+[2025.10.31-05.13.47:758][ 70]LogUObjectHash: Compacting FUObjectHashTables data took   0.36ms
+[2025.10.31-05.13.47:761][ 70]LogEditorActor: Deleted 0 Actors (0.021 secs)
+[2025.10.31-05.13.47:765][ 70]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/DiamondPlate/SM_DiamondPlate_002.SM_DiamondPlate_002
+[2025.10.31-05.13.47:765][ 70]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/DiamondPlate/SM_DiamondPlate_002.SM_DiamondPlate_002
+[2025.10.31-05.13.47:768][ 70]LogActorFactory: Actor Factory spawned StaticMesh /Game/Meshes/DiamondPlate/SM_DiamondPlate_002.SM_DiamondPlate_002 as actor: StaticMeshActor /Game/Map/DT_FinalProject.DT_FinalProject:PersistentLevel.StaticMeshActor_71
+[2025.10.31-05.14.10:397][417]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.10.31-05.14.10:444][417]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Map/DT_FinalProject" FILE="D:/DT_ProjectFinal/DT_ProjectFinal/Content/Map/DT_FinalProject.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.10.31-05.14.10:485][417]LogUObjectHash: Compacting FUObjectHashTables data took   0.30ms
+[2025.10.31-05.14.10:647][417]LogSavePackage: Moving output files for package: /Game/Map/DT_FinalProject
+[2025.10.31-05.14.10:647][417]LogSavePackage: Moving 'D:/DT_ProjectFinal/DT_ProjectFinal/Saved/DT_FinalProjectEFAA0AA9478FEAC0707DEA9421AF8FE3.tmp' to 'D:/DT_ProjectFinal/DT_ProjectFinal/Content/Map/DT_FinalProject.umap'
+[2025.10.31-05.14.10:661][417]LogFileHelpers: Saving map 'DT_FinalProject' took 0.217
+[2025.10.31-05.14.10:670][417]LogFileHelpers: InternalPromptForCheckoutAndSave took 272.029 ms (total: 2.29 sec)
+[2025.10.31-05.14.10:726][417]LogContentValidation: Display: Starting to validate 1 assets
+[2025.10.31-05.14.10:726][417]LogContentValidation: Enabled validators:
+[2025.10.31-05.14.10:726][417]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.10.31-05.14.10:726][417]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.10.31-05.14.10:726][417]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.10.31-05.14.10:726][417]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.10.31-05.14.10:726][417]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.10.31-05.14.10:726][417]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.10.31-05.14.10:726][417]AssetCheck: /Game/Map/DT_FinalProject Validating asset
+[2025.10.31-05.15.02:501][446]Cmd: TRANSACTION UNDO
+[2025.10.31-05.15.02:501][446]LogEditorTransaction: Undo Move Elements
+[2025.10.31-05.15.04:272][446]Cmd: TRANSACTION UNDO
+[2025.10.31-05.15.04:272][446]LogEditorTransaction: Undo Set Location
+[2025.10.31-05.15.06:044][446]Cmd: TRANSACTION UNDO
+[2025.10.31-05.15.06:044][446]LogEditorTransaction: Undo Set Location
+[2025.10.31-05.15.07:786][446]Cmd: TRANSACTION UNDO
+[2025.10.31-05.15.07:786][446]LogEditorTransaction: Undo Set Location
+[2025.10.31-05.15.54:367][ 52]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.10.31-05.15.54:394][ 52]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Map/DT_FinalProject" FILE="D:/DT_ProjectFinal/DT_ProjectFinal/Content/Map/DT_FinalProject.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.10.31-05.15.54:435][ 52]LogUObjectHash: Compacting FUObjectHashTables data took   0.30ms
+[2025.10.31-05.15.54:601][ 52]LogSavePackage: Moving output files for package: /Game/Map/DT_FinalProject
+[2025.10.31-05.15.54:601][ 52]LogSavePackage: Moving 'D:/DT_ProjectFinal/DT_ProjectFinal/Saved/DT_FinalProject176D0CF2415558B6170E818ABC1E9DAD.tmp' to 'D:/DT_ProjectFinal/DT_ProjectFinal/Content/Map/DT_FinalProject.umap'
+[2025.10.31-05.15.54:615][ 52]LogFileHelpers: Saving map 'DT_FinalProject' took 0.221
+[2025.10.31-05.15.54:625][ 52]LogFileHelpers: InternalPromptForCheckoutAndSave took 258.229 ms (total: 2.55 sec)
+[2025.10.31-05.15.54:677][ 52]LogContentValidation: Display: Starting to validate 1 assets
+[2025.10.31-05.15.54:677][ 52]LogContentValidation: Enabled validators:
+[2025.10.31-05.15.54:677][ 52]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.10.31-05.15.54:677][ 52]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.10.31-05.15.54:677][ 52]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.10.31-05.15.54:677][ 52]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.10.31-05.15.54:677][ 52]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.10.31-05.15.54:677][ 52]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.10.31-05.15.54:678][ 52]AssetCheck: /Game/Map/DT_FinalProject Validating asset
+[2025.10.31-05.17.43:601][802]Cmd: DUPLICATE
+[2025.10.31-05.17.43:601][802]Cmd: ACTOR DUPLICATE
+[2025.10.31-05.17.47:184][ 14]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2025.10.31-05.17.48:473][ 90]Cmd: TRANSACTION UNDO
+[2025.10.31-05.17.48:473][ 90]LogEditorTransaction: Undo Duplicate Elements
+[2025.10.31-05.17.57:467][487]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2025.10.31-05.18.02:718][793]Cmd: DUPLICATE
+[2025.10.31-05.18.02:718][793]Cmd: ACTOR DUPLICATE
+[2025.10.31-05.18.02:718][793]LogConsoleManager: Warning: Performance warning: Many (31) failed FindConsoleObject() for 'ACTOR'. 
+[2025.10.31-05.18.05:627][957]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2025.10.31-05.18.06:902][ 28]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 12745.678711
+[2025.10.31-05.18.07:133][ 42]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.10.31-05.18.07:133][ 42]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 12745.893555, Update Interval: 321.026642
+[2025.10.31-05.18.15:851][554]Cmd: DUPLICATE
+[2025.10.31-05.18.15:851][554]Cmd: ACTOR DUPLICATE
+[2025.10.31-05.18.21:161][854]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2025.10.31-05.18.24:358][ 40]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.10.31-05.18.24:412][ 40]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Map/DT_FinalProject" FILE="D:/DT_ProjectFinal/DT_ProjectFinal/Content/Map/DT_FinalProject.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.10.31-05.18.24:454][ 40]LogUObjectHash: Compacting FUObjectHashTables data took   0.63ms
+[2025.10.31-05.18.24:620][ 40]LogSavePackage: Moving output files for package: /Game/Map/DT_FinalProject
+[2025.10.31-05.18.24:621][ 40]LogSavePackage: Moving 'D:/DT_ProjectFinal/DT_ProjectFinal/Saved/DT_FinalProject5C3BC8EA40ABA38D96B6938A9AD57A96.tmp' to 'D:/DT_ProjectFinal/DT_ProjectFinal/Content/Map/DT_FinalProject.umap'
+[2025.10.31-05.18.24:633][ 40]LogFileHelpers: Saving map 'DT_FinalProject' took 0.222
+[2025.10.31-05.18.24:638][ 40]LogFileHelpers: InternalPromptForCheckoutAndSave took 280.662 ms (total: 2.83 sec)
+[2025.10.31-05.18.24:710][ 40]LogContentValidation: Display: Starting to validate 1 assets
+[2025.10.31-05.18.24:710][ 40]LogContentValidation: Enabled validators:
+[2025.10.31-05.18.24:710][ 40]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.10.31-05.18.24:710][ 40]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.10.31-05.18.24:710][ 40]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.10.31-05.18.24:710][ 40]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.10.31-05.18.24:710][ 40]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.10.31-05.18.24:710][ 40]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.10.31-05.18.24:711][ 40]AssetCheck: /Game/Map/DT_FinalProject Validating asset
+[2025.10.31-05.18.39:035][886]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2025.10.31-05.19.02:426][285]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2025.10.31-05.19.11:418][789]Cmd: TRANSACTION UNDO
+[2025.10.31-05.19.11:418][789]LogEditorTransaction: Undo Move Elements
+[2025.10.31-05.19.13:190][789]Cmd: TRANSACTION UNDO
+[2025.10.31-05.19.13:190][789]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.19.19:185][  9]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2025.10.31-05.19.34:680][908]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2025.10.31-05.19.36:124][984]Cmd: TRANSACTION UNDO
+[2025.10.31-05.19.36:124][984]LogEditorTransaction: Undo Move Elements
+[2025.10.31-05.19.39:518][ 51]Cmd: TRANSACTION UNDO
+[2025.10.31-05.19.39:518][ 51]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.19.42:968][131]Cmd: TRANSACTION UNDO
+[2025.10.31-05.19.42:968][131]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.19.45:735][175]Cmd: TRANSACTION UNDO
+[2025.10.31-05.19.45:735][175]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.19.49:418][274]Cmd: TRANSACTION UNDO
+[2025.10.31-05.19.49:418][274]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.19.51:516][279]Cmd: TRANSACTION UNDO
+[2025.10.31-05.19.51:516][279]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.19.53:873][293]Cmd: TRANSACTION UNDO
+[2025.10.31-05.19.53:873][293]LogEditorTransaction: Undo Clicking on Actors
+[2025.10.31-05.20.23:738][954]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2025.10.31-05.20.34:785][612]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2025.10.31-05.20.37:669][785]Cmd: TRANSACTION UNDO
+[2025.10.31-05.20.37:669][785]LogEditorTransaction: Undo Set Item Visibility
+[2025.10.31-05.20.41:509][891]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2025.10.31-05.20.42:754][964]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2025.10.31-05.20.44:062][ 42]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2025.10.31-05.20.45:290][117]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2025.10.31-05.20.46:605][195]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2025.10.31-05.20.47:485][247]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2025.10.31-05.20.48:195][290]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2025.10.31-05.21.36:502][726]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2025.10.31-05.22.08:519][574]Cmd: DELETE
+[2025.10.31-05.22.08:519][574]Cmd: ACTOR DELETE
+[2025.10.31-05.22.08:528][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:529][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:529][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:530][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:530][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:531][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:531][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:532][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:532][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:533][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:534][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:534][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:535][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:535][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:536][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:537][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:537][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:538][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:538][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:539][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:539][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:540][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:540][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:541][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:541][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:542][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:542][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:543][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:543][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:544][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:544][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:545][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:545][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:546][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:546][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:547][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:547][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:548][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:548][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:549][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:550][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:550][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:550][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:551][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:552][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:552][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:553][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:553][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:554][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:554][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:555][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:555][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:556][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:556][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:557][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:557][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:558][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:558][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:559][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:559][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:560][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:560][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:561][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:561][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:562][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:562][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:563][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:563][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:564][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:564][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:565][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:565][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:566][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:566][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:567][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:567][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:568][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:568][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:569][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:569][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:570][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:570][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:571][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:571][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:572][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:572][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:573][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:573][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:574][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:574][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:575][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:575][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:576][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:576][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:577][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:577][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:578][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:578][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:579][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:579][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:580][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:580][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:581][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:581][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:582][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:582][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:583][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:583][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:584][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:584][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:585][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:585][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:586][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:586][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:587][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:587][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:587][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:588][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:588][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:589][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:589][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:590][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:590][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:591][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:591][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:592][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:592][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:593][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:593][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:594][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:594][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:595][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:595][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:596][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:596][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:597][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:597][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:598][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:598][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:599][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:599][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:600][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:600][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:601][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:601][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:602][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:602][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:603][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:603][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:604][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:604][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:605][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:605][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:606][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:606][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:607][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:607][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:608][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:608][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:609][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:609][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:610][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:610][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:611][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:611][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:612][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:612][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:613][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:613][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:614][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:614][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:615][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:615][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:616][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:616][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:617][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:617][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:618][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:618][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:619][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:619][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:620][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:620][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:621][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:621][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:622][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:622][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:623][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:623][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:624][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:624][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:625][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:625][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:626][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:626][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:627][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:627][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:628][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:628][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:629][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:629][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:630][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:630][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:631][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:631][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:632][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:632][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:633][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:633][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:634][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:634][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:634][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:635][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:635][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:636][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:636][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:637][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:637][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:638][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:638][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:639][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:639][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:640][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:640][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:641][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:641][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:642][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:642][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:643][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:643][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:644][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:644][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:645][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:645][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:646][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:646][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:647][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:647][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:648][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:648][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:649][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:649][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:650][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:650][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:651][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:651][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:652][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:652][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:653][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:653][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:654][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:654][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:655][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:655][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:656][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:656][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:657][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:657][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:658][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:658][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:659][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:659][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:660][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:660][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:661][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:661][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:662][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:662][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:663][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:663][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:664][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:664][574]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.22.08:685][574]LogUObjectHash: Compacting FUObjectHashTables data took   0.39ms
+[2025.10.31-05.22.08:708][574]LogEditorActor: Deleted 272 Actors (0.187 secs)
+[2025.10.31-05.22.13:470][856]Cmd: DELETE
+[2025.10.31-05.22.13:470][856]Cmd: ACTOR DELETE
+[2025.10.31-05.22.46:271][802]LogWindows: LaunchURL https://docs.unrealengine.com/5.6/en/BuildingWorlds/LevelEditor?utm_source=editor&utm_medium=docs&utm_campaign=help_menu
+[2025.10.31-05.23.21:203][753]Cmd: DELETE
+[2025.10.31-05.23.21:203][753]Cmd: ACTOR DELETE
+[2025.10.31-05.24.00:270][151]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 13098.731445
+[2025.10.31-05.24.00:519][166]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.10.31-05.24.00:519][166]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 13098.964844, Update Interval: 336.212036
+[2025.10.31-05.24.46:987][920]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2025.10.31-05.26.16:813][ 70]LogSlate: Window 'Create Merged Actor' being destroyed
+[2025.10.31-05.26.17:198][ 70]LogStaticMesh: Display: Building static mesh SM_MERGED_StaticMeshActor_43 (Required Memory Estimate: 86.258069 MB)...
+[2025.10.31-05.26.18:396][124]LogStaticMesh: Built static mesh [1.21s] /Game/Meshes/MergeMesh/SM_MERGED_StaticMeshActor_43.SM_MERGED_StaticMeshActor_43
+[2025.10.31-05.26.19:647][200]LogSlate: Window 'Merge Actors' being destroyed
+[2025.10.31-05.26.19:680][200]LogSlate: Window 'Merge Actors' being destroyed
+[2025.10.31-05.26.31:555][894]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/MergeMesh/SM_MERGED_StaticMeshActor_43.SM_MERGED_StaticMeshActor_43
+[2025.10.31-05.26.31:555][894]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/MergeMesh/SM_MERGED_StaticMeshActor_43.SM_MERGED_StaticMeshActor_43
+[2025.10.31-05.26.31:558][894]LogActorFactory: Actor Factory spawned StaticMesh /Game/Meshes/MergeMesh/SM_MERGED_StaticMeshActor_43.SM_MERGED_StaticMeshActor_43 as actor: StaticMeshActor /Game/Map/DT_FinalProject.DT_FinalProject:PersistentLevel.StaticMeshActor_76
+[2025.10.31-05.26.32:603][954]LogUObjectHash: Compacting FUObjectHashTables data took   0.61ms
+[2025.10.31-05.26.32:618][954]LogEditorActor: Deleted 0 Actors (0.040 secs)
+[2025.10.31-05.26.32:623][954]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/MergeMesh/SM_MERGED_StaticMeshActor_43.SM_MERGED_StaticMeshActor_43
+[2025.10.31-05.26.32:623][954]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/MergeMesh/SM_MERGED_StaticMeshActor_43.SM_MERGED_StaticMeshActor_43
+[2025.10.31-05.26.32:626][954]LogActorFactory: Actor Factory spawned StaticMesh /Game/Meshes/MergeMesh/SM_MERGED_StaticMeshActor_43.SM_MERGED_StaticMeshActor_43 as actor: StaticMeshActor /Game/Map/DT_FinalProject.DT_FinalProject:PersistentLevel.StaticMeshActor_77
+[2025.10.31-05.26.38:689][314]Cmd: DELETE
+[2025.10.31-05.26.38:689][314]Cmd: ACTOR DELETE
+[2025.10.31-05.26.38:694][314]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.26.38:695][314]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.26.38:696][314]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.26.38:696][314]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.26.38:697][314]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.26.38:698][314]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.26.38:698][314]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.26.38:699][314]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.26.38:699][314]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.26.38:700][314]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.26.38:701][314]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.26.38:701][314]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.26.38:702][314]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.26.38:702][314]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.26.38:703][314]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.26.38:703][314]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.26.38:722][314]LogUObjectHash: Compacting FUObjectHashTables data took   0.31ms
+[2025.10.31-05.26.38:726][314]LogEditorActor: Deleted 16 Actors (0.037 secs)
+[2025.10.31-05.26.41:089][458]Cmd: DELETE
+[2025.10.31-05.26.41:089][458]Cmd: ACTOR DELETE
+[2025.10.31-05.26.41:094][458]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.26.41:115][458]LogUObjectHash: Compacting FUObjectHashTables data took   0.31ms
+[2025.10.31-05.26.41:118][458]LogEditorActor: Deleted 1 Actors (0.029 secs)
+[2025.10.31-05.26.56:499][381]Cmd: DELETE
+[2025.10.31-05.26.56:499][381]Cmd: ACTOR DELETE
+[2025.10.31-05.26.56:503][381]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.26.56:503][381]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.26.56:504][381]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.10.31-05.26.56:523][381]LogUObjectHash: Compacting FUObjectHashTables data took   0.53ms
+[2025.10.31-05.26.56:527][381]LogEditorActor: Deleted 3 Actors (0.028 secs)
+[2025.10.31-05.27.02:738][751]LogContentBrowser: Attempting asset rename: SM_MERGED_StaticMeshActor_43 -> SM
+[2025.10.31-05.27.02:912][751]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.10.31-05.27.02:912][751]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Meshes/MergeMesh/SM] ([1] browsable assets)...
+[2025.10.31-05.27.02:921][751]OBJ SavePackage:     Rendered thumbnail for [StaticMesh /Game/Meshes/MergeMesh/SM.SM]
+[2025.10.31-05.27.02:921][751]OBJ SavePackage: Finished generating thumbnails for package [/Game/Meshes/MergeMesh/SM]
+[2025.10.31-05.27.02:921][751]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Meshes/MergeMesh/SM" FILE="D:/DT_ProjectFinal/DT_ProjectFinal/Content/Meshes/MergeMesh/SM.uasset" SILENT=true
+[2025.10.31-05.27.02:945][751]LogSavePackage: Moving output files for package: /Game/Meshes/MergeMesh/SM
+[2025.10.31-05.27.02:945][751]LogSavePackage: Moving 'D:/DT_ProjectFinal/DT_ProjectFinal/Saved/SM2CAB48A042E0B7E59F39C88E3EFE4D47.tmp' to 'D:/DT_ProjectFinal/DT_ProjectFinal/Content/Meshes/MergeMesh/SM.uasset'
+[2025.10.31-05.27.02:946][751]LogFileHelpers: InternalPromptForCheckoutAndSave took 33.647 ms (total: 2.86 sec)
+[2025.10.31-05.27.02:979][751]LogUObjectHash: Compacting FUObjectHashTables data took   0.54ms
+[2025.10.31-05.27.03:005][751]LogUObjectHash: Compacting FUObjectHashTables data took   0.53ms
+[2025.10.31-05.27.03:021][751]LogUObjectHash: Compacting FUObjectHashTables data took   0.29ms
+[2025.10.31-05.27.03:082][751]LogContentValidation: Display: Starting to validate 1 assets
+[2025.10.31-05.27.03:082][751]LogContentValidation: Enabled validators:
+[2025.10.31-05.27.03:082][751]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.10.31-05.27.03:082][751]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.10.31-05.27.03:082][751]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.10.31-05.27.03:082][751]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.10.31-05.27.03:082][751]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.10.31-05.27.03:082][751]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.10.31-05.27.03:082][751]AssetCheck: /Game/Meshes/MergeMesh/SM Validating asset
+[2025.10.31-05.27.03:158][751]LogSourceControl: Display: Uncontrolled Changelist persistency file saved D:/DT_ProjectFinal/DT_ProjectFinal/Saved/SourceControl/UncontrolledChangelists.json
+[2025.10.31-05.27.07:605][980]LogContentBrowser: Attempting asset rename: SM_MERGED_SM_GoodsShelves_001 -> SM_MERGED_SM_GoodsShelves_001
+[2025.10.31-05.27.10:954][176]LogContentBrowser: Attempting asset rename: SM -> SM_MERGED_SM_GoodsShelves_002
+[2025.10.31-05.27.11:079][176]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.10.31-05.27.11:079][176]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Meshes/MergeMesh/SM_MERGED_SM_GoodsShelves_002] ([1] browsable assets)...
+[2025.10.31-05.27.11:079][176]OBJ SavePackage: Finished generating thumbnails for package [/Game/Meshes/MergeMesh/SM_MERGED_SM_GoodsShelves_002]
+[2025.10.31-05.27.11:079][176]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Meshes/MergeMesh/SM_MERGED_SM_GoodsShelves_002" FILE="D:/DT_ProjectFinal/DT_ProjectFinal/Content/Meshes/MergeMesh/SM_MERGED_SM_GoodsShelves_002.uasset" SILENT=true
+[2025.10.31-05.27.11:104][176]LogSavePackage: Moving output files for package: /Game/Meshes/MergeMesh/SM_MERGED_SM_GoodsShelves_002
+[2025.10.31-05.27.11:104][176]LogSavePackage: Moving 'D:/DT_ProjectFinal/DT_ProjectFinal/Saved/SM_MERGED_SM_GoodsShelves_00214746D7C436204D92CF26887912D15BE.tmp' to 'D:/DT_ProjectFinal/DT_ProjectFinal/Content/Meshes/MergeMesh/SM_MERGED_SM_GoodsShelves_002.uasset'
+[2025.10.31-05.27.11:127][176]LogFileHelpers: InternalPromptForCheckoutAndSave took 48.418 ms (total: 2.91 sec)
+[2025.10.31-05.27.11:190][176]LogUObjectHash: Compacting FUObjectHashTables data took   0.59ms
+[2025.10.31-05.27.11:214][176]LogUObjectHash: Compacting FUObjectHashTables data took   0.54ms
+[2025.10.31-05.27.11:233][176]LogUObjectHash: Compacting FUObjectHashTables data took   0.29ms
+[2025.10.31-05.27.11:298][176]LogContentValidation: Display: Starting to validate 1 assets
+[2025.10.31-05.27.11:298][176]LogContentValidation: Enabled validators:
+[2025.10.31-05.27.11:298][176]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.10.31-05.27.11:298][176]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.10.31-05.27.11:298][176]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.10.31-05.27.11:298][176]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.10.31-05.27.11:298][176]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.10.31-05.27.11:298][176]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.10.31-05.27.11:299][176]AssetCheck: /Game/Meshes/MergeMesh/SM_MERGED_SM_GoodsShelves_002 Validating asset
+[2025.10.31-05.27.11:375][176]LogSourceControl: Display: Uncontrolled Changelist persistency file saved D:/DT_ProjectFinal/DT_ProjectFinal/Saved/SourceControl/UncontrolledChangelists.json
+[2025.10.31-05.27.16:190][439]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/MergeMesh/SM_MERGED_SM_GoodsShelves_002.SM_MERGED_SM_GoodsShelves_002
+[2025.10.31-05.27.16:190][439]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/MergeMesh/SM_MERGED_SM_GoodsShelves_002.SM_MERGED_SM_GoodsShelves_002
+[2025.10.31-05.27.16:193][439]LogActorFactory: Actor Factory spawned StaticMesh /Game/Meshes/MergeMesh/SM_MERGED_SM_GoodsShelves_002.SM_MERGED_SM_GoodsShelves_002 as actor: StaticMeshActor /Game/Map/DT_FinalProject.DT_FinalProject:PersistentLevel.StaticMeshActor_78
+[2025.10.31-05.27.20:844][718]LogUObjectHash: Compacting FUObjectHashTables data took   0.31ms
+[2025.10.31-05.27.20:847][718]LogEditorActor: Deleted 0 Actors (0.019 secs)
+[2025.10.31-05.27.20:852][718]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/MergeMesh/SM_MERGED_SM_GoodsShelves_002.SM_MERGED_SM_GoodsShelves_002
+[2025.10.31-05.27.20:852][718]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/MergeMesh/SM_MERGED_SM_GoodsShelves_002.SM_MERGED_SM_GoodsShelves_002
+[2025.10.31-05.27.20:856][718]LogActorFactory: Actor Factory spawned StaticMesh /Game/Meshes/MergeMesh/SM_MERGED_SM_GoodsShelves_002.SM_MERGED_SM_GoodsShelves_002 as actor: StaticMeshActor /Game/Map/DT_FinalProject.DT_FinalProject:PersistentLevel.StaticMeshActor_79
+[2025.10.31-05.28.04:713][252]Cmd: DUPLICATE
+[2025.10.31-05.28.04:713][252]Cmd: ACTOR DUPLICATE
+[2025.10.31-05.28.40:256][329]Cmd: DUPLICATE
+[2025.10.31-05.28.40:256][329]Cmd: ACTOR DUPLICATE
+[2025.10.31-05.28.55:868][236]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2025.10.31-05.30.26:989][524]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 13485.149414
+[2025.10.31-05.30.27:238][539]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.10.31-05.30.27:238][539]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 13485.383789, Update Interval: 341.086456
+[2025.10.31-05.31.42:002][863]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.10.31-05.31.42:034][863]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Map/DT_FinalProject" FILE="D:/DT_ProjectFinal/DT_ProjectFinal/Content/Map/DT_FinalProject.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.10.31-05.31.42:077][863]LogUObjectHash: Compacting FUObjectHashTables data took   0.70ms
+[2025.10.31-05.31.42:208][863]LogSavePackage: Moving output files for package: /Game/Map/DT_FinalProject
+[2025.10.31-05.31.42:208][863]LogSavePackage: Moving 'D:/DT_ProjectFinal/DT_ProjectFinal/Saved/DT_FinalProject1EC8DB8B4CBB66125995DA86E97D4E2D.tmp' to 'D:/DT_ProjectFinal/DT_ProjectFinal/Content/Map/DT_FinalProject.umap'
+[2025.10.31-05.31.42:219][863]LogFileHelpers: Saving map 'DT_FinalProject' took 0.185
+[2025.10.31-05.31.42:224][863]LogFileHelpers: InternalPromptForCheckoutAndSave took 222.579 ms (total: 3.13 sec)
+[2025.10.31-05.31.42:284][863]LogContentValidation: Display: Starting to validate 1 assets
+[2025.10.31-05.31.42:284][863]LogContentValidation: Enabled validators:
+[2025.10.31-05.31.42:284][863]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.10.31-05.31.42:284][863]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.10.31-05.31.42:284][863]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.10.31-05.31.42:284][863]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.10.31-05.31.42:284][863]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.10.31-05.31.42:284][863]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.10.31-05.31.42:284][863]AssetCheck: /Game/Map/DT_FinalProject Validating asset
+[2025.10.31-05.32.27:154][466]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.10.31-05.32.27:219][466]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Map/DT_FinalProject" FILE="D:/DT_ProjectFinal/DT_ProjectFinal/Content/Map/DT_FinalProject.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.10.31-05.32.27:259][466]LogUObjectHash: Compacting FUObjectHashTables data took   0.31ms
+[2025.10.31-05.32.27:387][466]LogSavePackage: Moving output files for package: /Game/Map/DT_FinalProject
+[2025.10.31-05.32.27:387][466]LogSavePackage: Moving 'D:/DT_ProjectFinal/DT_ProjectFinal/Saved/DT_FinalProject0658E30F43FF00B1E2BAE483FC7F269A.tmp' to 'D:/DT_ProjectFinal/DT_ProjectFinal/Content/Map/DT_FinalProject.umap'
+[2025.10.31-05.32.27:398][466]LogFileHelpers: Saving map 'DT_FinalProject' took 0.179
+[2025.10.31-05.32.27:407][466]LogFileHelpers: InternalPromptForCheckoutAndSave took 252.847 ms (total: 3.39 sec)
+[2025.10.31-05.32.27:452][466]LogContentValidation: Display: Starting to validate 1 assets
+[2025.10.31-05.32.27:452][466]LogContentValidation: Enabled validators:
+[2025.10.31-05.32.27:452][466]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.10.31-05.32.27:452][466]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.10.31-05.32.27:452][466]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.10.31-05.32.27:452][466]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.10.31-05.32.27:452][466]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.10.31-05.32.27:452][466]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.10.31-05.32.27:452][466]AssetCheck: /Game/Map/DT_FinalProject Validating asset
+[2025.10.31-05.36.43:934][382]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 13861.780273
+[2025.10.31-05.36.44:934][385]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.10.31-05.36.44:934][385]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 13862.448242, Update Interval: 354.069031
+[2025.10.31-05.42.01:140][863]LogAssetEditorSubsystem: Opening Asset editor for StaticMesh /Game/Meshes/MergeMesh/SM_MERGED_SM_GoodsShelves_002.SM_MERGED_SM_GoodsShelves_002
+[2025.10.31-05.42.01:150][863]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_15
+[2025.10.31-05.42.05:190][ 25]LogUObjectHash: Compacting FUObjectHashTables data took   0.61ms
+[2025.10.31-05.42.05:323][ 25]LogSlate: Last resort fallback font was requested. Font: '<unknown>', Character: '<unknown>'
+[2025.10.31-05.42.05:336][ 25]LogSlate: Took 0.011158 seconds to synchronously load lazily loaded font '../../../Engine/Content/SlateDebug/Fonts/LastResort.ttf' (5269K)
+[2025.10.31-05.42.06:282][ 25]LogSlate: Window 'Delete Assets' being destroyed
+[2025.10.31-05.42.06:391][ 25]LogWorld: UWorld::CleanupWorld for World_8, bSessionEnded=true, bCleanupResources=true
+[2025.10.31-05.42.06:391][ 25]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.10.31-05.42.06:415][ 25]LogUObjectGlobals: Force Deleting 1 Package(s):
+	Asset Name: /Game/Meshes/MergeMesh/SM_MERGED_SM_GoodsShelves_001.SM_MERGED_SM_GoodsShelves_001
+	Asset Type: StaticMesh
+[2025.10.31-05.42.06:641][ 25]LogUObjectHash: Compacting FUObjectHashTables data took   0.63ms
+[2025.10.31-05.42.06:663][ 25]LogUObjectHash: Compacting FUObjectHashTables data took   0.55ms
+[2025.10.31-05.42.06:681][ 25]LogUObjectHash: Compacting FUObjectHashTables data took   0.29ms
+[2025.10.31-05.42.06:703][ 25]LogUObjectHash: Compacting FUObjectHashTables data took   0.30ms
+[2025.10.31-05.42.06:723][ 25]LogSourceControl: Display: Uncontrolled Changelist persistency file saved D:/DT_ProjectFinal/DT_ProjectFinal/Saved/SourceControl/UncontrolledChangelists.json
+[2025.10.31-05.42.10:341][241]LogContentBrowser: Attempting asset rename: SM_MERGED_SM_GoodsShelves_002 -> SM_MERGED_SM_GoodsShelves_001
+[2025.10.31-05.42.10:487][241]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.10.31-05.42.10:487][241]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Meshes/MergeMesh/SM_MERGED_SM_GoodsShelves_001] ([1] browsable assets)...
+[2025.10.31-05.42.10:487][241]OBJ SavePackage: Finished generating thumbnails for package [/Game/Meshes/MergeMesh/SM_MERGED_SM_GoodsShelves_001]
+[2025.10.31-05.42.10:487][241]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Meshes/MergeMesh/SM_MERGED_SM_GoodsShelves_001" FILE="D:/DT_ProjectFinal/DT_ProjectFinal/Content/Meshes/MergeMesh/SM_MERGED_SM_GoodsShelves_001.uasset" SILENT=true
+[2025.10.31-05.42.10:511][241]LogSavePackage: Moving output files for package: /Game/Meshes/MergeMesh/SM_MERGED_SM_GoodsShelves_001
+[2025.10.31-05.42.10:511][241]LogSavePackage: Moving 'D:/DT_ProjectFinal/DT_ProjectFinal/Saved/SM_MERGED_SM_GoodsShelves_001721F2F22467247A8F8D420ACD3088D35.tmp' to 'D:/DT_ProjectFinal/DT_ProjectFinal/Content/Meshes/MergeMesh/SM_MERGED_SM_GoodsShelves_001.uasset'
+[2025.10.31-05.42.10:512][241]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Meshes/MergeMesh/SM_MERGED_SM_GoodsShelves_002] ([1] browsable assets)...
+[2025.10.31-05.42.10:512][241]OBJ SavePackage: Finished generating thumbnails for package [/Game/Meshes/MergeMesh/SM_MERGED_SM_GoodsShelves_002]
+[2025.10.31-05.42.10:512][241]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Meshes/MergeMesh/SM_MERGED_SM_GoodsShelves_002" FILE="D:/DT_ProjectFinal/DT_ProjectFinal/Content/Meshes/MergeMesh/SM_MERGED_SM_GoodsShelves_002.uasset" SILENT=true
+[2025.10.31-05.42.10:519][241]LogSavePackage: Moving output files for package: /Game/Meshes/MergeMesh/SM_MERGED_SM_GoodsShelves_002
+[2025.10.31-05.42.10:519][241]LogSavePackage: Moving 'D:/DT_ProjectFinal/DT_ProjectFinal/Saved/SM_MERGED_SM_GoodsShelves_002F693E7AF466A3E09AE2E8186D3F26FFD.tmp' to 'D:/DT_ProjectFinal/DT_ProjectFinal/Content/Meshes/MergeMesh/SM_MERGED_SM_GoodsShelves_002.uasset'
+[2025.10.31-05.42.10:520][241]LogFileHelpers: InternalPromptForCheckoutAndSave took 33.184 ms (total: 3.42 sec)
+[2025.10.31-05.42.10:571][241]LogContentValidation: Display: Starting to validate 2 assets
+[2025.10.31-05.42.10:571][241]LogContentValidation: Enabled validators:
+[2025.10.31-05.42.10:571][241]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.10.31-05.42.10:572][241]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.10.31-05.42.10:572][241]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.10.31-05.42.10:572][241]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.10.31-05.42.10:572][241]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.10.31-05.42.10:572][241]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.10.31-05.42.10:572][241]AssetCheck: /Game/Meshes/MergeMesh/SM_MERGED_SM_GoodsShelves_001 Validating asset
+[2025.10.31-05.42.10:572][241]AssetCheck: /Game/Meshes/MergeMesh/SM_MERGED_SM_GoodsShelves_002 Validating asset
+[2025.10.31-05.42.49:272][531]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.10.31-05.42.49:305][531]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Map/DT_FinalProject" FILE="D:/DT_ProjectFinal/DT_ProjectFinal/Content/Map/DT_FinalProject.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.10.31-05.42.49:343][531]LogUObjectHash: Compacting FUObjectHashTables data took   0.60ms
+[2025.10.31-05.42.49:469][531]LogSavePackage: Moving output files for package: /Game/Map/DT_FinalProject
+[2025.10.31-05.42.49:469][531]LogSavePackage: Moving 'D:/DT_ProjectFinal/DT_ProjectFinal/Saved/DT_FinalProject3B80A5AD47E5875C84D5EE96CB340250.tmp' to 'D:/DT_ProjectFinal/DT_ProjectFinal/Content/Map/DT_FinalProject.umap'
+[2025.10.31-05.42.49:480][531]LogFileHelpers: Saving map 'DT_FinalProject' took 0.174
+[2025.10.31-05.42.49:485][531]LogFileHelpers: InternalPromptForCheckoutAndSave took 212.576 ms (total: 3.63 sec)
+[2025.10.31-05.42.49:554][531]LogContentValidation: Display: Starting to validate 1 assets
+[2025.10.31-05.42.49:554][531]LogContentValidation: Enabled validators:
+[2025.10.31-05.42.49:554][531]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.10.31-05.42.49:554][531]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.10.31-05.42.49:554][531]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.10.31-05.42.49:554][531]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.10.31-05.42.49:554][531]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.10.31-05.42.49:554][531]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.10.31-05.42.49:554][531]AssetCheck: /Game/Map/DT_FinalProject Validating asset
+[2025.10.31-05.43.10:808][542]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 14248.560547
+[2025.10.31-05.43.11:078][556]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.10.31-05.43.11:078][556]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 14248.808594, Update Interval: 330.022888
+[2025.10.31-05.43.13:058][672]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/Car/SM_Car_Body.SM_Car_Body
+[2025.10.31-05.43.13:058][672]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/Car/SM_Car_Body.SM_Car_Body
+[2025.10.31-05.43.13:062][672]LogActorFactory: Actor Factory spawned StaticMesh /Game/Meshes/Car/SM_Car_Body.SM_Car_Body as actor: StaticMeshActor /Game/Map/DT_FinalProject.DT_FinalProject:PersistentLevel.StaticMeshActor_82
+[2025.10.31-05.43.14:285][744]LogUObjectHash: Compacting FUObjectHashTables data took   0.30ms
+[2025.10.31-05.43.14:287][744]LogEditorActor: Deleted 0 Actors (0.020 secs)
+[2025.10.31-05.43.14:292][744]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/Car/SM_Car_Body.SM_Car_Body
+[2025.10.31-05.43.14:292][744]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/Car/SM_Car_Body.SM_Car_Body
+[2025.10.31-05.43.14:296][744]LogActorFactory: Actor Factory spawned StaticMesh /Game/Meshes/Car/SM_Car_Body.SM_Car_Body as actor: StaticMeshActor /Game/Map/DT_FinalProject.DT_FinalProject:PersistentLevel.StaticMeshActor_83
+[2025.10.31-05.44.01:659][171]Cmd: TRANSACTION UNDO
+[2025.10.31-05.44.01:659][171]LogEditorTransaction: Undo Move Elements
+[2025.10.31-05.44.08:057][171]LogControlRig: Warning: The dependency '/Game/Map/DT_FinalProject.DT_FinalProject:PersistentLevel.BP_RobotArm_C_1.SkeletalMesh' is a parent component of dependent '/Game/Map/DT_FinalProject.DT_FinalProject:PersistentLevel.BP_RobotArm_C_1.ControlRig'.
+The dependency '/Game/Map/DT_FinalProject.DT_FinalProject:PersistentLevel.BP_RobotArm_C_1.ControlRig' depends on dependent '/Game/Map/DT_FinalProject.DT_FinalProject:PersistentLevel.BP_RobotArm_C_1.SkeletalMesh'. This would cause a cycle.
+[2025.10.31-05.46.59:660][704]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/Car/SM_CarBody_002.SM_CarBody_002
+[2025.10.31-05.46.59:660][704]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/Car/SM_CarBody_002.SM_CarBody_002
+[2025.10.31-05.46.59:664][704]LogActorFactory: Actor Factory spawned StaticMesh /Game/Meshes/Car/SM_CarBody_002.SM_CarBody_002 as actor: StaticMeshActor /Game/Map/DT_FinalProject.DT_FinalProject:PersistentLevel.StaticMeshActor_84
+[2025.10.31-05.47.02:087][849]LogUObjectHash: Compacting FUObjectHashTables data took   0.55ms
+[2025.10.31-05.47.02:136][849]LogEditorActor: Deleted 0 Actors (0.066 secs)
+[2025.10.31-05.47.02:141][849]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/Car/SM_CarBody_002.SM_CarBody_002
+[2025.10.31-05.47.02:141][849]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Meshes/Car/SM_CarBody_002.SM_CarBody_002
+[2025.10.31-05.47.02:144][849]LogActorFactory: Actor Factory spawned StaticMesh /Game/Meshes/Car/SM_CarBody_002.SM_CarBody_002 as actor: StaticMeshActor /Game/Map/DT_FinalProject.DT_FinalProject:PersistentLevel.StaticMeshActor_85
+[2025.10.31-05.47.19:246][858]LogDerivedDataCache: C:/Users/User/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:00.000 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 0 files in 1 folders with total size 0 MiB.
