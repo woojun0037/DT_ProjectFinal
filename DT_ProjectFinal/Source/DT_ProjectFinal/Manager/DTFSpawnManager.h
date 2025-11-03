@@ -33,8 +33,8 @@ public:
 	UPROPERTY(VisibleInstanceOnly, Category = "CarFrame Spawn Points")
 	TArray<AActor*> FrameSpawnPoints;
 
-	UPROPERTY(VisibleInstanceOnly, Category = "CarFrame Spawn Points")
-	TArray<AActor*> LineSpawnPoints;
+	UPROPERTY(VisibleInstanceOnly, Category = "CarParts Spawn Points")
+	TArray<AActor*> PartsSpawnPoints;
 
 	UPROPERTY(EditAnywhere, Category = "Spawn")
 	FName SelectedLine = "LineA";

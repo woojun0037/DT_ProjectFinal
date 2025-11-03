@@ -1,14 +1,14 @@
 ﻿#include "DeliveryRobot/DTFDeliveryRobot.h"
-#include "AIController.h"
 #include "Navigation/PathFollowingComponent.h"
+#include "AIController.h"
 
 ADTFDeliveryRobot::ADTFDeliveryRobot()
 {
-
 	PrimaryActorTick.bCanEverTick = true;
 
 	RobotMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("RobotMesh"));
-	RootComponent = RobotMesh;
+	SetRootComponent(RobotMesh);
+	//RootComponent = RobotMesh;
 
 	AttachPoint = CreateDefaultSubobject<USceneComponent>(TEXT("AttachPoint"));
 	AttachPoint->SetupAttachment(RobotMesh);
@@ -30,7 +30,7 @@ void ADTFDeliveryRobot::BeginPlay()
 	if (!PartsSpawnPoint)
 	{
 		TArray<AActor*> FoundActors;
-		UGameplayStatics::GetAllActorsWithTag(GetWorld(), FName("PartsSpawnPoint"), FoundActors);
+		UGameplayStatics::GetAllActorsWithTag(GetWorld(), FName("PartsSpawnPoints"), FoundActors);
 
 		if (FoundActors.Num() > 0)
 		{
@@ -58,6 +58,16 @@ void ADTFDeliveryRobot::BeginPlay()
 	else
 	{
 		UE_LOG(LogTemp, Log, TEXT("Delivery targets assined from BP : %d Targets"), DeliveryTargets.Num());
+	}
+
+	if (AAIController* AICon = Cast<AAIController>(GetController()))
+	{
+		UPathFollowingComponent* PathFollowingComp = AICon->GetPathFollowingComponent();
+		if (PathFollowingComp)
+		{
+			PathFollowingComp->OnRequestFinished.AddUObject(this, &ADTFDeliveryRobot::OnMoveCompleted);
+			UE_LOG(LogTemp, Log, TEXT("Bound OnMoveCompleted delegate via Path Following Component"));
+		}
 	}
 }
 
@@ -159,9 +169,18 @@ void ADTFDeliveryRobot::StartDelivery()
 	}
 
 	CurrentState = ERobotState::MovingToPickUp;
-	MoveToLocation(PartsSpawnPoint->GetActorLocation());
+
+	FVector loc = PartsSpawnPoint->GetActorLocation();
+	loc.Z = GetActorLocation().Z;
+
+	MoveToLocation(loc);
 
 	UE_LOG(LogTemp, Log, TEXT("Starting Delivery to %d Targets"), DeliveryTargets.Num());
+}
+
+void ADTFDeliveryRobot::OnMoveCompleted(FAIRequestID RequestID, const FPathFollowingResult& Result)
+{
+
 }
 
 

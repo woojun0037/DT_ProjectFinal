@@ -4,6 +4,8 @@
 #include "GameFramework/Pawn.h"
 #include "GameFramework/FloatingPawnMovement.h"
 #include "Kismet/GameplayStatics.h"
+#include "AIController.h"
+#include "Navigation/PathFollowingComponent.h"
 #include "DTFDeliveryRobot.generated.h"
 
 
@@ -77,4 +79,7 @@ protected:
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "Delivery")
 	void OnDropComplete();
+
+	//이동 끝
+	void OnMoveCompleted(FAIRequestID RequestID, const FPathFollowingResult& Result);
 };

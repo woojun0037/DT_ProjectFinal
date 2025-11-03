@@ -31,8 +31,8 @@ void ADTFSpawnManager::InitialPosition()
 	TArray<AActor*> FoundFrameActors;
 	UGameplayStatics::GetAllActorsWithTag(GetWorld(), FName("FrameSpawnTag"), FoundFrameActors);
 
-	TArray<AActor*> FoundLineActors;
-	UGameplayStatics::GetAllActorsWithTag(GetWorld(), FName("LineSpawnTag"), FoundLineActors);
+	TArray<AActor*> FoundPartsActors;
+	UGameplayStatics::GetAllActorsWithTag(GetWorld(), FName("PartsSpawnPoints"), FoundPartsActors);
 
 	//이름 순서로 먼저 정렬, 그다음 숫자 순서로 정렬하는 Sort 함수를 사용한 람다식
 	FoundFrameActors.Sort([this](const AActor& A, const AActor& B)
@@ -50,7 +50,7 @@ void ADTFSpawnManager::InitialPosition()
 			return AFrame < BFrame;
 		});
 
-	FoundLineActors.Sort([this](const AActor& A, const AActor& B)
+	FoundPartsActors.Sort([this](const AActor& A, const AActor& B)
 		{
 			FString ALine; int32 ALineIndex;
 			FString BLine; int32 BLineIndex;
@@ -68,8 +68,8 @@ void ADTFSpawnManager::InitialPosition()
 	FrameSpawnPoints = FoundFrameActors;
 	UE_LOG(LogTemp, Log, TEXT("Found %d Frame spawn points"), FrameSpawnPoints.Num());
 
-	LineSpawnPoints  = FoundLineActors;
-	UE_LOG(LogTemp, Log, TEXT("Found %d Line spawn points"), LineSpawnPoints.Num());
+	PartsSpawnPoints = FoundPartsActors;
+	UE_LOG(LogTemp, Log, TEXT("Found %d Parts spawn points"), PartsSpawnPoints.Num());
 }
 
 void ADTFSpawnManager::ParseSpawnPointName(const FString& Name, FString& OutLine, int32& OutIndex)
@@ -136,11 +136,11 @@ void ADTFSpawnManager::SpawnCarParts()
 	}
 
 	// LineSpawnPoints도 AActor* 배열이므로 GetActorLocation() 사용
-	if (LineSpawnPoints.IsValidIndex(LineIdx) && LineSpawnPoints[LineIdx])
+	if (PartsSpawnPoints.IsValidIndex(LineIdx) && PartsSpawnPoints[LineIdx])
 	{
-		PartLocation = LineSpawnPoints[LineIdx]->GetActorLocation();
-		PartRotation = LineSpawnPoints[LineIdx]->GetActorRotation();
-		UE_LOG(LogTemp, Warning, TEXT("LinePoints index %d range"), LineIdx);
+		PartLocation = PartsSpawnPoints[LineIdx]->GetActorLocation();
+		PartRotation = PartsSpawnPoints[LineIdx]->GetActorRotation();
+		UE_LOG(LogTemp, Warning, TEXT("PartsSpawnPoint index %d range"), LineIdx);
 	}
 	else
 	{
