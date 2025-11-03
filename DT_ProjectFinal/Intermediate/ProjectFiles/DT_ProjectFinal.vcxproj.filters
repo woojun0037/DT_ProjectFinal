@@ -66,6 +66,15 @@
     <ClInclude Include="..\..\Source\DT_ProjectFinal\DataAsset\DTFDataAsset.h">
       <Filter>Source\DT_ProjectFinal\DataAsset</Filter>
     </ClInclude>
+    <Filter Include="Source\DT_ProjectFinal\DeliveryRobot">
+      <UniqueIdentifier>{D2986DA7-0CD0-3EBB-9FF6-F833CA8F4EF0}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DT_ProjectFinal\DeliveryRobot\DTFDeliveryRobot.cpp">
+      <Filter>Source\DT_ProjectFinal\DeliveryRobot</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT_ProjectFinal\DeliveryRobot\DTFDeliveryRobot.h">
+      <Filter>Source\DT_ProjectFinal\DeliveryRobot</Filter>
+    </ClInclude>
     <Filter Include="Source\DT_ProjectFinal\Interface">
       <UniqueIdentifier>{686122F5-91EF-3121-801F-FD2B7A2B860D}</UniqueIdentifier>
     </Filter>
