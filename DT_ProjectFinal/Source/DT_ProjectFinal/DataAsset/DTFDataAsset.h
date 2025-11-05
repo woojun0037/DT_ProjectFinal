@@ -1,6 +1,4 @@
-﻿// Fill out your copyright notice in the Description page of Project Settings.
-
-#pragma once
+﻿#pragma once
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
 #include "DTFDataAsset.generated.h"
@@ -28,17 +26,19 @@ struct FPartsInfo
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Parts Offset")
 	float OffsetZ = 0.f;
 
-	FPartsInfo() : PartsNamePattern(TEXT("")), OffsetX(0.f), OffsetY(0.f), OffsetZ(0.f)
+	FPartsInfo() :PartsName(),PartsMesh(), PartsNamePattern(TEXT("")), OffsetX(0.f), OffsetY(0.f), OffsetZ(0.f)
 	{}
 
 	FPartsInfo(const FString& Pattern, float X, float Y = 0.f, float Z = 0.f)
-		: PartsNamePattern(Pattern), OffsetX(X), OffsetY(Y), OffsetZ(Z) 
+		: PartsName(), PartsMesh(), PartsNamePattern(Pattern), OffsetX(X), OffsetY(Y), OffsetZ(Z)
 	{}
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "SpawnTransfrom")
-	FTransform transform;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "SpawnTransform")
+	FTransform Transform;
 	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Parts Mirroring")
 	bool bMirrorX = false;
+
 	bool bIsFrame(const FString& FrameName) const
 	{
 		return PartsName == FrameName;

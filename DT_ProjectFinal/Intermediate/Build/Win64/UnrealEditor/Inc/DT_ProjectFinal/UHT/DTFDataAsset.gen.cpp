@@ -63,8 +63,12 @@ struct Z_Construct_UScriptStruct_FPartsInfo_Statics
 		{ "Category", "Parts Offset" },
 		{ "ModuleRelativePath", "DataAsset/DTFDataAsset.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_transform_MetaData[] = {
-		{ "Category", "SpawnTransfrom" },
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Transform_MetaData[] = {
+		{ "Category", "SpawnTransform" },
+		{ "ModuleRelativePath", "DataAsset/DTFDataAsset.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bMirrorX_MetaData[] = {
+		{ "Category", "Parts Mirroring" },
 		{ "ModuleRelativePath", "DataAsset/DTFDataAsset.h" },
 	};
 #endif // WITH_METADATA
@@ -74,7 +78,9 @@ struct Z_Construct_UScriptStruct_FPartsInfo_Statics
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_OffsetX;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_OffsetY;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_OffsetZ;
-	static const UECodeGen_Private::FStructPropertyParams NewProp_transform;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_Transform;
+	static void NewProp_bMirrorX_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bMirrorX;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static void* NewStructOps()
 	{
@@ -88,7 +94,12 @@ const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FPartsInfo
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FPartsInfo_Statics::NewProp_OffsetX = { "OffsetX", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FPartsInfo, OffsetX), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OffsetX_MetaData), NewProp_OffsetX_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FPartsInfo_Statics::NewProp_OffsetY = { "OffsetY", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FPartsInfo, OffsetY), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OffsetY_MetaData), NewProp_OffsetY_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FPartsInfo_Statics::NewProp_OffsetZ = { "OffsetZ", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FPartsInfo, OffsetZ), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OffsetZ_MetaData), NewProp_OffsetZ_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FPartsInfo_Statics::NewProp_transform = { "transform", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FPartsInfo, transform), Z_Construct_UScriptStruct_FTransform, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_transform_MetaData), NewProp_transform_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FPartsInfo_Statics::NewProp_Transform = { "Transform", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FPartsInfo, Transform), Z_Construct_UScriptStruct_FTransform, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Transform_MetaData), NewProp_Transform_MetaData) };
+void Z_Construct_UScriptStruct_FPartsInfo_Statics::NewProp_bMirrorX_SetBit(void* Obj)
+{
+	((FPartsInfo*)Obj)->bMirrorX = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FPartsInfo_Statics::NewProp_bMirrorX = { "bMirrorX", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(FPartsInfo), &Z_Construct_UScriptStruct_FPartsInfo_Statics::NewProp_bMirrorX_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bMirrorX_MetaData), NewProp_bMirrorX_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FPartsInfo_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FPartsInfo_Statics::NewProp_PartsName,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FPartsInfo_Statics::NewProp_PartsMesh,
@@ -96,7 +107,8 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FP
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FPartsInfo_Statics::NewProp_OffsetX,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FPartsInfo_Statics::NewProp_OffsetY,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FPartsInfo_Statics::NewProp_OffsetZ,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FPartsInfo_Statics::NewProp_transform,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FPartsInfo_Statics::NewProp_Transform,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FPartsInfo_Statics::NewProp_bMirrorX,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FPartsInfo_Statics::PropPointers) < 2048);
 const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FPartsInfo_Statics::StructParams = {
@@ -182,8 +194,8 @@ struct Z_Construct_UClass_UDTFDataAsset_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UDTFDataAsset_Statics::NewProp_Parts_Inner = { "Parts", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FPartsInfo, METADATA_PARAMS(0, nullptr) }; // 2208304747
-const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UDTFDataAsset_Statics::NewProp_Parts = { "Parts", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UDTFDataAsset, Parts), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Parts_MetaData), NewProp_Parts_MetaData) }; // 2208304747
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UDTFDataAsset_Statics::NewProp_Parts_Inner = { "Parts", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FPartsInfo, METADATA_PARAMS(0, nullptr) }; // 538279332
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UDTFDataAsset_Statics::NewProp_Parts = { "Parts", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UDTFDataAsset, Parts), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Parts_MetaData), NewProp_Parts_MetaData) }; // 538279332
 const UECodeGen_Private::FSoftClassPropertyParams Z_Construct_UClass_UDTFDataAsset_Statics::NewProp_PartActorClass = { "PartActorClass", nullptr, (EPropertyFlags)0x0014000000000015, UECodeGen_Private::EPropertyGenFlags::SoftClass, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UDTFDataAsset, PartActorClass), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PartActorClass_MetaData), NewProp_PartActorClass_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UDTFDataAsset_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDTFDataAsset_Statics::NewProp_Parts_Inner,
@@ -228,13 +240,13 @@ UDTFDataAsset::~UDTFDataAsset() {}
 struct Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_DataAsset_DTFDataAsset_h__Script_DT_ProjectFinal_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FPartsInfo::StaticStruct, Z_Construct_UScriptStruct_FPartsInfo_Statics::NewStructOps, TEXT("PartsInfo"), &Z_Registration_Info_UScriptStruct_FPartsInfo, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FPartsInfo), 2208304747U) },
+		{ FPartsInfo::StaticStruct, Z_Construct_UScriptStruct_FPartsInfo_Statics::NewStructOps, TEXT("PartsInfo"), &Z_Registration_Info_UScriptStruct_FPartsInfo, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FPartsInfo), 538279332U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UDTFDataAsset, UDTFDataAsset::StaticClass, TEXT("UDTFDataAsset"), &Z_Registration_Info_UClass_UDTFDataAsset, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UDTFDataAsset), 1621203549U) },
+		{ Z_Construct_UClass_UDTFDataAsset, UDTFDataAsset::StaticClass, TEXT("UDTFDataAsset"), &Z_Registration_Info_UClass_UDTFDataAsset, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UDTFDataAsset), 1241820944U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_DataAsset_DTFDataAsset_h__Script_DT_ProjectFinal_1236244434(TEXT("/Script/DT_ProjectFinal"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_DataAsset_DTFDataAsset_h__Script_DT_ProjectFinal_2667962958(TEXT("/Script/DT_ProjectFinal"),
 	Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_DataAsset_DTFDataAsset_h__Script_DT_ProjectFinal_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_DataAsset_DTFDataAsset_h__Script_DT_ProjectFinal_Statics::ClassInfo),
 	Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_DataAsset_DTFDataAsset_h__Script_DT_ProjectFinal_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_DataAsset_DTFDataAsset_h__Script_DT_ProjectFinal_Statics::ScriptStructInfo),
 	nullptr, 0);

@@ -17,7 +17,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin ScriptStruct FPartsInfo ********************************************************
-#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_DataAsset_DTFDataAsset_h_11_GENERATED_BODY \
+#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_DataAsset_DTFDataAsset_h_9_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FPartsInfo_Statics; \
 	DT_PROJECTFINAL_API static class UScriptStruct* StaticStruct();
 

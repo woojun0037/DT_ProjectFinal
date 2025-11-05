@@ -45,6 +45,12 @@ public:
 	UPROPERTY(EditAnywhere, Category = "FrameParts")
 	FString FramePartsName = TEXT("SM_Car_Body");
 
+	UPROPERTY(EditAnywhere, Category = "HoodParts")
+	FString HoodPartsName = TEXT("SM_CarHodd");
+
+	UPROPERTY(EditAnywhere, Category = "BootParts")
+	FString BootPartsName = TEXT("SM_CarBoot");
+
 	//스폰 된 액터를 관리 하기위해서
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	TMap<FName, FPartActorArray> PartsMap;

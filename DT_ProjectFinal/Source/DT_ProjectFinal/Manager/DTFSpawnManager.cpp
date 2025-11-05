@@ -5,16 +5,10 @@ ADTFSpawnManager::ADTFSpawnManager()
 	PrimaryActorTick.bCanEverTick = false;
 	RootComponent = CreateDefaultSubobject<USceneComponent>((TEXT("RootComponent")));
 
-	PartsOffsetList = {
-		FPartsInfo(TEXT("Hood") ,100.f, 0.f, 0.f),
-		FPartsInfo(TEXT("Left") ,100.f, 0.f, 0.f),
-		FPartsInfo(TEXT("Boot") ,100.f, 0.f, 0.f),
-		FPartsInfo(TEXT("Right"),100.f, 0.f, 0.f)
-	};
-	//PartsOffsetList.Add();
-	//PartsOffsetList.Add();
-	//PartsOffsetList.Add();
-	//PartsOffsetList.Add();
+	PartsOffsetList.Add(FPartsInfo(TEXT("Hood" ) , 0.f, 0.f, 0.f));
+	PartsOffsetList.Add(FPartsInfo(TEXT("Left" ) , 0.f, 0.f, 0.f));
+	PartsOffsetList.Add(FPartsInfo(TEXT("Boot" ) , 0.f, 0.f, 0.f));
+	PartsOffsetList.Add(FPartsInfo(TEXT("Right") , 0.f, 0.f, 0.f));
 }
 
 void ADTFSpawnManager::BeginPlay()
