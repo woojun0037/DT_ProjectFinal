@@ -38,7 +38,7 @@ public:
 	bool bIsAssemble;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Parts Name")
-	FString PartsName;
+	FName PartsName;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly,Category = "Assembly")
 	FAttachmentTransform AttachTransform;

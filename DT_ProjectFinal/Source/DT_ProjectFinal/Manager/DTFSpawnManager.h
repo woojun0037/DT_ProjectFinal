@@ -26,6 +26,7 @@ public:
 protected:
 
 	virtual void BeginPlay() override;
+
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SpawnData")
 	UDTFDataAsset* CarPartsDataAsset;
@@ -40,20 +41,20 @@ public:
 	FName SelectedLine = "LineA";
 
 	UPROPERTY(EditAnywhere, Category = "FrameParts")
-	FString FramePartsName = TEXT("SM_Car_Body");
+	FName FramePartsName = TEXT("SM_Car_Body");
 
 	UPROPERTY(EditAnywhere, Category = "HoodParts")
-	FString HoodPartsName = TEXT("SM_CarHodd");
+	FName HoodPartsName = TEXT("SM_CarHodd");
 
 	UPROPERTY(EditAnywhere, Category = "BootParts")
-	FString BootPartsName = TEXT("SM_CarBoot");
+	FName BootPartsName = TEXT("SM_CarBoot");
 
 	//스폰 된 액터를 관리 하기위해서
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	TMap<FName, FPartActorArray> PartsMap;
 	
 	UFUNCTION(BlueprintCallable, Category = "PartsClass")
-	TSubclassOf <AActor> GetPartActorClass();
+	TSubclassOf <AActor> GetPartsActorClass();
 
 private:
 	static constexpr float PARTS_OFFSET_DISTANCE = 50.f;
@@ -63,13 +64,12 @@ private:
 
 	void SpawnCarParts();
 
-	FTransform CarculateSpawnTransform(const FTransform& BaseTransform, const FPartsInfo& PartInfo, int32 Index, bool bIsFrame);
+	FTransform CarculateSpawnTransform(const FTransform& BaseTransform, const FPartsInfo& PartsInfo, int32 Index, bool bIsFrame);
 	FTransform CreateMirroedTransform (const FTransform& BaseTransform, bool bMirrorX);
-	FTransform GetOffsetTransform (const FTransform& BaseTransform, const FString& PartName, int32 Index, float Offset);
-	FVector GetPartsSpecificOffset(const FString& PartName) const;
-
+	FTransform GetOffsetTransform     (const FTransform& BaseTransform, const FPartsInfo& PartsInfo, int32 Index, float Offset);
+	
 	UClass* FrameClass;
-	UClass* PartClass;
+	UClass* PartsClass;
 
 	int32 GetLineIndexByName(FName LineName)const;
 };

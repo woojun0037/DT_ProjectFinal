@@ -9,29 +9,16 @@ struct FPartsInfo
 	GENERATED_BODY()
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Parts Name")
-	FString PartsName;
+	FName PartsName;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Parts Mesh")
 	UStaticMesh* PartsMesh;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Parts Offset")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Parts Name Pattern")
 	FString PartsNamePattern;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Parts Offset")
-	float OffsetX = 0.f;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Parts Offset")
-	float OffsetY = 0.f;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Parts Offset")
-	float OffsetZ = 0.f;
-
-	FPartsInfo() :PartsName(),PartsMesh(), PartsNamePattern(TEXT("")), OffsetX(0.f), OffsetY(0.f), OffsetZ(0.f)
-	{}
-
-	FPartsInfo(const FString& Pattern, float X, float Y = 0.f, float Z = 0.f)
-		: PartsName(), PartsMesh(), PartsNamePattern(Pattern), OffsetX(X), OffsetY(Y), OffsetZ(Z)
-	{}
+	FTransform PartsOffsetTransform = FTransform::Identity;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "SpawnTransform")
 	FTransform Transform;
@@ -39,12 +26,15 @@ struct FPartsInfo
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Parts Mirroring")
 	bool bMirrorX = false;
 
-	bool bIsFrame(const FString& FrameName) const
+	FPartsInfo():PartsName(),PartsMesh(), PartsNamePattern(TEXT("")), 
+				 PartsOffsetTransform(FTransform::Identity), bMirrorX(false){}
+
+	bool bIsFrame(const FName& FrameName) const
 	{
 		return PartsName == FrameName;
 	}
 
-	int32 GetSpawnCount(const FString& FrameName) const
+	int32 GetSpawnCount(const FName& FrameName) const
 	{
 		return bIsFrame(FrameName) ? 1 : 2;
 	}
@@ -55,12 +45,10 @@ class DT_PROJECTFINAL_API UDTFDataAsset : public UDataAsset
 {
 	GENERATED_BODY()
 
-public:
-	UDTFDataAsset();
-	
+public:	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Parts")
 	TArray<FPartsInfo> Parts;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Part SoftObejct Info")
-	TSoftClassPtr<AActor> PartActorClass;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Parts SoftObejct Info")
+	TSoftClassPtr<AActor> PartsActorClass;
 };

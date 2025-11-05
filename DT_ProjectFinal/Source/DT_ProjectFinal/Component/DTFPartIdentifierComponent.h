@@ -19,6 +19,24 @@ protected:
 public:	
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Parts Info")
-	FName PartType;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Parts Info")
+	FName PartsType;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Parts Info")
+	FName PartsName;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Parts Info")
+	FString PartsNamePattern;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Parts Info")
+	FTransform Offset;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Parts Info")
+	bool bIsMirrored = false;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Parts Info")
+	bool bIsFrame = false;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Parts Info")
+	FVector CustomOffset = FVector::ZeroVector;
 };

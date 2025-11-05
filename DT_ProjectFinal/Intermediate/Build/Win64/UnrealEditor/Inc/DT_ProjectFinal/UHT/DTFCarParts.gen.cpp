@@ -146,7 +146,7 @@ struct Z_Construct_UClass_ADTFCarParts_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_PartsMesh;
 	static void NewProp_bIsAssemble_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsAssemble;
-	static const UECodeGen_Private::FStrPropertyParams NewProp_PartsName;
+	static const UECodeGen_Private::FNamePropertyParams NewProp_PartsName;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_AttachTransform;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
@@ -161,7 +161,7 @@ void Z_Construct_UClass_ADTFCarParts_Statics::NewProp_bIsAssemble_SetBit(void* O
 	((ADTFCarParts*)Obj)->bIsAssemble = 1;
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ADTFCarParts_Statics::NewProp_bIsAssemble = { "bIsAssemble", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ADTFCarParts), &Z_Construct_UClass_ADTFCarParts_Statics::NewProp_bIsAssemble_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bIsAssemble_MetaData), NewProp_bIsAssemble_MetaData) };
-const UECodeGen_Private::FStrPropertyParams Z_Construct_UClass_ADTFCarParts_Statics::NewProp_PartsName = { "PartsName", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTFCarParts, PartsName), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PartsName_MetaData), NewProp_PartsName_MetaData) };
+const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_ADTFCarParts_Statics::NewProp_PartsName = { "PartsName", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTFCarParts, PartsName), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PartsName_MetaData), NewProp_PartsName_MetaData) };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ADTFCarParts_Statics::NewProp_AttachTransform = { "AttachTransform", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTFCarParts, AttachTransform), Z_Construct_UScriptStruct_FAttachmentTransform, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AttachTransform_MetaData), NewProp_AttachTransform_MetaData) }; // 3884010519
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ADTFCarParts_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTFCarParts_Statics::NewProp_PartsMesh,
@@ -203,18 +203,18 @@ ADTFCarParts::~ADTFCarParts() {}
 // ********** End Class ADTFCarParts ***************************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_CarParts_DTFCarParts_h__Script_DT_ProjectFinal_Statics
+struct Z_CompiledInDeferFile_FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_CarParts_DTFCarParts_h__Script_DT_ProjectFinal_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
 		{ FAttachmentTransform::StaticStruct, Z_Construct_UScriptStruct_FAttachmentTransform_Statics::NewStructOps, TEXT("AttachmentTransform"), &Z_Registration_Info_UScriptStruct_FAttachmentTransform, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FAttachmentTransform), 3884010519U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ADTFCarParts, ADTFCarParts::StaticClass, TEXT("ADTFCarParts"), &Z_Registration_Info_UClass_ADTFCarParts, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADTFCarParts), 684763888U) },
+		{ Z_Construct_UClass_ADTFCarParts, ADTFCarParts::StaticClass, TEXT("ADTFCarParts"), &Z_Registration_Info_UClass_ADTFCarParts, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADTFCarParts), 869182198U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_CarParts_DTFCarParts_h__Script_DT_ProjectFinal_2720103234(TEXT("/Script/DT_ProjectFinal"),
-	Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_CarParts_DTFCarParts_h__Script_DT_ProjectFinal_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_CarParts_DTFCarParts_h__Script_DT_ProjectFinal_Statics::ClassInfo),
-	Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_CarParts_DTFCarParts_h__Script_DT_ProjectFinal_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_CarParts_DTFCarParts_h__Script_DT_ProjectFinal_Statics::ScriptStructInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_CarParts_DTFCarParts_h__Script_DT_ProjectFinal_384420623(TEXT("/Script/DT_ProjectFinal"),
+	Z_CompiledInDeferFile_FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_CarParts_DTFCarParts_h__Script_DT_ProjectFinal_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_CarParts_DTFCarParts_h__Script_DT_ProjectFinal_Statics::ClassInfo),
+	Z_CompiledInDeferFile_FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_CarParts_DTFCarParts_h__Script_DT_ProjectFinal_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_CarParts_DTFCarParts_h__Script_DT_ProjectFinal_Statics::ScriptStructInfo),
 	nullptr, 0);
 // ********** End Registration *********************************************************************
 
