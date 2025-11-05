@@ -1,14 +1,11 @@
 ﻿#include "Manager/DTFSpawnManager.h"
 #include "CarParts/DTFCarParts.h"
+
 ADTFSpawnManager::ADTFSpawnManager()
 {
 	PrimaryActorTick.bCanEverTick = false;
 	RootComponent = CreateDefaultSubobject<USceneComponent>((TEXT("RootComponent")));
 
-	PartsOffsetList.Add(FPartsInfo(TEXT("Hood" ) , 0.f, 0.f, 0.f));
-	PartsOffsetList.Add(FPartsInfo(TEXT("Left" ) , 0.f, 0.f, 0.f));
-	PartsOffsetList.Add(FPartsInfo(TEXT("Boot" ) , 0.f, 0.f, 0.f));
-	PartsOffsetList.Add(FPartsInfo(TEXT("Right") , 0.f, 0.f, 0.f));
 }
 
 void ADTFSpawnManager::BeginPlay()
@@ -269,11 +266,16 @@ FTransform ADTFSpawnManager::GetOffsetTransform(const FTransform& BaseTransform,
 
 FVector ADTFSpawnManager::GetPartsSpecificOffset(const FString& PartName) const
 {
-	for (const FPartsInfo& Setting : PartsOffsetList)
+	if (CarPartsDataAsset)
 	{
-		if (PartName.Contains(Setting.PartsName))
+		return FVector::ZeroVector;
+	}
+
+	for (const FPartsInfo& PartInfo : CarPartsDataAsset->Parts)
+	{
+		if (!PartInfo.PartsNamePattern.IsEmpty() && PartName.Contains(PartInfo.PartsNamePattern))
 		{
-			return FVector(Setting.OffsetX, Setting.OffsetX, Setting.OffsetZ);
+			return FVector(PartInfo.OffsetX, PartInfo.OffsetY, PartInfo.OffsetZ);
 		}
 	}
 	return FVector::ZeroVector;

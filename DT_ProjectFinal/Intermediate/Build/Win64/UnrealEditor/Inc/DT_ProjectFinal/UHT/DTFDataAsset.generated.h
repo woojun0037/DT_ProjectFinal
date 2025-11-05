@@ -40,14 +40,12 @@ public: \
 
 
 #define FID_DT_ProjectFinal_Source_DT_ProjectFinal_DataAsset_DTFDataAsset_h_56_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API UDTFDataAsset(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	UDTFDataAsset(UDTFDataAsset&&) = delete; \
 	UDTFDataAsset(const UDTFDataAsset&) = delete; \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UDTFDataAsset); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UDTFDataAsset); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UDTFDataAsset) \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UDTFDataAsset) \
 	NO_API virtual ~UDTFDataAsset();
 
 

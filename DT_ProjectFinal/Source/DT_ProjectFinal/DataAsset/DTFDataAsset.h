@@ -56,6 +56,8 @@ class DT_PROJECTFINAL_API UDTFDataAsset : public UDataAsset
 	GENERATED_BODY()
 
 public:
+	UDTFDataAsset();
+	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Parts")
 	TArray<FPartsInfo> Parts;
 

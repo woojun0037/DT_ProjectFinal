@@ -36,9 +36,6 @@ public:
 	UPROPERTY(VisibleInstanceOnly, Category = "CarParts Spawn Points")
 	TArray<AActor*> PartsSpawnPoints;
 	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CarParts Spawn Points")
-	TArray<FPartsInfo> PartsOffsetList;
-
 	UPROPERTY(EditAnywhere, Category = "Spawn")
 	FName SelectedLine = "LineA";
 
@@ -68,8 +65,8 @@ private:
 
 	FTransform CarculateSpawnTransform(const FTransform& BaseTransform, const FPartsInfo& PartInfo, int32 Index, bool bIsFrame);
 	FTransform CreateMirroedTransform (const FTransform& BaseTransform, bool bMirrorX);
-	FTransform GetOffsetTransform     (const FTransform& BaseTransform, const FString&    PartName, int32 Index, float Offset);
-	FVector    GetPartsSpecificOffset (const FString& PartName) const;
+	FTransform GetOffsetTransform (const FTransform& BaseTransform, const FString& PartName, int32 Index, float Offset);
+	FVector GetPartsSpecificOffset(const FString& PartName) const;
 
 	UClass* FrameClass;
 	UClass* PartClass;

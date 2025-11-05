@@ -231,7 +231,6 @@ UClass* Z_Construct_UClass_UDTFDataAsset()
 	}
 	return Z_Registration_Info_UClass_UDTFDataAsset.OuterSingleton;
 }
-UDTFDataAsset::UDTFDataAsset(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(UDTFDataAsset);
 UDTFDataAsset::~UDTFDataAsset() {}
 // ********** End Class UDTFDataAsset **************************************************************
