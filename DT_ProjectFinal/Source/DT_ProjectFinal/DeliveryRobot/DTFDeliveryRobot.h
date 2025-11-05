@@ -4,6 +4,7 @@
 #include "GameFramework/Pawn.h"
 #include "GameFramework/FloatingPawnMovement.h"
 #include "Kismet/GameplayStatics.h"
+#include "Components/CapsuleComponent.h"
 #include "AIController.h"
 #include "Navigation/PathFollowingComponent.h"
 #include "DTFDeliveryRobot.generated.h"
@@ -48,6 +49,9 @@ public:
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
 	USceneComponent* AttachPoint;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
+	UCapsuleComponent* CapsuleComponent;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
 	UStaticMeshComponent* RobotMesh;

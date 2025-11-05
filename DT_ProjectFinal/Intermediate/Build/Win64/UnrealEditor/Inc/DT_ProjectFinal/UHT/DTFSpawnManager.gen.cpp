@@ -6,6 +6,7 @@
 
 #include "UObject/GeneratedCppIncludes.h"
 #include "Manager/DTFSpawnManager.h"
+#include "DataAsset/DTFDataAsset.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
@@ -13,11 +14,11 @@ void EmptyLinkFunctionForGeneratedCodeDTFSpawnManager() {}
 
 // ********** Begin Cross Module References ********************************************************
 COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
-COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 DT_PROJECTFINAL_API UClass* Z_Construct_UClass_ADTFSpawnManager();
 DT_PROJECTFINAL_API UClass* Z_Construct_UClass_ADTFSpawnManager_NoRegister();
 DT_PROJECTFINAL_API UClass* Z_Construct_UClass_UDTFDataAsset_NoRegister();
 DT_PROJECTFINAL_API UScriptStruct* Z_Construct_UScriptStruct_FPartActorArray();
+DT_PROJECTFINAL_API UScriptStruct* Z_Construct_UScriptStruct_FPartsInfo();
 ENGINE_API UClass* Z_Construct_UClass_AActor();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 UPackage* Z_Construct_UPackage__Script_DT_ProjectFinal();
@@ -126,43 +127,12 @@ DEFINE_FUNCTION(ADTFSpawnManager::execGetPartActorClass)
 }
 // ********** End Class ADTFSpawnManager Function GetPartActorClass ********************************
 
-// ********** Begin Class ADTFSpawnManager Function SpawnCarParts **********************************
-struct Z_Construct_UFunction_ADTFSpawnManager_SpawnCarParts_Statics
-{
-#if WITH_METADATA
-	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "Category", "Spawn" },
-		{ "ModuleRelativePath", "Manager/DTFSpawnManager.h" },
-	};
-#endif // WITH_METADATA
-	static const UECodeGen_Private::FFunctionParams FuncParams;
-};
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADTFSpawnManager_SpawnCarParts_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADTFSpawnManager, nullptr, "SpawnCarParts", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADTFSpawnManager_SpawnCarParts_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADTFSpawnManager_SpawnCarParts_Statics::Function_MetaDataParams)},  };
-UFunction* Z_Construct_UFunction_ADTFSpawnManager_SpawnCarParts()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ADTFSpawnManager_SpawnCarParts_Statics::FuncParams);
-	}
-	return ReturnFunction;
-}
-DEFINE_FUNCTION(ADTFSpawnManager::execSpawnCarParts)
-{
-	P_FINISH;
-	P_NATIVE_BEGIN;
-	P_THIS->SpawnCarParts();
-	P_NATIVE_END;
-}
-// ********** End Class ADTFSpawnManager Function SpawnCarParts ************************************
-
 // ********** Begin Class ADTFSpawnManager *********************************************************
 void ADTFSpawnManager::StaticRegisterNativesADTFSpawnManager()
 {
 	UClass* Class = ADTFSpawnManager::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "GetPartActorClass", &ADTFSpawnManager::execGetPartActorClass },
-		{ "SpawnCarParts", &ADTFSpawnManager::execSpawnCarParts },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -214,12 +184,16 @@ struct Z_Construct_UClass_ADTFSpawnManager_Statics
 		{ "Category", "CarParts Spawn Points" },
 		{ "ModuleRelativePath", "Manager/DTFSpawnManager.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PartsOffsetList_MetaData[] = {
+		{ "Category", "CarParts Spawn Points" },
+		{ "ModuleRelativePath", "Manager/DTFSpawnManager.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SelectedLine_MetaData[] = {
 		{ "Category", "Spawn" },
 		{ "ModuleRelativePath", "Manager/DTFSpawnManager.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OffsetDistance_MetaData[] = {
-		{ "Category", "Part Spawn Offset Distance" },
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_FramePartsName_MetaData[] = {
+		{ "Category", "FrameParts" },
 		{ "ModuleRelativePath", "Manager/DTFSpawnManager.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PartsMap_MetaData[] = {
@@ -238,8 +212,10 @@ struct Z_Construct_UClass_ADTFSpawnManager_Statics
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_FrameSpawnPoints;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_PartsSpawnPoints_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_PartsSpawnPoints;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_PartsOffsetList_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_PartsOffsetList;
 	static const UECodeGen_Private::FNamePropertyParams NewProp_SelectedLine;
-	static const UECodeGen_Private::FStructPropertyParams NewProp_OffsetDistance;
+	static const UECodeGen_Private::FStrPropertyParams NewProp_FramePartsName;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_PartsMap_ValueProp;
 	static const UECodeGen_Private::FNamePropertyParams NewProp_PartsMap_Key_KeyProp;
 	static const UECodeGen_Private::FMapPropertyParams NewProp_PartsMap;
@@ -247,7 +223,6 @@ struct Z_Construct_UClass_ADTFSpawnManager_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_ADTFSpawnManager_GetPartActorClass, "GetPartActorClass" }, // 2541434779
-		{ &Z_Construct_UFunction_ADTFSpawnManager_SpawnCarParts, "SpawnCarParts" }, // 662107140
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -260,8 +235,10 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADTFSpawnManag
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_ADTFSpawnManager_Statics::NewProp_FrameSpawnPoints = { "FrameSpawnPoints", nullptr, (EPropertyFlags)0x0010000000020801, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTFSpawnManager, FrameSpawnPoints), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FrameSpawnPoints_MetaData), NewProp_FrameSpawnPoints_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADTFSpawnManager_Statics::NewProp_PartsSpawnPoints_Inner = { "PartsSpawnPoints", nullptr, (EPropertyFlags)0x0000000000020000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_ADTFSpawnManager_Statics::NewProp_PartsSpawnPoints = { "PartsSpawnPoints", nullptr, (EPropertyFlags)0x0010000000020801, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTFSpawnManager, PartsSpawnPoints), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PartsSpawnPoints_MetaData), NewProp_PartsSpawnPoints_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ADTFSpawnManager_Statics::NewProp_PartsOffsetList_Inner = { "PartsOffsetList", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FPartsInfo, METADATA_PARAMS(0, nullptr) }; // 2208304747
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_ADTFSpawnManager_Statics::NewProp_PartsOffsetList = { "PartsOffsetList", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTFSpawnManager, PartsOffsetList), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PartsOffsetList_MetaData), NewProp_PartsOffsetList_MetaData) }; // 2208304747
 const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_ADTFSpawnManager_Statics::NewProp_SelectedLine = { "SelectedLine", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTFSpawnManager, SelectedLine), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SelectedLine_MetaData), NewProp_SelectedLine_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ADTFSpawnManager_Statics::NewProp_OffsetDistance = { "OffsetDistance", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTFSpawnManager, OffsetDistance), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OffsetDistance_MetaData), NewProp_OffsetDistance_MetaData) };
+const UECodeGen_Private::FStrPropertyParams Z_Construct_UClass_ADTFSpawnManager_Statics::NewProp_FramePartsName = { "FramePartsName", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTFSpawnManager, FramePartsName), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FramePartsName_MetaData), NewProp_FramePartsName_MetaData) };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ADTFSpawnManager_Statics::NewProp_PartsMap_ValueProp = { "PartsMap", nullptr, (EPropertyFlags)0x0000000000000001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 1, Z_Construct_UScriptStruct_FPartActorArray, METADATA_PARAMS(0, nullptr) }; // 1293919948
 const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_ADTFSpawnManager_Statics::NewProp_PartsMap_Key_KeyProp = { "PartsMap_Key", nullptr, (EPropertyFlags)0x0000000000000001, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FMapPropertyParams Z_Construct_UClass_ADTFSpawnManager_Statics::NewProp_PartsMap = { "PartsMap", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTFSpawnManager, PartsMap), EMapPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PartsMap_MetaData), NewProp_PartsMap_MetaData) }; // 1293919948
@@ -271,8 +248,10 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ADTFSpawn
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTFSpawnManager_Statics::NewProp_FrameSpawnPoints,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTFSpawnManager_Statics::NewProp_PartsSpawnPoints_Inner,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTFSpawnManager_Statics::NewProp_PartsSpawnPoints,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTFSpawnManager_Statics::NewProp_PartsOffsetList_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTFSpawnManager_Statics::NewProp_PartsOffsetList,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTFSpawnManager_Statics::NewProp_SelectedLine,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTFSpawnManager_Statics::NewProp_OffsetDistance,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTFSpawnManager_Statics::NewProp_FramePartsName,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTFSpawnManager_Statics::NewProp_PartsMap_ValueProp,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTFSpawnManager_Statics::NewProp_PartsMap_Key_KeyProp,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTFSpawnManager_Statics::NewProp_PartsMap,
@@ -317,10 +296,10 @@ struct Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_
 		{ FPartActorArray::StaticStruct, Z_Construct_UScriptStruct_FPartActorArray_Statics::NewStructOps, TEXT("PartActorArray"), &Z_Registration_Info_UScriptStruct_FPartActorArray, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FPartActorArray), 1293919948U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ADTFSpawnManager, ADTFSpawnManager::StaticClass, TEXT("ADTFSpawnManager"), &Z_Registration_Info_UClass_ADTFSpawnManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADTFSpawnManager), 2555133227U) },
+		{ Z_Construct_UClass_ADTFSpawnManager, ADTFSpawnManager::StaticClass, TEXT("ADTFSpawnManager"), &Z_Registration_Info_UClass_ADTFSpawnManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADTFSpawnManager), 783712408U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFSpawnManager_h__Script_DT_ProjectFinal_2679201171(TEXT("/Script/DT_ProjectFinal"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFSpawnManager_h__Script_DT_ProjectFinal_1841266749(TEXT("/Script/DT_ProjectFinal"),
 	Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFSpawnManager_h__Script_DT_ProjectFinal_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFSpawnManager_h__Script_DT_ProjectFinal_Statics::ClassInfo),
 	Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFSpawnManager_h__Script_DT_ProjectFinal_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFSpawnManager_h__Script_DT_ProjectFinal_Statics::ScriptStructInfo),
 	nullptr, 0);

@@ -19,17 +19,17 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class AActor;
 
 // ********** Begin Class ADTFDeliveryRobot ********************************************************
-#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_25_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_26_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execStartDelivery); \
 	DECLARE_FUNCTION(execDropParts); \
 	DECLARE_FUNCTION(execPickupParts); \
 	DECLARE_FUNCTION(execMoveToLocation);
 
 
-#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_25_CALLBACK_WRAPPERS
+#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_26_CALLBACK_WRAPPERS
 DT_PROJECTFINAL_API UClass* Z_Construct_UClass_ADTFDeliveryRobot_NoRegister();
 
-#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_25_INCLASS_NO_PURE_DECLS \
+#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_26_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesADTFDeliveryRobot(); \
 	friend struct Z_Construct_UClass_ADTFDeliveryRobot_Statics; \
@@ -40,7 +40,7 @@ public: \
 	DECLARE_SERIALIZER(ADTFDeliveryRobot)
 
 
-#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_25_ENHANCED_CONSTRUCTORS \
+#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_26_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ADTFDeliveryRobot(ADTFDeliveryRobot&&) = delete; \
 	ADTFDeliveryRobot(const ADTFDeliveryRobot&) = delete; \
@@ -50,14 +50,14 @@ public: \
 	NO_API virtual ~ADTFDeliveryRobot();
 
 
-#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_22_PROLOG
-#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_25_GENERATED_BODY \
+#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_23_PROLOG
+#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_26_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_25_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_25_CALLBACK_WRAPPERS \
-	FID_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_25_INCLASS_NO_PURE_DECLS \
-	FID_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_25_ENHANCED_CONSTRUCTORS \
+	FID_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_26_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_26_CALLBACK_WRAPPERS \
+	FID_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_26_INCLASS_NO_PURE_DECLS \
+	FID_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_26_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

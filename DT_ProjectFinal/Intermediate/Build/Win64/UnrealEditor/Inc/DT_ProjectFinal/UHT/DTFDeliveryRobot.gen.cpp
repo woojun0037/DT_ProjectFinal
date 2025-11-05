@@ -18,6 +18,7 @@ DT_PROJECTFINAL_API UClass* Z_Construct_UClass_ADTFDeliveryRobot_NoRegister();
 DT_PROJECTFINAL_API UEnum* Z_Construct_UEnum_DT_ProjectFinal_ERobotState();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_APawn();
+ENGINE_API UClass* Z_Construct_UClass_UCapsuleComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UFloatingPawnMovement_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
@@ -346,6 +347,11 @@ struct Z_Construct_UClass_ADTFDeliveryRobot_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "DeliveryRobot/DTFDeliveryRobot.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CapsuleComponent_MetaData[] = {
+		{ "Category", "Components" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "DeliveryRobot/DTFDeliveryRobot.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_RobotMesh_MetaData[] = {
 		{ "Category", "Components" },
 		{ "EditInline", "true" },
@@ -382,6 +388,7 @@ struct Z_Construct_UClass_ADTFDeliveryRobot_Statics
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_AttachPoint;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_CapsuleComponent;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_RobotMesh;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_MovementComponent;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_DeliveryTargets_Inner;
@@ -409,6 +416,7 @@ struct Z_Construct_UClass_ADTFDeliveryRobot_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADTFDeliveryRobot_Statics::NewProp_AttachPoint = { "AttachPoint", nullptr, (EPropertyFlags)0x002008000008000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTFDeliveryRobot, AttachPoint), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AttachPoint_MetaData), NewProp_AttachPoint_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADTFDeliveryRobot_Statics::NewProp_CapsuleComponent = { "CapsuleComponent", nullptr, (EPropertyFlags)0x002008000008000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTFDeliveryRobot, CapsuleComponent), Z_Construct_UClass_UCapsuleComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CapsuleComponent_MetaData), NewProp_CapsuleComponent_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADTFDeliveryRobot_Statics::NewProp_RobotMesh = { "RobotMesh", nullptr, (EPropertyFlags)0x002008000008000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTFDeliveryRobot, RobotMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RobotMesh_MetaData), NewProp_RobotMesh_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADTFDeliveryRobot_Statics::NewProp_MovementComponent = { "MovementComponent", nullptr, (EPropertyFlags)0x002008000008000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTFDeliveryRobot, MovementComponent), Z_Construct_UClass_UFloatingPawnMovement_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MovementComponent_MetaData), NewProp_MovementComponent_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADTFDeliveryRobot_Statics::NewProp_DeliveryTargets_Inner = { "DeliveryTargets", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
@@ -421,6 +429,7 @@ const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ADTFDeliveryRobo
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_ADTFDeliveryRobot_Statics::NewProp_CurrentLineIndex = { "CurrentLineIndex", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTFDeliveryRobot, CurrentLineIndex), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CurrentLineIndex_MetaData), NewProp_CurrentLineIndex_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ADTFDeliveryRobot_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTFDeliveryRobot_Statics::NewProp_AttachPoint,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTFDeliveryRobot_Statics::NewProp_CapsuleComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTFDeliveryRobot_Statics::NewProp_RobotMesh,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTFDeliveryRobot_Statics::NewProp_MovementComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTFDeliveryRobot_Statics::NewProp_DeliveryTargets_Inner,
@@ -472,10 +481,10 @@ struct Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_Delivery
 		{ ERobotState_StaticEnum, TEXT("ERobotState"), &Z_Registration_Info_UEnum_ERobotState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 167837002U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ADTFDeliveryRobot, ADTFDeliveryRobot::StaticClass, TEXT("ADTFDeliveryRobot"), &Z_Registration_Info_UClass_ADTFDeliveryRobot, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADTFDeliveryRobot), 1792464287U) },
+		{ Z_Construct_UClass_ADTFDeliveryRobot, ADTFDeliveryRobot::StaticClass, TEXT("ADTFDeliveryRobot"), &Z_Registration_Info_UClass_ADTFDeliveryRobot, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADTFDeliveryRobot), 441089787U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h__Script_DT_ProjectFinal_1262990724(TEXT("/Script/DT_ProjectFinal"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h__Script_DT_ProjectFinal_4266474784(TEXT("/Script/DT_ProjectFinal"),
 	Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h__Script_DT_ProjectFinal_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h__Script_DT_ProjectFinal_Statics::ClassInfo),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h__Script_DT_ProjectFinal_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h__Script_DT_ProjectFinal_Statics::EnumInfo));

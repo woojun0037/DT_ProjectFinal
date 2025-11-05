@@ -29,7 +29,6 @@ struct FPartActorArray;
 
 // ********** Begin Class ADTFSpawnManager *********************************************************
 #define FID_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFSpawnManager_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execSpawnCarParts); \
 	DECLARE_FUNCTION(execGetPartActorClass);
 
 

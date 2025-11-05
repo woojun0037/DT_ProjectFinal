@@ -12,8 +12,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeDTFCarParts() {}
 
 // ********** Begin Cross Module References ********************************************************
-COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
-COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
+COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FTransform();
 DT_PROJECTFINAL_API UClass* Z_Construct_UClass_ADTFCarParts();
 DT_PROJECTFINAL_API UClass* Z_Construct_UClass_ADTFCarParts_NoRegister();
 DT_PROJECTFINAL_API UScriptStruct* Z_Construct_UScriptStruct_FAttachmentTransform();
@@ -45,17 +44,12 @@ struct Z_Construct_UScriptStruct_FAttachmentTransform_Statics
 		{ "ToolTip", "\xed\x8c\x8c\xec\xb8\xa0 \xeb\xb3\x84\xeb\xa1\x9c \xeb\xb6\x80\xec\xb0\xa9\xeb\x90\x98\xeb\x8a\x94 \xec\x9c\x84\xec\xb9\x98, \xed\x9a\x8c\xec\xa0\x84" },
 #endif
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Location_MetaData[] = {
-		{ "Category", "AttachmentTransform" },
-		{ "ModuleRelativePath", "CarParts/DTFCarParts.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Rotation_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Transform_MetaData[] = {
 		{ "Category", "AttachmentTransform" },
 		{ "ModuleRelativePath", "CarParts/DTFCarParts.h" },
 	};
 #endif // WITH_METADATA
-	static const UECodeGen_Private::FStructPropertyParams NewProp_Location;
-	static const UECodeGen_Private::FStructPropertyParams NewProp_Rotation;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_Transform;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static void* NewStructOps()
 	{
@@ -63,11 +57,9 @@ struct Z_Construct_UScriptStruct_FAttachmentTransform_Statics
 	}
 	static const UECodeGen_Private::FStructParams StructParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FAttachmentTransform_Statics::NewProp_Location = { "Location", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FAttachmentTransform, Location), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Location_MetaData), NewProp_Location_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FAttachmentTransform_Statics::NewProp_Rotation = { "Rotation", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FAttachmentTransform, Rotation), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Rotation_MetaData), NewProp_Rotation_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FAttachmentTransform_Statics::NewProp_Transform = { "Transform", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FAttachmentTransform, Transform), Z_Construct_UScriptStruct_FTransform, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Transform_MetaData), NewProp_Transform_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FAttachmentTransform_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FAttachmentTransform_Statics::NewProp_Location,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FAttachmentTransform_Statics::NewProp_Rotation,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FAttachmentTransform_Statics::NewProp_Transform,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FAttachmentTransform_Statics::PropPointers) < 2048);
 const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAttachmentTransform_Statics::StructParams = {
@@ -170,7 +162,7 @@ void Z_Construct_UClass_ADTFCarParts_Statics::NewProp_bIsAssemble_SetBit(void* O
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ADTFCarParts_Statics::NewProp_bIsAssemble = { "bIsAssemble", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ADTFCarParts), &Z_Construct_UClass_ADTFCarParts_Statics::NewProp_bIsAssemble_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bIsAssemble_MetaData), NewProp_bIsAssemble_MetaData) };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UClass_ADTFCarParts_Statics::NewProp_PartsName = { "PartsName", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTFCarParts, PartsName), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PartsName_MetaData), NewProp_PartsName_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ADTFCarParts_Statics::NewProp_AttachTransform = { "AttachTransform", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTFCarParts, AttachTransform), Z_Construct_UScriptStruct_FAttachmentTransform, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AttachTransform_MetaData), NewProp_AttachTransform_MetaData) }; // 1338986325
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ADTFCarParts_Statics::NewProp_AttachTransform = { "AttachTransform", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTFCarParts, AttachTransform), Z_Construct_UScriptStruct_FAttachmentTransform, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AttachTransform_MetaData), NewProp_AttachTransform_MetaData) }; // 3884010519
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ADTFCarParts_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTFCarParts_Statics::NewProp_PartsMesh,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTFCarParts_Statics::NewProp_bIsAssemble,
@@ -214,13 +206,13 @@ ADTFCarParts::~ADTFCarParts() {}
 struct Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_CarParts_DTFCarParts_h__Script_DT_ProjectFinal_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FAttachmentTransform::StaticStruct, Z_Construct_UScriptStruct_FAttachmentTransform_Statics::NewStructOps, TEXT("AttachmentTransform"), &Z_Registration_Info_UScriptStruct_FAttachmentTransform, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FAttachmentTransform), 1338986325U) },
+		{ FAttachmentTransform::StaticStruct, Z_Construct_UScriptStruct_FAttachmentTransform_Statics::NewStructOps, TEXT("AttachmentTransform"), &Z_Registration_Info_UScriptStruct_FAttachmentTransform, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FAttachmentTransform), 3884010519U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ADTFCarParts, ADTFCarParts::StaticClass, TEXT("ADTFCarParts"), &Z_Registration_Info_UClass_ADTFCarParts, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADTFCarParts), 630578811U) },
+		{ Z_Construct_UClass_ADTFCarParts, ADTFCarParts::StaticClass, TEXT("ADTFCarParts"), &Z_Registration_Info_UClass_ADTFCarParts, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADTFCarParts), 684763888U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_CarParts_DTFCarParts_h__Script_DT_ProjectFinal_1033602183(TEXT("/Script/DT_ProjectFinal"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_CarParts_DTFCarParts_h__Script_DT_ProjectFinal_2720103234(TEXT("/Script/DT_ProjectFinal"),
 	Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_CarParts_DTFCarParts_h__Script_DT_ProjectFinal_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_CarParts_DTFCarParts_h__Script_DT_ProjectFinal_Statics::ClassInfo),
 	Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_CarParts_DTFCarParts_h__Script_DT_ProjectFinal_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_CarParts_DTFCarParts_h__Script_DT_ProjectFinal_Statics::ScriptStructInfo),
 	nullptr, 0);

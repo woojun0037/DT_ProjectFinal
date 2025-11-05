@@ -6,9 +6,13 @@ ADTFDeliveryRobot::ADTFDeliveryRobot()
 {
 	PrimaryActorTick.bCanEverTick = true;
 
+	CapsuleComponent = CreateDefaultSubobject<UCapsuleComponent>(TEXT("CapsuleComponent"));
+	CapsuleComponent->InitCapsuleSize(34.f, 88.f); // 반경 높이
+	SetRootComponent(CapsuleComponent);
+	
 	RobotMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("RobotMesh"));
-	SetRootComponent(RobotMesh);
-	//RootComponent = RobotMesh;
+	RobotMesh->SetupAttachment(CapsuleComponent);
+	//RootComponent = CapsuleComponent;
 
 	AttachPoint = CreateDefaultSubobject<USceneComponent>(TEXT("AttachPoint"));
 	AttachPoint->SetupAttachment(RobotMesh);
@@ -16,9 +20,9 @@ ADTFDeliveryRobot::ADTFDeliveryRobot()
 	MovementComponent = CreateDefaultSubobject<UFloatingPawnMovement>(TEXT("MovementCompoent"));
 
 	AIControllerClass = AAIController::StaticClass();
-	AutoPossessAI = EAutoPossessAI::PlacedInWorldOrSpawned;
+	AutoPossessAI     = EAutoPossessAI::PlacedInWorldOrSpawned;
 
-	CurrentState = ERobotState::Idle;
+	CurrentState      = ERobotState::Idle;
 }
 
 
@@ -115,7 +119,7 @@ void ADTFDeliveryRobot::PickupParts(AActor* Parts)
 	
 	CurrentParts = Parts;
 	CurrentState = ERobotState::MovingToDelivery;
-
+	 
 	//BP 이벤트 트리거
 	OnPickupComplete();
 }

@@ -35,12 +35,15 @@ public:
 
 	UPROPERTY(VisibleInstanceOnly, Category = "CarParts Spawn Points")
 	TArray<AActor*> PartsSpawnPoints;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CarParts Spawn Points")
+	TArray<FPartsInfo> PartsOffsetList;
 
 	UPROPERTY(EditAnywhere, Category = "Spawn")
 	FName SelectedLine = "LineA";
 
-	UPROPERTY(EditAnywhere, Category = "Part Spawn Offset Distance")
-	FVector OffsetDistance;
+	UPROPERTY(EditAnywhere, Category = "FrameParts")
+	FString FramePartsName = TEXT("SM_Car_Body");
 
 	//스폰 된 액터를 관리 하기위해서
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
@@ -49,12 +52,18 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "PartsClass")
 	TSubclassOf <AActor> GetPartActorClass();
 
-	UFUNCTION(BlueprintCallable, Category = "Spawn")
-	void SpawnCarParts();
-
 private:
+	static constexpr float PARTS_OFFSET_DISTANCE = 50.f;
+
 	void InitialPosition();
 	void ParseSpawnPointName(const FString& Name, FString& OutLine, int32& OutIndex);
+
+	void SpawnCarParts();
+
+	FTransform CarculateSpawnTransform(const FTransform& BaseTransform, const FPartsInfo& PartInfo, int32 Index, bool bIsFrame);
+	FTransform CreateMirroedTransform (const FTransform& BaseTransform, bool bMirrorX);
+	FTransform GetOffsetTransform     (const FTransform& BaseTransform, const FString&    PartName, int32 Index, float Offset);
+	FVector    GetPartsSpecificOffset (const FString& PartName) const;
 
 	UClass* FrameClass;
 	UClass* PartClass;

@@ -14,10 +14,7 @@ struct FAttachmentTransform
 {
 	GENERATED_BODY()
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FVector Location;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FRotator Rotation;
+	FTransform Transform;
 };
 
 

@@ -16,12 +16,29 @@ struct FPartsInfo
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Parts Mesh")
 	UStaticMesh* PartsMesh;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Spawn Location")
-	FVector SpawnLocation;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Parts Offset")
+	FString PartsNamePattern;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Spawn Rotator")
-	FRotator SPawnRotation;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Parts Offset")
+	float OffsetX = 0.f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Parts Offset")
+	float OffsetY = 0.f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Parts Offset")
+	float OffsetZ = 0.f;
+
+	FPartsInfo() : PartsNamePattern(TEXT("")), OffsetX(0.f), OffsetY(0.f), OffsetZ(0.f)
+	{}
+
+	FPartsInfo(const FString& Pattern, float X, float Y = 0.f, float Z = 0.f)
+		: PartsNamePattern(Pattern), OffsetX(X), OffsetY(Y), OffsetZ(Z) 
+	{}
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "SpawnTransfrom")
+	FTransform transform;
 	
+	bool bMirrorX = false;
 	bool bIsFrame(const FString& FrameName) const
 	{
 		return PartsName == FrameName;

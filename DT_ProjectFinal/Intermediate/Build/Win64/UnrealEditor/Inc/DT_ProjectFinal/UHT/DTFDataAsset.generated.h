@@ -28,7 +28,7 @@ struct FPartsInfo;
 // ********** Begin Class UDTFDataAsset ************************************************************
 DT_PROJECTFINAL_API UClass* Z_Construct_UClass_UDTFDataAsset_NoRegister();
 
-#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_DataAsset_DTFDataAsset_h_39_INCLASS_NO_PURE_DECLS \
+#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_DataAsset_DTFDataAsset_h_56_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUDTFDataAsset(); \
 	friend struct Z_Construct_UClass_UDTFDataAsset_Statics; \
@@ -39,7 +39,7 @@ public: \
 	DECLARE_SERIALIZER(UDTFDataAsset)
 
 
-#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_DataAsset_DTFDataAsset_h_39_ENHANCED_CONSTRUCTORS \
+#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_DataAsset_DTFDataAsset_h_56_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UDTFDataAsset(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -51,12 +51,12 @@ public: \
 	NO_API virtual ~UDTFDataAsset();
 
 
-#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_DataAsset_DTFDataAsset_h_36_PROLOG
-#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_DataAsset_DTFDataAsset_h_39_GENERATED_BODY \
+#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_DataAsset_DTFDataAsset_h_53_PROLOG
+#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_DataAsset_DTFDataAsset_h_56_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_DT_ProjectFinal_Source_DT_ProjectFinal_DataAsset_DTFDataAsset_h_39_INCLASS_NO_PURE_DECLS \
-	FID_DT_ProjectFinal_Source_DT_ProjectFinal_DataAsset_DTFDataAsset_h_39_ENHANCED_CONSTRUCTORS \
+	FID_DT_ProjectFinal_Source_DT_ProjectFinal_DataAsset_DTFDataAsset_h_56_INCLASS_NO_PURE_DECLS \
+	FID_DT_ProjectFinal_Source_DT_ProjectFinal_DataAsset_DTFDataAsset_h_56_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

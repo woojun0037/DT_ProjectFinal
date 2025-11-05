@@ -4,6 +4,17 @@ ADTFSpawnManager::ADTFSpawnManager()
 {
 	PrimaryActorTick.bCanEverTick = false;
 	RootComponent = CreateDefaultSubobject<USceneComponent>((TEXT("RootComponent")));
+
+	PartsOffsetList = {
+		FPartsInfo(TEXT("Hood") ,100.f, 0.f, 0.f),
+		FPartsInfo(TEXT("Left") ,100.f, 0.f, 0.f),
+		FPartsInfo(TEXT("Boot") ,100.f, 0.f, 0.f),
+		FPartsInfo(TEXT("Right"),100.f, 0.f, 0.f)
+	};
+	//PartsOffsetList.Add();
+	//PartsOffsetList.Add();
+	//PartsOffsetList.Add();
+	//PartsOffsetList.Add();
 }
 
 void ADTFSpawnManager::BeginPlay()
@@ -121,13 +132,11 @@ void ADTFSpawnManager::SpawnCarParts()
 		return;
 	}
 
-	FVector  FrameLocation, PartLocation;
-	FRotator FrameRotation, PartRotation;
+	FTransform FrameTransform, PartsTransform;
 	// FrameSpawnPoints는 AActor* 배열이므로 GetActorLocation() 사용
 	if (FrameSpawnPoints.IsValidIndex(LineIdx) && FrameSpawnPoints[LineIdx])
-	{
-		FrameLocation = FrameSpawnPoints[LineIdx]->GetActorLocation();
-		FrameRotation = FrameSpawnPoints[LineIdx]->GetActorRotation();
+	{ 
+		FrameTransform = FrameSpawnPoints[LineIdx]->GetActorTransform();
 	}
 	else
 	{
@@ -138,72 +147,66 @@ void ADTFSpawnManager::SpawnCarParts()
 	// LineSpawnPoints도 AActor* 배열이므로 GetActorLocation() 사용
 	if (PartsSpawnPoints.IsValidIndex(LineIdx) && PartsSpawnPoints[LineIdx])
 	{
-		PartLocation = PartsSpawnPoints[LineIdx]->GetActorLocation();
-		PartRotation = PartsSpawnPoints[LineIdx]->GetActorRotation();
+		PartsTransform = PartsSpawnPoints[LineIdx]->GetActorTransform();
 		UE_LOG(LogTemp, Warning, TEXT("PartsSpawnPoint index %d range"), LineIdx);
 	}
 	else
 	{
+		UE_LOG(LogTemp, Warning, TEXT("PartsSpawnPoint index Outof range"), LineIdx);
 		return;
 	}
 
 	UWorld* World = GetWorld();
 	if (World == nullptr)
 	{
+		UE_LOG(LogTemp, Warning, TEXT("No UWorld"));
 		return;
 	}
 
-	FString FramePartsName = TEXT("SM_Car_Body");
 	for (FPartsInfo& PartInfo : CarPartsDataAsset->Parts)
 	{
+		bool  bIsFrame    = PartInfo.bIsFrame(FramePartsName);
+		int32 SpawnCount  = PartInfo.GetSpawnCount(FramePartsName);
 
-		bool bIsFrame = PartInfo.bIsFrame(FramePartsName);
-		int32 SpawnCount = PartInfo.GetSpawnCount(FramePartsName);
+		FTransform BaseTransform = bIsFrame ? FrameTransform : PartsTransform;
 
 		for (int32 i = 0; i < SpawnCount; i++)
 		{
-			FVector  SpawnLocation = bIsFrame ? FrameLocation : PartLocation;
-			FRotator SpawnRotation = bIsFrame ? FrameRotation : PartRotation;
-			
-			//Parts는 좌우로 배치
-			if (!bIsFrame)
-			{
-				OffsetDistance.X = 100.f;
-				if (i == 0)
-				{
-					SpawnLocation += FVector(-OffsetDistance.X, 0, 0);
-				}
-				else if (i == 1)
-				{
-					SpawnLocation += FVector(OffsetDistance.X, 0, 0);
-				}
-			}
+			FTransform SpawnTransform = CarculateSpawnTransform(BaseTransform, PartInfo, i, bIsFrame);
+	
 			UClass* SpawnClass = PartActorClass;
 			if (!SpawnClass)
 			{
 				UE_LOG(LogTemp, Warning, TEXT("Spawn Class is null"));
 				continue;
 			}
+			UE_LOG(LogTemp, Warning, TEXT("SpawnCarParts %s / %s"), *SpawnTransform.ToString(), *GetNameSafe(SpawnClass));
+			 
+			AActor* SpawnedActor = World->SpawnActor<AActor>(SpawnClass, SpawnTransform);
 
-
-			AActor* SpawnedActor = World->SpawnActor<AActor>(SpawnClass, SpawnLocation, SpawnRotation);
 			if (SpawnedActor)
 			{
-				UE_LOG(LogTemp, Warning, TEXT("Spawn"));
+				FVector DesiredScale = SpawnTransform.GetScale3D();
+				UE_LOG(LogTemp, Warning, TEXT("DesiredScale"), *DesiredScale.ToString());
+
 				UStaticMeshComponent* MeshComp = SpawnedActor->FindComponentByClass<UStaticMeshComponent>();
 
 				if (MeshComp && PartInfo.PartsMesh)
 				{
 					UE_LOG(LogTemp, Warning, TEXT("PartMesh"));
 					MeshComp->SetStaticMesh(PartInfo.PartsMesh);
+
+					SpawnedActor->SetActorScale3D(DesiredScale);
 				}
+#if WITH_EDITOR
 				SpawnedActor->SetActorLabel(PartInfo.PartsName);
+#endif
 
 				UDTFPartIdentifierComponent* PartComp = SpawnedActor->FindComponentByClass<UDTFPartIdentifierComponent>();
 				if (!PartComp)
 				{
-					PartComp = NewObject<UDTFPartIdentifierComponent>(SpawnedActor);
-					PartComp->RegisterComponent(); //런타임에 동적으로 생성한 컴포넌트를 게임 오브젝트에 등록하는 함수
+					PartComp    = NewObject<UDTFPartIdentifierComponent>(SpawnedActor);
+					PartComp    ->RegisterComponent(); //런타임에 동적으로 생성한 컴포넌트를 게임 오브젝트에 등록하는 함수
 					SpawnedActor->AddInstanceComponent(PartComp);
 				}
 				if (PartComp)
@@ -214,6 +217,72 @@ void ADTFSpawnManager::SpawnCarParts()
 			}
 		}
 	}
+}
+
+FTransform ADTFSpawnManager::CarculateSpawnTransform(const FTransform& BaseTransform, const FPartsInfo& PartInfo, int32 Index, bool bIsFrame)
+{
+	FTransform SpawnTransform = BaseTransform;
+
+	bool bMirrorX = PartInfo.PartsName.EndsWith(TEXT("Right"));/*PartInfo.bMirrorX*/
+	UE_LOG(LogTemp, Log, TEXT("## Right ? %d (%s)"), bMirrorX, *PartInfo.PartsName);
+
+	SpawnTransform = CreateMirroedTransform(SpawnTransform, bMirrorX);
+
+	if (!bIsFrame)
+	{
+		SpawnTransform = GetOffsetTransform(SpawnTransform, PartInfo.PartsName, Index, PARTS_OFFSET_DISTANCE);
+	}
+	return SpawnTransform;
+}
+
+FTransform ADTFSpawnManager::CreateMirroedTransform(const FTransform& BaseTransform, bool bMirrorX)
+{
+	UE_LOG(LogTemp, Warning, TEXT("CreateMirroedTransform#1 %s / %d"), *BaseTransform.ToString(), bMirrorX);
+	FTransform Result = BaseTransform;
+
+	if (bMirrorX)
+	{
+		FVector Scale = Result.GetScale3D();
+		Scale.X *= -1.f;
+		Result.SetScale3D(Scale);
+	}
+
+	UE_LOG(LogTemp, Warning, TEXT("CreateMirroedTransform#2 %s / %d"), *BaseTransform.ToString(), bMirrorX);
+
+	return Result;
+}
+
+FTransform ADTFSpawnManager::GetOffsetTransform(const FTransform& BaseTransform, const FString& PartName, int32 Index, float Offset)
+{
+	FTransform Result      = BaseTransform;
+	FVector    Location    = Result.GetLocation();
+	FVector    PartsOffset = GetPartsSpecificOffset(PartName);
+
+	if (!PartsOffset.IsZero())
+	{
+		// 파츠별 오프셋이 설정되어 있으면 사용
+		Location += PartsOffset;
+	}
+	else
+	{
+		// 기본 좌우 오프셋 적용 (Left/Right 분리)
+		Location.X += (Index == 0) ? -Offset : Offset;
+	}
+
+	Result.SetLocation(Location);
+	return Result;
+}
+
+FVector ADTFSpawnManager::GetPartsSpecificOffset(const FString& PartName) const
+{
+	for (const FPartsInfo& Setting : PartsOffsetList)
+	{
+		if (PartName.Contains(Setting.PartsName))
+		{
+			return FVector(Setting.OffsetX, Setting.OffsetX, Setting.OffsetZ);
+		}
+	}
+	return FVector::ZeroVector;
 }
 
 int32 ADTFSpawnManager::GetLineIndexByName(FName LineName) const
