@@ -2,6 +2,8 @@
 
 #include "CoreMinimal.h"
 #include "Engine/GameInstance.h"
+#include "Blueprint/UserWidget.h"
+#include "DTFUIManager.h"
 #include "DTFGameInstance.generated.h"
 
 UCLASS()
@@ -11,6 +13,14 @@ class DT_PROJECTFINAL_API UDTFGameInstance : public UGameInstance
 	
 public:
 	UDTFGameInstance();
+
+	virtual void Init() override;
+
+	UPROPERTY(BlueprintReadWrite, Category = "UI")
+	UDTFUIManager* UIManager;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UI")
+	TSubclassOf<UUserWidget> LineOrderWidgetClass;
 
 	//생산된 자동차 수량 추가 함수
 	UFUNCTION(BlueprintCallable)

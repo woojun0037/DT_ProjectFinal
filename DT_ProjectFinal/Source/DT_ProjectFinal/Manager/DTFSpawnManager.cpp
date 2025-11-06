@@ -11,7 +11,6 @@ void ADTFSpawnManager::BeginPlay()
 {
 	Super::BeginPlay();
 	InitialPosition();
-	SpawnCarParts();
 }
 
 /// Soft Reference와 Hard Reference의 차이점 설명 
@@ -99,14 +98,14 @@ TSubclassOf<AActor> ADTFSpawnManager::GetPartsActorClass()
 		UE_LOG(LogTemp, Warning, TEXT("IsValid"));
 		return CarPartsDataAsset->PartsActorClass.Get();
 	}
-	else
+	else  
 	{
 		//메모리에 에셋이 없다면 LoadSynchronous로 에셋 바로 불러오기 
 		return CarPartsDataAsset->PartsActorClass.LoadSynchronous();
 	}
 }
 
-void ADTFSpawnManager::SpawnCarParts()
+void ADTFSpawnManager::SpawnCarParts(FName LineName)
 {
 	TSubclassOf<AActor> PartsActorClass = GetPartsActorClass();
 	if (PartsActorClass == nullptr)
@@ -115,10 +114,10 @@ void ADTFSpawnManager::SpawnCarParts()
 		return;
 	}
 
-	const int32 LineIdx = GetLineIndexByName(SelectedLine);
+	const int32 LineIdx = GetLineIndexByName(LineName);
 	if (LineIdx == -1)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("##InValid line Selected: %s"), *SelectedLine.ToString());
+		UE_LOG(LogTemp, Warning, TEXT("##InValid line Selected: %s"), *LineName.ToString());
 		return;
 	}
 

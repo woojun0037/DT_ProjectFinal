@@ -7,23 +7,27 @@
 #include "UObject/GeneratedCppIncludes.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeDT_ProjectFinal_init() {}
+	DT_PROJECTFINAL_API UFunction* Z_Construct_UDelegateFunction_DT_ProjectFinal_OnLineSelectedDelegate__DelegateSignature();
 	static FPackageRegistrationInfo Z_Registration_Info_UPackage__Script_DT_ProjectFinal;
 	FORCENOINLINE UPackage* Z_Construct_UPackage__Script_DT_ProjectFinal()
 	{
 		if (!Z_Registration_Info_UPackage__Script_DT_ProjectFinal.OuterSingleton)
 		{
+			static UObject* (*const SingletonFuncArray[])() = {
+				(UObject* (*)())Z_Construct_UDelegateFunction_DT_ProjectFinal_OnLineSelectedDelegate__DelegateSignature,
+			};
 			static const UECodeGen_Private::FPackageParams PackageParams = {
 				"/Script/DT_ProjectFinal",
-				nullptr,
-				0,
+				SingletonFuncArray,
+				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x330E59C4,
-				0x7F7BE592,
+				0x4496EEC1,
+				0xFAA5CAF5,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_DT_ProjectFinal.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_DT_ProjectFinal.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_DT_ProjectFinal(Z_Construct_UPackage__Script_DT_ProjectFinal, TEXT("/Script/DT_ProjectFinal"), Z_Registration_Info_UPackage__Script_DT_ProjectFinal, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x330E59C4, 0x7F7BE592));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_DT_ProjectFinal(Z_Construct_UPackage__Script_DT_ProjectFinal, TEXT("/Script/DT_ProjectFinal"), Z_Registration_Info_UPackage__Script_DT_ProjectFinal, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x4496EEC1, 0xFAA5CAF5));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

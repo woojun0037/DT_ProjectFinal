@@ -112,5 +112,11 @@
     <ClInclude Include="..\..\Source\DT_ProjectFinal\Manager\DTFUIManager.h">
       <Filter>Source\DT_ProjectFinal\Manager</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\DT_ProjectFinal\Manager\DTFUIManagerActor.cpp">
+      <Filter>Source\DT_ProjectFinal\Manager</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT_ProjectFinal\Manager\DTFUIManagerActor.h">
+      <Filter>Source\DT_ProjectFinal\Manager</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

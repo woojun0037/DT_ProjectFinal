@@ -36,25 +36,23 @@ public:
 
 	UPROPERTY(VisibleInstanceOnly, Category = "CarParts Spawn Points")
 	TArray<AActor*> PartsSpawnPoints;
-	
-	UPROPERTY(EditAnywhere, Category = "Spawn")
-	FName SelectedLine = "LineA";
-
+ 
 	UPROPERTY(EditAnywhere, Category = "FrameParts")
 	FName FramePartsName = TEXT("SM_Car_Body");
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	TMap<FName, FPartActorArray> PartsMap;
-	
+		
 	UFUNCTION(BlueprintCallable, Category = "PartsClass")
 	TSubclassOf <AActor> GetPartsActorClass();
+
+	UFUNCTION(BlueprintCallable)
+	void SpawnCarParts(FName LineName);
 private:
 	static constexpr float PARTS_OFFSET_DISTANCE = 50.f;
 
 	void InitialPosition();
 	void ParseSpawnPointName(const FString& Name, FString& OutLine, int32& OutIndex);
-
-	void SpawnCarParts();
 
 	FTransform CarculateSpawnTransform(const FTransform& BaseTransform, const FPartsInfo& PartsInfo, int32 Index, bool bIsFrame);
 	FTransform CreateMirroedTransform (const FTransform& BaseTransform, bool bMirrorX);

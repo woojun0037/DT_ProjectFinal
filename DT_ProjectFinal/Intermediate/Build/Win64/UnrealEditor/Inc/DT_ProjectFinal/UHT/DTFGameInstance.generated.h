@@ -17,14 +17,14 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class UDTFGameInstance *********************************************************
-#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameInstance_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameInstance_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execAddPartUsage); \
 	DECLARE_FUNCTION(execAddComponentedCars);
 
 
 DT_PROJECTFINAL_API UClass* Z_Construct_UClass_UDTFGameInstance_NoRegister();
 
-#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameInstance_h_10_INCLASS_NO_PURE_DECLS \
+#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameInstance_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUDTFGameInstance(); \
 	friend struct Z_Construct_UClass_UDTFGameInstance_Statics; \
@@ -35,7 +35,7 @@ public: \
 	DECLARE_SERIALIZER(UDTFGameInstance)
 
 
-#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameInstance_h_10_ENHANCED_CONSTRUCTORS \
+#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameInstance_h_12_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	UDTFGameInstance(UDTFGameInstance&&) = delete; \
 	UDTFGameInstance(const UDTFGameInstance&) = delete; \
@@ -45,13 +45,13 @@ public: \
 	NO_API virtual ~UDTFGameInstance();
 
 
-#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameInstance_h_7_PROLOG
-#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameInstance_h_10_GENERATED_BODY \
+#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameInstance_h_9_PROLOG
+#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameInstance_h_12_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameInstance_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameInstance_h_10_INCLASS_NO_PURE_DECLS \
-	FID_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameInstance_h_10_ENHANCED_CONSTRUCTORS \
+	FID_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameInstance_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameInstance_h_12_INCLASS_NO_PURE_DECLS \
+	FID_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameInstance_h_12_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

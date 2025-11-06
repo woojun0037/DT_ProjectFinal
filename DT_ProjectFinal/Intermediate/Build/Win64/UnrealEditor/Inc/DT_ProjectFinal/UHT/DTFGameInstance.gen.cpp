@@ -12,9 +12,12 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeDTFGameInstance() {}
 
 // ********** Begin Cross Module References ********************************************************
+COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 DT_PROJECTFINAL_API UClass* Z_Construct_UClass_UDTFGameInstance();
 DT_PROJECTFINAL_API UClass* Z_Construct_UClass_UDTFGameInstance_NoRegister();
+DT_PROJECTFINAL_API UClass* Z_Construct_UClass_UDTFUIManager_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UGameInstance();
+UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
 UPackage* Z_Construct_UPackage__Script_DT_ProjectFinal();
 // ********** End Cross Module References **********************************************************
 
@@ -175,6 +178,14 @@ struct Z_Construct_UClass_UDTFGameInstance_Statics
 		{ "IncludePath", "Manager/DTFGameInstance.h" },
 		{ "ModuleRelativePath", "Manager/DTFGameInstance.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_UIManager_MetaData[] = {
+		{ "Category", "UI" },
+		{ "ModuleRelativePath", "Manager/DTFGameInstance.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_LineOrderWidgetClass_MetaData[] = {
+		{ "Category", "UI" },
+		{ "ModuleRelativePath", "Manager/DTFGameInstance.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TotalCompletedCars_MetaData[] = {
 		{ "Category", "DTFGameInstance" },
 #if !UE_BUILD_SHIPPING
@@ -196,6 +207,8 @@ struct Z_Construct_UClass_UDTFGameInstance_Statics
 #endif
 	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_UIManager;
+	static const UECodeGen_Private::FClassPropertyParams NewProp_LineOrderWidgetClass;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_TotalCompletedCars;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_LineProductionCount_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_LineProductionCount;
@@ -211,10 +224,14 @@ struct Z_Construct_UClass_UDTFGameInstance_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UDTFGameInstance_Statics::NewProp_UIManager = { "UIManager", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UDTFGameInstance, UIManager), Z_Construct_UClass_UDTFUIManager_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_UIManager_MetaData), NewProp_UIManager_MetaData) };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_UDTFGameInstance_Statics::NewProp_LineOrderWidgetClass = { "LineOrderWidgetClass", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UDTFGameInstance, LineOrderWidgetClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LineOrderWidgetClass_MetaData), NewProp_LineOrderWidgetClass_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UDTFGameInstance_Statics::NewProp_TotalCompletedCars = { "TotalCompletedCars", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UDTFGameInstance, TotalCompletedCars), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TotalCompletedCars_MetaData), NewProp_TotalCompletedCars_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UDTFGameInstance_Statics::NewProp_LineProductionCount_Inner = { "LineProductionCount", nullptr, (EPropertyFlags)0x0000000000020000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UDTFGameInstance_Statics::NewProp_LineProductionCount = { "LineProductionCount", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UDTFGameInstance, LineProductionCount), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LineProductionCount_MetaData), NewProp_LineProductionCount_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UDTFGameInstance_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDTFGameInstance_Statics::NewProp_UIManager,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDTFGameInstance_Statics::NewProp_LineOrderWidgetClass,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDTFGameInstance_Statics::NewProp_TotalCompletedCars,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDTFGameInstance_Statics::NewProp_LineProductionCount_Inner,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDTFGameInstance_Statics::NewProp_LineProductionCount,
@@ -256,10 +273,10 @@ UDTFGameInstance::~UDTFGameInstance() {}
 struct Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameInstance_h__Script_DT_ProjectFinal_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UDTFGameInstance, UDTFGameInstance::StaticClass, TEXT("UDTFGameInstance"), &Z_Registration_Info_UClass_UDTFGameInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UDTFGameInstance), 3299332907U) },
+		{ Z_Construct_UClass_UDTFGameInstance, UDTFGameInstance::StaticClass, TEXT("UDTFGameInstance"), &Z_Registration_Info_UClass_UDTFGameInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UDTFGameInstance), 3962791377U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameInstance_h__Script_DT_ProjectFinal_75037342(TEXT("/Script/DT_ProjectFinal"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameInstance_h__Script_DT_ProjectFinal_1620640418(TEXT("/Script/DT_ProjectFinal"),
 	Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameInstance_h__Script_DT_ProjectFinal_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameInstance_h__Script_DT_ProjectFinal_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
