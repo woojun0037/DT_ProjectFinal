@@ -34,10 +34,6 @@ struct FPartsInfo
 		return PartsName == FrameName;
 	}
 
-	int32 GetSpawnCount(const FName& FrameName) const
-	{
-		return bIsFrame(FrameName) ? 1 : 2;
-	}
 };
 
 UCLASS(BlueprintType)

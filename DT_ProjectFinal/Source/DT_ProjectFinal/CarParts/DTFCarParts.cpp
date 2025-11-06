@@ -4,7 +4,8 @@
 ADTFCarParts::ADTFCarParts()
 {
 	PrimaryActorTick.bCanEverTick = false;
-
+	PartsMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MeshComp"));
+	RootComponent = PartsMesh;
 }
 
 void ADTFCarParts::BeginPlay()

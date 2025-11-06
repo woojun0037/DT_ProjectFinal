@@ -43,19 +43,11 @@ public:
 	UPROPERTY(EditAnywhere, Category = "FrameParts")
 	FName FramePartsName = TEXT("SM_Car_Body");
 
-	UPROPERTY(EditAnywhere, Category = "HoodParts")
-	FName HoodPartsName = TEXT("SM_CarHodd");
-
-	UPROPERTY(EditAnywhere, Category = "BootParts")
-	FName BootPartsName = TEXT("SM_CarBoot");
-
-	//스폰 된 액터를 관리 하기위해서
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	TMap<FName, FPartActorArray> PartsMap;
 	
 	UFUNCTION(BlueprintCallable, Category = "PartsClass")
 	TSubclassOf <AActor> GetPartsActorClass();
-
 private:
 	static constexpr float PARTS_OFFSET_DISTANCE = 50.f;
 

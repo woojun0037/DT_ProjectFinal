@@ -5,7 +5,6 @@ ADTFSpawnManager::ADTFSpawnManager()
 {
 	PrimaryActorTick.bCanEverTick = false;
 	RootComponent = CreateDefaultSubobject<USceneComponent>((TEXT("RootComponent")));
-
 }
 
 void ADTFSpawnManager::BeginPlay()
@@ -68,10 +67,10 @@ void ADTFSpawnManager::InitialPosition()
 		});
 
 	FrameSpawnPoints = FoundFrameActors;
-	UE_LOG(LogTemp, Log, TEXT("Found %d Frame spawn points"), FrameSpawnPoints.Num());
+	UE_LOG(LogTemp, Log, TEXT("##Found %d Frame spawn points"), FrameSpawnPoints.Num());
 
 	PartsSpawnPoints = FoundPartsActors;
-	UE_LOG(LogTemp, Log, TEXT("Found %d Parts spawn points"), PartsSpawnPoints.Num());
+	UE_LOG(LogTemp, Log, TEXT("##Found %d Parts spawn points"), PartsSpawnPoints.Num());
 }
 
 void ADTFSpawnManager::ParseSpawnPointName(const FString& Name, FString& OutLine, int32& OutIndex)
@@ -112,14 +111,14 @@ void ADTFSpawnManager::SpawnCarParts()
 	TSubclassOf<AActor> PartsActorClass = GetPartsActorClass();
 	if (PartsActorClass == nullptr)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("PartsActorClass is null"));
+		UE_LOG(LogTemp, Warning, TEXT("##PartsActorClass is null"));
 		return;
 	}
 
 	const int32 LineIdx = GetLineIndexByName(SelectedLine);
 	if (LineIdx == -1)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("InValid line Selected: %s"), *SelectedLine.ToString());
+		UE_LOG(LogTemp, Warning, TEXT("##InValid line Selected: %s"), *SelectedLine.ToString());
 		return;
 	}
 
@@ -131,7 +130,7 @@ void ADTFSpawnManager::SpawnCarParts()
 	}
 	else
 	{
-		UE_LOG(LogTemp, Warning, TEXT("FramePoints index %d out of range"), LineIdx);
+		UE_LOG(LogTemp, Warning, TEXT("##FramePoints index %d out of range"), LineIdx);
 		return;
 	}
 
@@ -139,44 +138,44 @@ void ADTFSpawnManager::SpawnCarParts()
 	if (PartsSpawnPoints.IsValidIndex(LineIdx) && PartsSpawnPoints[LineIdx])
 	{
 		PartsTransform = PartsSpawnPoints[LineIdx]->GetActorTransform();
-		UE_LOG(LogTemp, Warning, TEXT("PartsSpawnPoint index %d range"), LineIdx);
+		UE_LOG(LogTemp, Warning, TEXT("##PartsSpawnPoint index %d range"), LineIdx);
 	}
 	else
 	{
-		UE_LOG(LogTemp, Warning, TEXT("PartsSpawnPoint index Outof range"), LineIdx);
+		UE_LOG(LogTemp, Warning, TEXT("##PartsSpawnPoint index Outof range"), LineIdx);
 		return;
 	}
 
 	UWorld* World = GetWorld();
 	if (World == nullptr)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("No UWorld"));
+		UE_LOG(LogTemp, Warning, TEXT("##No UWorld"));
 		return;
 	}
 
 	for (FPartsInfo& PartsInfo : CarPartsDataAsset->Parts)
 	{
-		bool  bIsFrame    = PartsInfo.bIsFrame(FramePartsName);
-		int32 SpawnCount  = PartsInfo.GetSpawnCount(FramePartsName);
+		bool  bIsFrame = PartsInfo.bIsFrame(FramePartsName);
 
+		int32 SpawnCount = 1;
 		FTransform BaseTransform = bIsFrame ? FrameTransform : PartsTransform;
 
 		for (int32 i = 0; i < SpawnCount; i++)
 		{
 			FTransform SpawnTransform = CarculateSpawnTransform(BaseTransform, PartsInfo, i, bIsFrame);
 		
-			UE_LOG(LogTemp, Warning, TEXT("SpawnCarParts %s / %s"), *SpawnTransform.ToString(), *GetNameSafe(PartsActorClass));
+			UE_LOG(LogTemp, Warning, TEXT("##SpawnCarParts %s / %s"), *SpawnTransform.ToString(), *GetNameSafe(PartsActorClass));
 			 
 			AActor* SpawnedActor = World->SpawnActor<AActor>(PartsActorClass, SpawnTransform);
 			if (SpawnedActor == nullptr)
 			{
-				UE_LOG(LogTemp, Warning, TEXT("Failed to Spawn Actor for Parts : %s"), *PartsInfo.PartsName.ToString());
+				UE_LOG(LogTemp, Warning, TEXT("##Failed to Spawn Actor for Parts : %s"), *PartsInfo.PartsName.ToString());
 				continue;
 			}
 			UStaticMeshComponent* MeshComp = SpawnedActor->FindComponentByClass<UStaticMeshComponent>();
 			if (MeshComp == nullptr)
 			{
-				UE_LOG(LogTemp, Warning, TEXT("No StaticMeshComponent found for: %s"), *PartsInfo.PartsName.ToString());
+				UE_LOG(LogTemp, Warning, TEXT("##No StaticMeshComponent found for: %s"), *PartsInfo.PartsName.ToString());
 				continue;
 			}
 			if (PartsInfo.PartsMesh)
@@ -185,19 +184,18 @@ void ADTFSpawnManager::SpawnCarParts()
 			}
 			else
 			{
-				UE_LOG(LogTemp, Warning, TEXT("PartsMesh is Null in DataAsset for: %s"), *PartsInfo.PartsName.ToString());
+				UE_LOG(LogTemp, Warning, TEXT("##PartsMesh is Null in DataAsset for: %s"), *PartsInfo.PartsName.ToString());
 			}
 			//SpawnedActor->SetActorScale3D(SpawnTransform.GetScale3D());
 
 #if WITH_EDITOR
-				//PartsName은 ACtor의 고유 이름이라 FName으로 해놓고 생각없이 FString으로 함 필요시 수정
-				//SpawnedActor->SetActorLabel(*PartsInfo.PartsName);
+			SpawnedActor->SetActorLabel(*PartsInfo.PartsName.ToString());
 #endif
 			UDTFPartIdentifierComponent* PartsComp = SpawnedActor->FindComponentByClass<UDTFPartIdentifierComponent>();
 			if (!PartsComp)
 			{
-				PartsComp    = NewObject<UDTFPartIdentifierComponent>(SpawnedActor);
-				PartsComp    ->RegisterComponent(); //런타임에 동적으로 생성한 컴포넌트를 게임 오브젝트에 등록하는 함수
+				PartsComp = NewObject<UDTFPartIdentifierComponent>(SpawnedActor);
+				PartsComp ->RegisterComponent(); //런타임에 동적으로 생성한 컴포넌트를 게임 오브젝트에 등록하는 함수
 				SpawnedActor->AddInstanceComponent(PartsComp);
 			}
 			if (PartsComp)
@@ -209,7 +207,7 @@ void ADTFSpawnManager::SpawnCarParts()
 				PartsComp->bIsMirrored = PartsInfo.bMirrorX;
 				PartsComp->bIsFrame = PartsInfo.bIsFrame(FramePartsName);
 				
-				UE_LOG(LogTemp, Log, TEXT("PartComp Initialized for %s with offset %s, Mirrored : %s"), 
+				UE_LOG(LogTemp, Log, TEXT("##PartComp Initialized for %s with offset %s, Mirrored : %s"), 
 				*PartsComp->PartsName.ToString(), *PartsComp->Offset.ToString(), PartsComp->bIsMirrored ? TEXT("true") : TEXT("false"));
 			}
 			PartsMap.FindOrAdd(PartsComp ? PartsComp->PartsType : FName("Default")).Actors.Add(SpawnedActor);
@@ -222,7 +220,7 @@ FTransform ADTFSpawnManager::CarculateSpawnTransform(const FTransform& BaseTrans
 	FTransform SpawnTransform = BaseTransform;
 
 	bool bMirrorX = PartsInfo.bMirrorX;
-	UE_LOG(LogTemp, Log, TEXT("## Right ? %d (%s)"), bMirrorX, *PartsInfo.PartsName.ToString());
+	UE_LOG(LogTemp, Log, TEXT(" Right ? %d (%s)"), bMirrorX, *PartsInfo.PartsName.ToString());
 
 	SpawnTransform = CreateMirroedTransform(SpawnTransform, bMirrorX);
 
@@ -235,7 +233,7 @@ FTransform ADTFSpawnManager::CarculateSpawnTransform(const FTransform& BaseTrans
 
 FTransform ADTFSpawnManager::CreateMirroedTransform(const FTransform& BaseTransform, bool bMirrorX)
 {
-	UE_LOG(LogTemp, Warning, TEXT("CreateMirroedTransform#1 %s / %d"), *BaseTransform.ToString(), bMirrorX);
+	UE_LOG(LogTemp, Warning, TEXT("## CreateMirroedTransform#1 %s / %d"), *BaseTransform.ToString(), bMirrorX);
 	FTransform Result = BaseTransform;
 
 	if (bMirrorX)
@@ -245,7 +243,7 @@ FTransform ADTFSpawnManager::CreateMirroedTransform(const FTransform& BaseTransf
 		Result.SetScale3D(Scale);
 	}
 
-	UE_LOG(LogTemp, Warning, TEXT("CreateMirroedTransform#2 %s / %d"), *BaseTransform.ToString(), bMirrorX);
+	UE_LOG(LogTemp, Warning, TEXT("## CreateMirroedTransform#2 %s / %d"), *BaseTransform.ToString(), bMirrorX);
 
 	return Result;
 }
@@ -285,3 +283,4 @@ int32 ADTFSpawnManager::GetLineIndexByName(FName LineName) const
 	}
 	return -1;
 }
+

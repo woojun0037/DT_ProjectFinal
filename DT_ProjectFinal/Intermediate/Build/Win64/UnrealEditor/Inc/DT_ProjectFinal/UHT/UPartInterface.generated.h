@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Interface UUPartInterface ******************************************************
 DT_PROJECTFINAL_API UClass* Z_Construct_UClass_UUPartInterface_NoRegister();
 
-#define FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Interface_UPartInterface_h_10_ENHANCED_CONSTRUCTORS \
+#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_Interface_UPartInterface_h_10_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	DT_PROJECTFINAL_API UUPartInterface(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -31,7 +31,7 @@ DT_PROJECTFINAL_API UClass* Z_Construct_UClass_UUPartInterface_NoRegister();
 	virtual ~UUPartInterface() = default;
 
 
-#define FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Interface_UPartInterface_h_10_GENERATED_UINTERFACE_BODY() \
+#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_Interface_UPartInterface_h_10_GENERATED_UINTERFACE_BODY() \
 private: \
 	static void StaticRegisterNativesUUPartInterface(); \
 	friend struct Z_Construct_UClass_UUPartInterface_Statics; \
@@ -42,15 +42,15 @@ public: \
 	DECLARE_SERIALIZER(UUPartInterface)
 
 
-#define FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Interface_UPartInterface_h_10_GENERATED_BODY \
+#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_Interface_UPartInterface_h_10_GENERATED_BODY \
 	PRAGMA_DISABLE_DEPRECATION_WARNINGS \
-	FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Interface_UPartInterface_h_10_GENERATED_UINTERFACE_BODY() \
-	FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Interface_UPartInterface_h_10_ENHANCED_CONSTRUCTORS \
+	FID_DT_ProjectFinal_Source_DT_ProjectFinal_Interface_UPartInterface_h_10_GENERATED_UINTERFACE_BODY() \
+	FID_DT_ProjectFinal_Source_DT_ProjectFinal_Interface_UPartInterface_h_10_ENHANCED_CONSTRUCTORS \
 private: \
 	PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Interface_UPartInterface_h_10_INCLASS_IINTERFACE_NO_PURE_DECLS \
+#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_Interface_UPartInterface_h_10_INCLASS_IINTERFACE_NO_PURE_DECLS \
 protected: \
 	virtual ~IUPartInterface() {} \
 public: \
@@ -59,11 +59,11 @@ public: \
 	virtual UObject* _getUObject() const { return nullptr; }
 
 
-#define FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Interface_UPartInterface_h_7_PROLOG
-#define FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Interface_UPartInterface_h_15_GENERATED_BODY \
+#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_Interface_UPartInterface_h_7_PROLOG
+#define FID_DT_ProjectFinal_Source_DT_ProjectFinal_Interface_UPartInterface_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Interface_UPartInterface_h_10_INCLASS_IINTERFACE_NO_PURE_DECLS \
+	FID_DT_ProjectFinal_Source_DT_ProjectFinal_Interface_UPartInterface_h_10_INCLASS_IINTERFACE_NO_PURE_DECLS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -73,6 +73,6 @@ class UUPartInterface;
 // ********** End Interface UUPartInterface ********************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Interface_UPartInterface_h
+#define CURRENT_FILE_ID FID_DT_ProjectFinal_Source_DT_ProjectFinal_Interface_UPartInterface_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

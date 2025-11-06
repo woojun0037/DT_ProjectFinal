@@ -120,14 +120,14 @@ ADTFGameModeBase::~ADTFGameModeBase() {}
 // ********** End Class ADTFGameModeBase ***********************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameModeBase_h__Script_DT_ProjectFinal_Statics
+struct Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameModeBase_h__Script_DT_ProjectFinal_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_ADTFGameModeBase, ADTFGameModeBase::StaticClass, TEXT("ADTFGameModeBase"), &Z_Registration_Info_UClass_ADTFGameModeBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADTFGameModeBase), 990303273U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameModeBase_h__Script_DT_ProjectFinal_2324816897(TEXT("/Script/DT_ProjectFinal"),
-	Z_CompiledInDeferFile_FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameModeBase_h__Script_DT_ProjectFinal_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameModeBase_h__Script_DT_ProjectFinal_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameModeBase_h__Script_DT_ProjectFinal_2324816897(TEXT("/Script/DT_ProjectFinal"),
+	Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameModeBase_h__Script_DT_ProjectFinal_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameModeBase_h__Script_DT_ProjectFinal_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************
