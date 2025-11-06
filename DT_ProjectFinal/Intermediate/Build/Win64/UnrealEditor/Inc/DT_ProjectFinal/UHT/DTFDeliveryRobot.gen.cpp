@@ -475,7 +475,7 @@ ADTFDeliveryRobot::~ADTFDeliveryRobot() {}
 // ********** End Class ADTFDeliveryRobot **********************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h__Script_DT_ProjectFinal_Statics
+struct Z_CompiledInDeferFile_FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h__Script_DT_ProjectFinal_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
 		{ ERobotState_StaticEnum, TEXT("ERobotState"), &Z_Registration_Info_UEnum_ERobotState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 167837002U) },
@@ -484,10 +484,10 @@ struct Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_Delivery
 		{ Z_Construct_UClass_ADTFDeliveryRobot, ADTFDeliveryRobot::StaticClass, TEXT("ADTFDeliveryRobot"), &Z_Registration_Info_UClass_ADTFDeliveryRobot, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADTFDeliveryRobot), 441089787U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h__Script_DT_ProjectFinal_4266474784(TEXT("/Script/DT_ProjectFinal"),
-	Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h__Script_DT_ProjectFinal_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h__Script_DT_ProjectFinal_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h__Script_DT_ProjectFinal_4266474784(TEXT("/Script/DT_ProjectFinal"),
+	Z_CompiledInDeferFile_FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h__Script_DT_ProjectFinal_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h__Script_DT_ProjectFinal_Statics::ClassInfo),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h__Script_DT_ProjectFinal_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h__Script_DT_ProjectFinal_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h__Script_DT_ProjectFinal_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h__Script_DT_ProjectFinal_Statics::EnumInfo));
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

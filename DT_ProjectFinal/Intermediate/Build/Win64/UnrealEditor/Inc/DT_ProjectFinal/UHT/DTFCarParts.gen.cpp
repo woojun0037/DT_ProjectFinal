@@ -203,7 +203,7 @@ ADTFCarParts::~ADTFCarParts() {}
 // ********** End Class ADTFCarParts ***************************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_CarParts_DTFCarParts_h__Script_DT_ProjectFinal_Statics
+struct Z_CompiledInDeferFile_FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_CarParts_DTFCarParts_h__Script_DT_ProjectFinal_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
 		{ FAttachmentTransform::StaticStruct, Z_Construct_UScriptStruct_FAttachmentTransform_Statics::NewStructOps, TEXT("AttachmentTransform"), &Z_Registration_Info_UScriptStruct_FAttachmentTransform, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FAttachmentTransform), 3884010519U) },
@@ -212,9 +212,9 @@ struct Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_CarParts
 		{ Z_Construct_UClass_ADTFCarParts, ADTFCarParts::StaticClass, TEXT("ADTFCarParts"), &Z_Registration_Info_UClass_ADTFCarParts, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADTFCarParts), 869182198U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_CarParts_DTFCarParts_h__Script_DT_ProjectFinal_384420623(TEXT("/Script/DT_ProjectFinal"),
-	Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_CarParts_DTFCarParts_h__Script_DT_ProjectFinal_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_CarParts_DTFCarParts_h__Script_DT_ProjectFinal_Statics::ClassInfo),
-	Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_CarParts_DTFCarParts_h__Script_DT_ProjectFinal_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DT_ProjectFinal_Source_DT_ProjectFinal_CarParts_DTFCarParts_h__Script_DT_ProjectFinal_Statics::ScriptStructInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_CarParts_DTFCarParts_h__Script_DT_ProjectFinal_384420623(TEXT("/Script/DT_ProjectFinal"),
+	Z_CompiledInDeferFile_FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_CarParts_DTFCarParts_h__Script_DT_ProjectFinal_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_CarParts_DTFCarParts_h__Script_DT_ProjectFinal_Statics::ClassInfo),
+	Z_CompiledInDeferFile_FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_CarParts_DTFCarParts_h__Script_DT_ProjectFinal_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_CarParts_DTFCarParts_h__Script_DT_ProjectFinal_Statics::ScriptStructInfo),
 	nullptr, 0);
 // ********** End Registration *********************************************************************
 

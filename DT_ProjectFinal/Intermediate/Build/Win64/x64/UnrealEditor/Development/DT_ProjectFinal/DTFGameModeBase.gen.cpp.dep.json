@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\dt_projectfinal\\dt_projectfinal\\intermediate\\build\\win64\\unrealeditor\\inc\\dt_projectfinal\\uht\\dtfgamemodebase.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\dt_projectfinal\\dt_projectfinal\\intermediate\\build\\win64\\x64\\dt_projectfinaleditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\dt_projectfinal\\dt_projectfinal\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\dt_projectfinal\\definitions.dt_projectfinal.h",
+            "d:\\dt_projectfinal\\dt_projectfinal\\source\\dt_projectfinal\\manager\\dtfgamemodebase.h",
+            "d:\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "d:\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "d:\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "d:\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "d:\\dt_projectfinal\\dt_projectfinal\\intermediate\\build\\win64\\unrealeditor\\inc\\dt_projectfinal\\uht\\dtfgamemodebase.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
