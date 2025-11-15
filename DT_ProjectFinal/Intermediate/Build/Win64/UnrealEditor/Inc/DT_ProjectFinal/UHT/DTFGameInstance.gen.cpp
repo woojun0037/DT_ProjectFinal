@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Manager/DTFGameInstance.h"
+#include "Manager/GameInstance/DTFGameInstance.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
@@ -15,9 +15,9 @@ void EmptyLinkFunctionForGeneratedCodeDTFGameInstance() {}
 COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 DT_PROJECTFINAL_API UClass* Z_Construct_UClass_UDTFGameInstance();
 DT_PROJECTFINAL_API UClass* Z_Construct_UClass_UDTFGameInstance_NoRegister();
+DT_PROJECTFINAL_API UClass* Z_Construct_UClass_UDTFLineOrderWidget_NoRegister();
 DT_PROJECTFINAL_API UClass* Z_Construct_UClass_UDTFUIManager_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UGameInstance();
-UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
 UPackage* Z_Construct_UPackage__Script_DT_ProjectFinal();
 // ********** End Cross Module References **********************************************************
 
@@ -35,7 +35,7 @@ struct Z_Construct_UFunction_UDTFGameInstance_AddComponentedCars_Statics
 		{ "Comment", "//\xec\x83\x9d\xec\x82\xb0\xeb\x90\x9c \xec\x9e\x90\xeb\x8f\x99\xec\xb0\xa8 \xec\x88\x98\xeb\x9f\x89 \xec\xb6\x94\xea\xb0\x80 \xed\x95\xa8\xec\x88\x98\n" },
 #endif
 		{ "CPP_Default_Count", "1" },
-		{ "ModuleRelativePath", "Manager/DTFGameInstance.h" },
+		{ "ModuleRelativePath", "Manager/GameInstance/DTFGameInstance.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "\xec\x83\x9d\xec\x82\xb0\xeb\x90\x9c \xec\x9e\x90\xeb\x8f\x99\xec\xb0\xa8 \xec\x88\x98\xeb\x9f\x89 \xec\xb6\x94\xea\xb0\x80 \xed\x95\xa8\xec\x88\x98" },
 #endif
@@ -89,7 +89,7 @@ struct Z_Construct_UFunction_UDTFGameInstance_AddPartUsage_Statics
 		{ "Comment", "//\xeb\xb6\x80\xed\x92\x88 \xec\x82\xac\xec\x9a\xa9 \xea\xb8\xb0\xeb\xa1\x9d \xec\xb6\x94\xea\xb0\x80 \xed\x95\xa8\xec\x88\x98\n" },
 #endif
 		{ "CPP_Default_count", "1" },
-		{ "ModuleRelativePath", "Manager/DTFGameInstance.h" },
+		{ "ModuleRelativePath", "Manager/GameInstance/DTFGameInstance.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "\xeb\xb6\x80\xed\x92\x88 \xec\x82\xac\xec\x9a\xa9 \xea\xb8\xb0\xeb\xa1\x9d \xec\xb6\x94\xea\xb0\x80 \xed\x95\xa8\xec\x88\x98" },
 #endif
@@ -175,23 +175,23 @@ struct Z_Construct_UClass_UDTFGameInstance_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
-		{ "IncludePath", "Manager/DTFGameInstance.h" },
-		{ "ModuleRelativePath", "Manager/DTFGameInstance.h" },
+		{ "IncludePath", "Manager/GameInstance/DTFGameInstance.h" },
+		{ "ModuleRelativePath", "Manager/GameInstance/DTFGameInstance.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_UIManager_MetaData[] = {
 		{ "Category", "UI" },
-		{ "ModuleRelativePath", "Manager/DTFGameInstance.h" },
+		{ "ModuleRelativePath", "Manager/GameInstance/DTFGameInstance.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_LineOrderWidgetClass_MetaData[] = {
 		{ "Category", "UI" },
-		{ "ModuleRelativePath", "Manager/DTFGameInstance.h" },
+		{ "ModuleRelativePath", "Manager/GameInstance/DTFGameInstance.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TotalCompletedCars_MetaData[] = {
 		{ "Category", "DTFGameInstance" },
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// \xec\xb4\x9d \xec\x99\x84\xec\x84\xb1 \xec\x9e\x90\xeb\x8f\x99\xec\xb0\xa8 \xea\xb0\x9c\xec\x88\x98\n" },
 #endif
-		{ "ModuleRelativePath", "Manager/DTFGameInstance.h" },
+		{ "ModuleRelativePath", "Manager/GameInstance/DTFGameInstance.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "\xec\xb4\x9d \xec\x99\x84\xec\x84\xb1 \xec\x9e\x90\xeb\x8f\x99\xec\xb0\xa8 \xea\xb0\x9c\xec\x88\x98" },
 #endif
@@ -201,7 +201,7 @@ struct Z_Construct_UClass_UDTFGameInstance_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "//\xeb\x9d\xbc\xec\x9d\xb8\xeb\xb3\x84 \xeb\x88\x84\xec\xa0\x81 \xec\x83\x9d\xec\x82\xb0\xeb\x9f\x89\n" },
 #endif
-		{ "ModuleRelativePath", "Manager/DTFGameInstance.h" },
+		{ "ModuleRelativePath", "Manager/GameInstance/DTFGameInstance.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "\xeb\x9d\xbc\xec\x9d\xb8\xeb\xb3\x84 \xeb\x88\x84\xec\xa0\x81 \xec\x83\x9d\xec\x82\xb0\xeb\x9f\x89" },
 #endif
@@ -215,8 +215,8 @@ struct Z_Construct_UClass_UDTFGameInstance_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UDTFGameInstance_AddComponentedCars, "AddComponentedCars" }, // 1150641988
-		{ &Z_Construct_UFunction_UDTFGameInstance_AddPartUsage, "AddPartUsage" }, // 551847171
+		{ &Z_Construct_UFunction_UDTFGameInstance_AddComponentedCars, "AddComponentedCars" }, // 2083850124
+		{ &Z_Construct_UFunction_UDTFGameInstance_AddPartUsage, "AddPartUsage" }, // 221784487
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -224,8 +224,8 @@ struct Z_Construct_UClass_UDTFGameInstance_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UDTFGameInstance_Statics::NewProp_UIManager = { "UIManager", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UDTFGameInstance, UIManager), Z_Construct_UClass_UDTFUIManager_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_UIManager_MetaData), NewProp_UIManager_MetaData) };
-const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_UDTFGameInstance_Statics::NewProp_LineOrderWidgetClass = { "LineOrderWidgetClass", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UDTFGameInstance, LineOrderWidgetClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LineOrderWidgetClass_MetaData), NewProp_LineOrderWidgetClass_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UDTFGameInstance_Statics::NewProp_UIManager = { "UIManager", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UDTFGameInstance, UIManager), Z_Construct_UClass_UDTFUIManager_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_UIManager_MetaData), NewProp_UIManager_MetaData) };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_UDTFGameInstance_Statics::NewProp_LineOrderWidgetClass = { "LineOrderWidgetClass", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UDTFGameInstance, LineOrderWidgetClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UDTFLineOrderWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LineOrderWidgetClass_MetaData), NewProp_LineOrderWidgetClass_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UDTFGameInstance_Statics::NewProp_TotalCompletedCars = { "TotalCompletedCars", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UDTFGameInstance, TotalCompletedCars), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TotalCompletedCars_MetaData), NewProp_TotalCompletedCars_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UDTFGameInstance_Statics::NewProp_LineProductionCount_Inner = { "LineProductionCount", nullptr, (EPropertyFlags)0x0000000000020000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UDTFGameInstance_Statics::NewProp_LineProductionCount = { "LineProductionCount", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UDTFGameInstance, LineProductionCount), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LineProductionCount_MetaData), NewProp_LineProductionCount_MetaData) };
@@ -270,14 +270,14 @@ UDTFGameInstance::~UDTFGameInstance() {}
 // ********** End Class UDTFGameInstance ***********************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameInstance_h__Script_DT_ProjectFinal_Statics
+struct Z_CompiledInDeferFile_FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_GameInstance_DTFGameInstance_h__Script_DT_ProjectFinal_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UDTFGameInstance, UDTFGameInstance::StaticClass, TEXT("UDTFGameInstance"), &Z_Registration_Info_UClass_UDTFGameInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UDTFGameInstance), 3962791377U) },
+		{ Z_Construct_UClass_UDTFGameInstance, UDTFGameInstance::StaticClass, TEXT("UDTFGameInstance"), &Z_Registration_Info_UClass_UDTFGameInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UDTFGameInstance), 1596277085U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameInstance_h__Script_DT_ProjectFinal_1620640418(TEXT("/Script/DT_ProjectFinal"),
-	Z_CompiledInDeferFile_FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameInstance_h__Script_DT_ProjectFinal_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameInstance_h__Script_DT_ProjectFinal_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_GameInstance_DTFGameInstance_h__Script_DT_ProjectFinal_1888330041(TEXT("/Script/DT_ProjectFinal"),
+	Z_CompiledInDeferFile_FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_GameInstance_DTFGameInstance_h__Script_DT_ProjectFinal_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_GameInstance_DTFGameInstance_h__Script_DT_ProjectFinal_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

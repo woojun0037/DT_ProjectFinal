@@ -1,23 +1,29 @@
 ﻿#pragma once
-
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
-#include "GameFramework/FloatingPawnMovement.h"
-#include "Kismet/GameplayStatics.h"
-#include "Components/CapsuleComponent.h"
-#include "AIController.h"
-#include "Navigation/PathFollowingComponent.h"
 #include "DTFDeliveryRobot.generated.h"
 
+class UCapsuleComponent;
+class UStaticMeshComponent;
+class USceneComponent;
+class UFloatingPawnMovement;
+
+class UDTFUIManager;
+class UDTFGameInstance;
+class AAIController;
+
+struct FAIRequestID;
+struct FPathFollowingResult;
 
 UENUM(BlueprintType)
 enum class ERobotState : uint8
 {
-	Idle,
-	MovingToPickUp,
-	PickingUp,
-	MovingToDelivery,
-	Dropping
+	Idle			 UMETA(DisplayName = "IDLE"),
+	MovingToPickUp   UMETA(DisplayName = "MovingToPick Up"),
+	PickingUp		 UMETA(DisplayName = "Picking Up"),
+	MovingToDelivery UMETA(DisplayName = "Moving To Delivery"),
+	Dropping		 UMETA(DisplayName = "Dropping"),
+	Error		     UMETA(DisplayName = "Error")
 };
 
 UCLASS()
@@ -28,62 +34,73 @@ class DT_PROJECTFINAL_API ADTFDeliveryRobot : public APawn
 public:	
 	ADTFDeliveryRobot();
 
-protected:
-	virtual void BeginPlay() override;
-
-public:	
+	//Public API
 	virtual void Tick(float DeltaTime) override;
 
-	UFUNCTION(BlueprintCallable, Category = "Delivery")
-	void MoveToLocation(FVector TargetLocation);
-	
-	UFUNCTION(BlueprintCallable, Category = "Delivery")
-	void PickupParts(AActor* Parts);
+	void InitializeRobot(AActor* InPartsSpawnPoint, AActor* InAssignedSpawnPoint);
 
-	UFUNCTION(BlueprintCallable, Category = "Delivery")
-	void DropParts();
+	UFUNCTION(BlueprintCallable, Category = "State Machine")
+	void SetState(ERobotState NewState);
 
 	UFUNCTION(BlueprintCallable, Category = "Delivery")
 	void StartDelivery();
-
-protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
-	USceneComponent* AttachPoint;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
-	UCapsuleComponent* CapsuleComponent;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
-	UStaticMeshComponent* RobotMesh;
 	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
-	UFloatingPawnMovement* MovementComponent;
+	void MoveToLocationAsync(const FVector& InTargetLocation);
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Delivery")
-	TArray<AActor*> DeliveryTargets;
+	void PickupParts(AActor* Parts);
+	void DropParts();
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Delivery")
-	float MovementSpeed = 300.0f;
+	void BindToUIManager(class UDTFUIManager* UIManager);
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Delivery")
-	AActor* PartsSpawnPoint;
+	void OnMoveCompleted(FAIRequestID RequestID, const FPathFollowingResult& Result);
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Delivery")
-	AActor* CurrentParts;
+	UFUNCTION()
+	void OnPartsSpawnedAtSpawnPoint();
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Delivery")
-	ERobotState CurrentState;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Delivery")
-	int32 CurrentLineIndex = 0;
-
-	//BP에서 오버라이드 가능한 이벤트
+	// 블루프린트 이벤트용 함수 선언
 	UFUNCTION(BlueprintImplementableEvent, Category = "Delivery")
 	void OnPickupComplete();
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "Delivery")
 	void OnDropComplete();
 
-	//이동 끝
-	void OnMoveCompleted(FAIRequestID RequestID, const FPathFollowingResult& Result);
+protected:
+	virtual void BeginPlay() override;
+
+	//Components
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+	UCapsuleComponent* CapsuleComponent;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+	UFloatingPawnMovement* MovementComponent;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+	USceneComponent* AttachPoint;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Mesh", meta = (AllowPrivateAccess = "true"))
+	UStaticMeshComponent* RobotMesh;
+
+private:
+	//DeliveryState
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Delivery", meta = (AllowPrivateAccess = "true"))
+	AActor* PartsSpawnPoint;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Delivery", meta = (AllowPrivateAccess = "true"))
+	AActor* AssignedSpawnPoint;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Delivery", meta = (AllowPrivateAccess = "true"))
+	ERobotState CurrentState = ERobotState::Idle;
+	
+	//CurrentParts
+	UPROPERTY()
+	AActor* CurrentParts = nullptr;
+
+	UPROPERTY(EditAnywhere, Category = "Delivery")
+	TArray<AActor*> DeliveryTargets;
+
+	int32 CurrentLineIndex = 0;
+
+	bool bIsDelivering = false;
+
+	TSubclassOf<AAIController> AIControllerClass;
 };

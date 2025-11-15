@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"D:\\DT_ProjectFinal\\DT_ProjectFinal\\Source\\DT_ProjectFinal\\DT_ProjectFinal.Build.cs",
-		"D:\\DT_ProjectFinal\\DT_ProjectFinal\\Source\\DT_ProjectFinal.Target.cs",
-		"D:\\DT_ProjectFinal\\DT_ProjectFinal\\Source\\DT_ProjectFinalEditor.Target.cs"
+		"C:\\Users\\BCA-PC20\\Desktop\\DT_ProjectFinal\\DT_ProjectFinal\\Source\\DT_ProjectFinal\\DT_ProjectFinal.Build.cs",
+		"C:\\Users\\BCA-PC20\\Desktop\\DT_ProjectFinal\\DT_ProjectFinal\\Source\\DT_ProjectFinal.Target.cs",
+		"C:\\Users\\BCA-PC20\\Desktop\\DT_ProjectFinal\\DT_ProjectFinal\\Source\\DT_ProjectFinalEditor.Target.cs"
 	],
 	"EngineVersion": "5.6.1"
 }

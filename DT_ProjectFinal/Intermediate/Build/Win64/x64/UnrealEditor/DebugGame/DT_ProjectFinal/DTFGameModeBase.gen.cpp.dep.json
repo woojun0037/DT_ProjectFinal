@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\bca-pc20\\desktop\\dt_projectfinal\\dt_projectfinal\\intermediate\\build\\win64\\unrealeditor\\inc\\dt_projectfinal\\uht\\dtfgamemodebase.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\bca-pc20\\desktop\\dt_projectfinal\\dt_projectfinal\\intermediate\\build\\win64\\x64\\dt_projectfinaleditor\\debuggame\\unrealed\\sharedpch.unrealed.project.nonoptimized.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\bca-pc20\\desktop\\dt_projectfinal\\dt_projectfinal\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\dt_projectfinal\\definitions.dt_projectfinal.h",
+            "c:\\users\\bca-pc20\\desktop\\dt_projectfinal\\dt_projectfinal\\source\\dt_projectfinal\\manager\\gamemode\\dtfgamemodebase.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "c:\\users\\bca-pc20\\desktop\\dt_projectfinal\\dt_projectfinal\\intermediate\\build\\win64\\unrealeditor\\inc\\dt_projectfinal\\uht\\dtfgamemodebase.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -4,7 +4,7 @@
 	DO NOT modify this manually! Edit the corresponding .h files instead!
 ===========================================================================*/
 
-// IWYU pragma: private, include "Manager/DTFSpawnManager.h"
+// IWYU pragma: private, include "Manager/Spawn/DTFSpawnManager.h"
 
 #ifdef DT_PROJECTFINAL_DTFSpawnManager_generated_h
 #error "DTFSpawnManager.generated.h already included, missing '#pragma once' in DTFSpawnManager.h"
@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class AActor;
 
 // ********** Begin ScriptStruct FPartActorArray ***************************************************
-#define FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFSpawnManager_h_13_GENERATED_BODY \
+#define FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_Spawn_DTFSpawnManager_h_16_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FPartActorArray_Statics; \
 	DT_PROJECTFINAL_API static class UScriptStruct* StaticStruct();
 
@@ -28,14 +28,18 @@ struct FPartActorArray;
 // ********** End ScriptStruct FPartActorArray *****************************************************
 
 // ********** Begin Class ADTFSpawnManager *********************************************************
-#define FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFSpawnManager_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_Spawn_DTFSpawnManager_h_25_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execAssignSpawnPointsToBots); \
 	DECLARE_FUNCTION(execSpawnCarParts); \
-	DECLARE_FUNCTION(execGetPartsActorClass);
+	DECLARE_FUNCTION(execGetPartsActorClass); \
+	DECLARE_FUNCTION(execPartsSpawnComplete); \
+	DECLARE_FUNCTION(execHandlePartsSpawned); \
+	DECLARE_FUNCTION(execNotifyPartsSpawned);
 
 
 DT_PROJECTFINAL_API UClass* Z_Construct_UClass_ADTFSpawnManager_NoRegister();
 
-#define FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFSpawnManager_h_22_INCLASS_NO_PURE_DECLS \
+#define FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_Spawn_DTFSpawnManager_h_25_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesADTFSpawnManager(); \
 	friend struct Z_Construct_UClass_ADTFSpawnManager_Statics; \
@@ -46,7 +50,7 @@ public: \
 	DECLARE_SERIALIZER(ADTFSpawnManager)
 
 
-#define FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFSpawnManager_h_22_ENHANCED_CONSTRUCTORS \
+#define FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_Spawn_DTFSpawnManager_h_25_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ADTFSpawnManager(ADTFSpawnManager&&) = delete; \
 	ADTFSpawnManager(const ADTFSpawnManager&) = delete; \
@@ -56,13 +60,13 @@ public: \
 	NO_API virtual ~ADTFSpawnManager();
 
 
-#define FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFSpawnManager_h_19_PROLOG
-#define FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFSpawnManager_h_22_GENERATED_BODY \
+#define FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_Spawn_DTFSpawnManager_h_22_PROLOG
+#define FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_Spawn_DTFSpawnManager_h_25_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFSpawnManager_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFSpawnManager_h_22_INCLASS_NO_PURE_DECLS \
-	FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFSpawnManager_h_22_ENHANCED_CONSTRUCTORS \
+	FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_Spawn_DTFSpawnManager_h_25_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_Spawn_DTFSpawnManager_h_25_INCLASS_NO_PURE_DECLS \
+	FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_Spawn_DTFSpawnManager_h_25_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -72,6 +76,6 @@ class ADTFSpawnManager;
 // ********** End Class ADTFSpawnManager ***********************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFSpawnManager_h
+#define CURRENT_FILE_ID FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_Spawn_DTFSpawnManager_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

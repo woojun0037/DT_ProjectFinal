@@ -5,14 +5,13 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Manager/DTFGameModeBase.h"
+#include "Manager/GameMode/DTFGameModeBase.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 void EmptyLinkFunctionForGeneratedCodeDTFGameModeBase() {}
 
 // ********** Begin Cross Module References ********************************************************
-COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 DT_PROJECTFINAL_API UClass* Z_Construct_UClass_ADTFGameModeBase();
 DT_PROJECTFINAL_API UClass* Z_Construct_UClass_ADTFGameModeBase_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_AGameModeBase();
@@ -58,21 +57,16 @@ struct Z_Construct_UClass_ADTFGameModeBase_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
 		{ "HideCategories", "Info Rendering MovementReplication Replication Actor Input Movement Collision Rendering HLOD WorldPartition DataLayers Transformation" },
-		{ "IncludePath", "Manager/DTFGameModeBase.h" },
-		{ "ModuleRelativePath", "Manager/DTFGameModeBase.h" },
+		{ "IncludePath", "Manager/GameMode/DTFGameModeBase.h" },
+		{ "ModuleRelativePath", "Manager/GameMode/DTFGameModeBase.h" },
 		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DTFUiClass_MetaData[] = {
-		{ "Category", "UI" },
-		{ "ModuleRelativePath", "Manager/DTFGameModeBase.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DTFUi_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DTFUIManager_MetaData[] = {
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Manager/DTFGameModeBase.h" },
+		{ "ModuleRelativePath", "Manager/GameMode/DTFGameModeBase.h" },
 	};
 #endif // WITH_METADATA
-	static const UECodeGen_Private::FClassPropertyParams NewProp_DTFUiClass;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_DTFUi;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_DTFUIManager;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -80,11 +74,9 @@ struct Z_Construct_UClass_ADTFGameModeBase_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ADTFGameModeBase_Statics::NewProp_DTFUiClass = { "DTFUiClass", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTFGameModeBase, DTFUiClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DTFUiClass_MetaData), NewProp_DTFUiClass_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADTFGameModeBase_Statics::NewProp_DTFUi = { "DTFUi", nullptr, (EPropertyFlags)0x0040000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTFGameModeBase, DTFUi), Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DTFUi_MetaData), NewProp_DTFUi_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADTFGameModeBase_Statics::NewProp_DTFUIManager = { "DTFUIManager", nullptr, (EPropertyFlags)0x0040000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTFGameModeBase, DTFUIManager), Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DTFUIManager_MetaData), NewProp_DTFUIManager_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ADTFGameModeBase_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTFGameModeBase_Statics::NewProp_DTFUiClass,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTFGameModeBase_Statics::NewProp_DTFUi,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTFGameModeBase_Statics::NewProp_DTFUIManager,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ADTFGameModeBase_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ADTFGameModeBase_Statics::DependentSingletons[])() = {
@@ -120,14 +112,14 @@ ADTFGameModeBase::~ADTFGameModeBase() {}
 // ********** End Class ADTFGameModeBase ***********************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameModeBase_h__Script_DT_ProjectFinal_Statics
+struct Z_CompiledInDeferFile_FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_GameMode_DTFGameModeBase_h__Script_DT_ProjectFinal_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ADTFGameModeBase, ADTFGameModeBase::StaticClass, TEXT("ADTFGameModeBase"), &Z_Registration_Info_UClass_ADTFGameModeBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADTFGameModeBase), 990303273U) },
+		{ Z_Construct_UClass_ADTFGameModeBase, ADTFGameModeBase::StaticClass, TEXT("ADTFGameModeBase"), &Z_Registration_Info_UClass_ADTFGameModeBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADTFGameModeBase), 790043068U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameModeBase_h__Script_DT_ProjectFinal_2324816897(TEXT("/Script/DT_ProjectFinal"),
-	Z_CompiledInDeferFile_FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameModeBase_h__Script_DT_ProjectFinal_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_DTFGameModeBase_h__Script_DT_ProjectFinal_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_GameMode_DTFGameModeBase_h__Script_DT_ProjectFinal_2271547510(TEXT("/Script/DT_ProjectFinal"),
+	Z_CompiledInDeferFile_FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_GameMode_DTFGameModeBase_h__Script_DT_ProjectFinal_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_Manager_GameMode_DTFGameModeBase_h__Script_DT_ProjectFinal_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

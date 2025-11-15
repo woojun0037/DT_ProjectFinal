@@ -16,20 +16,19 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
-class AActor;
+enum class ERobotState : uint8;
 
 // ********** Begin Class ADTFDeliveryRobot ********************************************************
-#define FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_26_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_32_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execOnPartsSpawnedAtSpawnPoint); \
 	DECLARE_FUNCTION(execStartDelivery); \
-	DECLARE_FUNCTION(execDropParts); \
-	DECLARE_FUNCTION(execPickupParts); \
-	DECLARE_FUNCTION(execMoveToLocation);
+	DECLARE_FUNCTION(execSetState);
 
 
-#define FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_26_CALLBACK_WRAPPERS
+#define FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_32_CALLBACK_WRAPPERS
 DT_PROJECTFINAL_API UClass* Z_Construct_UClass_ADTFDeliveryRobot_NoRegister();
 
-#define FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_26_INCLASS_NO_PURE_DECLS \
+#define FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_32_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesADTFDeliveryRobot(); \
 	friend struct Z_Construct_UClass_ADTFDeliveryRobot_Statics; \
@@ -40,7 +39,7 @@ public: \
 	DECLARE_SERIALIZER(ADTFDeliveryRobot)
 
 
-#define FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_26_ENHANCED_CONSTRUCTORS \
+#define FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_32_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ADTFDeliveryRobot(ADTFDeliveryRobot&&) = delete; \
 	ADTFDeliveryRobot(const ADTFDeliveryRobot&) = delete; \
@@ -50,14 +49,14 @@ public: \
 	NO_API virtual ~ADTFDeliveryRobot();
 
 
-#define FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_23_PROLOG
-#define FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_26_GENERATED_BODY \
+#define FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_29_PROLOG
+#define FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_32_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_26_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_26_CALLBACK_WRAPPERS \
-	FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_26_INCLASS_NO_PURE_DECLS \
-	FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_26_ENHANCED_CONSTRUCTORS \
+	FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_32_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_32_CALLBACK_WRAPPERS \
+	FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_32_INCLASS_NO_PURE_DECLS \
+	FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_32_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -67,7 +66,7 @@ class ADTFDeliveryRobot;
 // ********** End Class ADTFDeliveryRobot **********************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h
+#define CURRENT_FILE_ID FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h
 
 // ********** Begin Enum ERobotState ***************************************************************
 #define FOREACH_ENUM_EROBOTSTATE(op) \
@@ -75,7 +74,8 @@ class ADTFDeliveryRobot;
 	op(ERobotState::MovingToPickUp) \
 	op(ERobotState::PickingUp) \
 	op(ERobotState::MovingToDelivery) \
-	op(ERobotState::Dropping) 
+	op(ERobotState::Dropping) \
+	op(ERobotState::Error) 
 
 enum class ERobotState : uint8;
 template<> struct TIsUEnumClass<ERobotState> { enum { Value = true }; };

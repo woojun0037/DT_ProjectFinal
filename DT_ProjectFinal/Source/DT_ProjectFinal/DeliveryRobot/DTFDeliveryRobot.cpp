@@ -1,6 +1,15 @@
 ﻿#include "DeliveryRobot/DTFDeliveryRobot.h"
-#include "Navigation/PathFollowingComponent.h"
+
+#include "Manager/UI/DTFUIManager.h"
+#include "Manager/GameInstance/DTFGameInstance.h"
+
+#include "Components/CapsuleComponent.h"
+#include "Components/StaticMeshComponent.h"
+
 #include "AIController.h"
+#include "GameFramework/FloatingPawnMovement.h"
+#include "Kismet/GameplayStatics.h"
+#include "Navigation/PathFollowingComponent.h"
 
 ADTFDeliveryRobot::ADTFDeliveryRobot()
 {
@@ -29,49 +38,27 @@ ADTFDeliveryRobot::ADTFDeliveryRobot()
 void ADTFDeliveryRobot::BeginPlay()
 { 
 	Super::BeginPlay();
+	
+	TArray<AActor*> FoundTargets;
+	DeliveryTargets = FoundTargets;
 
-	//BP에서 할당하지 않았으면 자동으로 찾기
-	if (!PartsSpawnPoint)
-	{
-		TArray<AActor*> FoundActors;
-		UGameplayStatics::GetAllActorsWithTag(GetWorld(), FName("PartsSpawnPoints"), FoundActors);
-
-		if (FoundActors.Num() > 0)
-		{
-			PartsSpawnPoint = FoundActors[0];
-			UE_LOG(LogTemp, Log, TEXT("Found PartsSpawnPoint by tag: %s"), *PartsSpawnPoint->GetName());
-		}
-		else
-		{
-			UE_LOG(LogTemp, Warning, TEXT("PartsSpawnPoint not Found! Add 'PartsSpawnPoint' tag to spawn actor."));
-		}
-	}
-	else
-	{
-		UE_LOG(LogTemp, Log, TEXT("PartsSpawnPoint assigned from BP : %s"), *PartsSpawnPoint->GetName());
-	}
-
-	if (DeliveryTargets.Num() == 0)
-	{
-		TArray<AActor*> FoundTargets;
-		UGameplayStatics::GetAllActorsWithTag(GetWorld(), FName("DeliveryPoint"), FoundTargets);
-		DeliveryTargets = FoundTargets;
-
-		UE_LOG(LogTemp, Log, TEXT("Found %d Delivery targets by tag"), DeliveryTargets.Num());
-	}
-	else
-	{
-		UE_LOG(LogTemp, Log, TEXT("Delivery targets assined from BP : %d Targets"), DeliveryTargets.Num());
-	}
-
+	// AIController 바인딩
 	if (AAIController* AICon = Cast<AAIController>(GetController()))
 	{
-		UPathFollowingComponent* PathFollowingComp = AICon->GetPathFollowingComponent();
-		if (PathFollowingComp)
+		if (UPathFollowingComponent* PathFollowingComp = AICon->GetPathFollowingComponent())
 		{
 			PathFollowingComp->OnRequestFinished.AddUObject(this, &ADTFDeliveryRobot::OnMoveCompleted);
-			UE_LOG(LogTemp, Log, TEXT("Bound OnMoveCompleted delegate via Path Following Component"));
 		}
+	}
+
+	UDTFGameInstance* GI = Cast<UDTFGameInstance>(UGameplayStatics::GetGameInstance(GetWorld()));
+	if (GI && GI->UIManager)
+	{
+		BindToUIManager(GI->UIManager);
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("##UIManager is nullptr in DeleveryBot BeginPlay"));
 	}
 }
 
@@ -80,23 +67,120 @@ void ADTFDeliveryRobot::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 }
 
-void ADTFDeliveryRobot::MoveToLocation(FVector TargetLocation)
+void ADTFDeliveryRobot::InitializeRobot(AActor* InPartsSpawnPoint, AActor* InAssignedSpawnPoint)
+{
+	PartsSpawnPoint    = InPartsSpawnPoint;
+	AssignedSpawnPoint = InAssignedSpawnPoint;
+
+	UE_LOG(LogTemp, Log,
+		TEXT("##DeliveryRobot::InitializeRobot [%s] Parts=%s, Assigned=%s"),
+		*GetName(),
+		*GetNameSafe(PartsSpawnPoint),
+		*GetNameSafe(AssignedSpawnPoint));
+}
+
+void ADTFDeliveryRobot::SetState(ERobotState NewState)
+{
+	if (CurrentState == NewState)
+	{
+		return;
+	}
+	CurrentState = NewState;
+
+	switch (NewState)
+	{
+	case ERobotState::Idle:
+		UE_LOG(LogTemp, Log, TEXT("##Robot is Idle"));
+		break;
+
+	case ERobotState::MovingToPickUp:
+		if (PartsSpawnPoint)
+		{
+			FVector TargetLoc = PartsSpawnPoint->GetActorLocation();
+			TargetLoc.Z = GetActorLocation().Z;
+			MoveToLocationAsync(TargetLoc);
+		}
+		break;
+
+	case ERobotState::PickingUp:
+		PickupParts(PartsSpawnPoint);
+		break;
+
+	case ERobotState::MovingToDelivery:
+		if (DeliveryTargets.IsValidIndex(CurrentLineIndex))
+		{
+			FVector TargetLoc = DeliveryTargets[CurrentLineIndex]->GetActorLocation();
+			TargetLoc.Z = GetActorLocation().Z;
+			MoveToLocationAsync(TargetLoc);
+		}
+		break;
+
+	case ERobotState::Dropping:
+		DropParts();
+		break;
+
+	case ERobotState::Error:
+		UE_LOG(LogTemp, Warning, TEXT("Error state!"));
+		break;
+
+	default:
+		break;
+	}
+}
+
+void ADTFDeliveryRobot::StartDelivery()
+{
+	if (bIsDelivering)
+	{
+		UE_LOG(LogTemp, Log, TEXT("##StartDelivery called again on %s, but already delivering. Ignoring."), *GetNameSafe(this));
+		return;
+	}
+
+	AActor* TargetPoint = AssignedSpawnPoint ? AssignedSpawnPoint : PartsSpawnPoint;
+	if (!TargetPoint)
+	{
+		UE_LOG(LogTemp, Error, TEXT("##Cannot Start Delivery : No Spawn Point assigned!"));
+		return;
+	}
+
+	if (DeliveryTargets.Num() == 0)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("##StartDelivery : No Delivery : No Delivery Target set yet (moving to spawn point only)"));
+	}
+
+	const FVector TargetLocation = TargetPoint->GetActorLocation();
+	UE_LOG(LogTemp, Log, TEXT("##StartDelivery : %s moving to %s"), *GetNameSafe(this), *TargetLocation.ToString());
+	bIsDelivering = true;
+
+	MoveToLocationAsync(TargetPoint->GetActorLocation());
+	UE_LOG(LogTemp, Log, TEXT("Starting Delivery to %d targets"), DeliveryTargets.Num());
+}
+
+void ADTFDeliveryRobot::MoveToLocationAsync(const FVector& InTargetLocation)
 {
 	AAIController* AIController = Cast<AAIController>(GetController());
 	if (!AIController)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("No AI CONTROLLER!!"));
+		UE_LOG(LogTemp, Warning, TEXT("##No AI CONTROLLER!!"));
 		return;
 	}
+	
+	FVector TargetLocation = InTargetLocation;
+	TargetLocation.Z = GetActorLocation().Z;
 
 	FAIMoveRequest MoveRequest;
 	MoveRequest.SetGoalLocation(TargetLocation);
 	MoveRequest.SetAcceptanceRadius(50.0f);
-
-	FNavPathSharedPtr NavPath;
-	AIController->MoveTo(MoveRequest, &NavPath);
-
-	UE_LOG(LogTemp, Log, TEXT("Moving to location: %s"), *TargetLocation.ToString());
+	
+	EPathFollowingRequestResult::Type Result = AIController->MoveTo(MoveRequest);
+	if (Result != EPathFollowingRequestResult::RequestSuccessful)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("##MoveToLocationAsync : MoveTo request failed or InValid"));
+	}
+	else
+	{
+		UE_LOG(LogTemp, Log, TEXT("##MoveToLocationAsync : MoveTo request started successfuly"));
+	}
 }
 
 
@@ -109,14 +193,19 @@ void ADTFDeliveryRobot::PickupParts(AActor* Parts)
 		return;
 	}
 	 
-	Parts->AttachToComponent(AttachPoint, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
+	Parts->AttachToComponent(AttachPoint, FAttachmentTransformRules::KeepRelativeTransform);
+
+	Parts->SetActorRelativeLocation(FVector::ZeroVector);
+	Parts->SetActorRelativeRotation(FRotator::ZeroRotator);
 
 	//물리 비활성화
 	if (UStaticMeshComponent* PartMesh = Parts->FindComponentByClass<UStaticMeshComponent>())
 	{
 		PartMesh->SetSimulatePhysics(false);
 	}
-	
+	UE_LOG(LogTemp, Log, TEXT("@@Parts %s attached to AttachPoint at %s"), *Parts->GetName(), *AttachPoint->GetComponentLocation().ToString());
+	UE_LOG(LogTemp, Log, TEXT("@@Parts location after attach: %s"), *Parts->GetActorLocation().ToString());
+
 	CurrentParts = Parts;
 	CurrentState = ERobotState::MovingToDelivery;
 	 
@@ -131,13 +220,12 @@ void ADTFDeliveryRobot::DropParts()
 		UE_LOG(LogTemp, Warning, TEXT("No parts to Drop!!"));
 		return;
 	}
-
 	FVector DropLocation = AttachPoint->GetComponentLocation();
 
 	//Parts 분리
 	CurrentParts->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
-
 	CurrentParts->SetActorLocation(DropLocation);
+
 	UE_LOG(LogTemp, Log, TEXT("Dropped parts: %s at %s"), *CurrentParts->GetName(), *DropLocation.ToString());
 
 	CurrentParts = nullptr;
@@ -154,37 +242,49 @@ void ADTFDeliveryRobot::DropParts()
 	{
 		CurrentState = ERobotState::Idle;
 		CurrentLineIndex = 0;
-		UE_LOG(LogTemp, Log, TEXT("All Deliveries Complete!!"));
+		UE_LOG(LogTemp, Log, TEXT("##All Deliveries Complete!!"));
 	}
 }
 
-void ADTFDeliveryRobot::StartDelivery()
+void ADTFDeliveryRobot::BindToUIManager(UDTFUIManager* UIManager)
 {
-	if (!PartsSpawnPoint)
+	if (UIManager)
 	{
-		UE_LOG(LogTemp, Error, TEXT("Cannot start Delivery : PartsSpawnPoint is Null!"));
-		return;
+		UIManager->OnPartsSpawned.AddDynamic(this, &ADTFDeliveryRobot::OnPartsSpawnedAtSpawnPoint);
 	}
+}
 
-	if (DeliveryTargets.Num() == 0)
+void ADTFDeliveryRobot::OnPartsSpawnedAtSpawnPoint()
+{
+	if (PartsSpawnPoint)
 	{
-		UE_LOG(LogTemp, Error, TEXT("Cannot start Delivery : No Delivery targets!"));
-		return;
+		SetState(ERobotState::MovingToPickUp);
 	}
-
-	CurrentState = ERobotState::MovingToPickUp;
-
-	FVector loc = PartsSpawnPoint->GetActorLocation();
-	loc.Z = GetActorLocation().Z;
-
-	MoveToLocation(loc);
-
-	UE_LOG(LogTemp, Log, TEXT("Starting Delivery to %d Targets"), DeliveryTargets.Num());
 }
 
 void ADTFDeliveryRobot::OnMoveCompleted(FAIRequestID RequestID, const FPathFollowingResult& Result)
 {
+	if (Result.Code != EPathFollowingResult::Success)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Move failed or aborted"));
+		SetState(ERobotState::Idle);
+		return;
+	}
 
+	switch (CurrentState)
+	{
+	case ERobotState::MovingToPickUp:
+		SetState(ERobotState::PickingUp);
+		break;
+
+	case ERobotState::MovingToDelivery:
+		SetState(ERobotState::Dropping);
+		break;
+
+	default:
+		break;
+	}
 }
+
 
 

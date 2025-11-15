@@ -87,35 +87,77 @@
     <Filter Include="Source\DT_ProjectFinal\Manager">
       <UniqueIdentifier>{369385F5-B611-3D1D-88E0-853F08B3432B}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\DT_ProjectFinal\Manager\DTFGameInstance.cpp">
-      <Filter>Source\DT_ProjectFinal\Manager</Filter>
+    <Filter Include="Source\DT_ProjectFinal\Manager\Delegates">
+      <UniqueIdentifier>{51471AD9-8060-3A58-AA91-57DEBCD5D176}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DT_ProjectFinal\Manager\Delegates\DTFDelegates.cpp">
+      <Filter>Source\DT_ProjectFinal\Manager\Delegates</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\DT_ProjectFinal\Manager\DTFGameInstance.h">
-      <Filter>Source\DT_ProjectFinal\Manager</Filter>
+    <ClInclude Include="..\..\Source\DT_ProjectFinal\Manager\Delegates\DTFDelegates.h">
+      <Filter>Source\DT_ProjectFinal\Manager\Delegates</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\DT_ProjectFinal\Manager\DTFGameModeBase.cpp">
-      <Filter>Source\DT_ProjectFinal\Manager</Filter>
+    <Filter Include="Source\DT_ProjectFinal\Manager\DeliveryRobot">
+      <UniqueIdentifier>{D347D206-07D9-369D-A90B-DD86195AA225}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DT_ProjectFinal\Manager\DeliveryRobot\DTFDeliveryRobotManager.cpp">
+      <Filter>Source\DT_ProjectFinal\Manager\DeliveryRobot</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\DT_ProjectFinal\Manager\DTFGameModeBase.h">
-      <Filter>Source\DT_ProjectFinal\Manager</Filter>
+    <ClInclude Include="..\..\Source\DT_ProjectFinal\Manager\DeliveryRobot\DTFDeliveryRobotManager.h">
+      <Filter>Source\DT_ProjectFinal\Manager\DeliveryRobot</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\DT_ProjectFinal\Manager\DTFSpawnManager.cpp">
-      <Filter>Source\DT_ProjectFinal\Manager</Filter>
+    <Filter Include="Source\DT_ProjectFinal\Manager\GameInstance">
+      <UniqueIdentifier>{C7546B74-85A5-336E-A67A-6C70D7C04EC7}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DT_ProjectFinal\Manager\GameInstance\DTFGameInstance.cpp">
+      <Filter>Source\DT_ProjectFinal\Manager\GameInstance</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\DT_ProjectFinal\Manager\DTFSpawnManager.h">
-      <Filter>Source\DT_ProjectFinal\Manager</Filter>
+    <ClInclude Include="..\..\Source\DT_ProjectFinal\Manager\GameInstance\DTFGameInstance.h">
+      <Filter>Source\DT_ProjectFinal\Manager\GameInstance</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\DT_ProjectFinal\Manager\DTFUIManager.cpp">
-      <Filter>Source\DT_ProjectFinal\Manager</Filter>
+    <Filter Include="Source\DT_ProjectFinal\Manager\GameMode">
+      <UniqueIdentifier>{35E45096-8093-327F-A85E-91276667C179}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DT_ProjectFinal\Manager\GameMode\DTFGameModeBase.cpp">
+      <Filter>Source\DT_ProjectFinal\Manager\GameMode</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\DT_ProjectFinal\Manager\DTFUIManager.h">
-      <Filter>Source\DT_ProjectFinal\Manager</Filter>
+    <ClInclude Include="..\..\Source\DT_ProjectFinal\Manager\GameMode\DTFGameModeBase.h">
+      <Filter>Source\DT_ProjectFinal\Manager\GameMode</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\DT_ProjectFinal\Manager\DTFUIManagerActor.cpp">
-      <Filter>Source\DT_ProjectFinal\Manager</Filter>
+    <Filter Include="Source\DT_ProjectFinal\Manager\PlayerController">
+      <UniqueIdentifier>{ED7079A7-E1D0-3BBA-8472-1D5A90118EF3}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DT_ProjectFinal\Manager\PlayerController\DTFPlayerController.cpp">
+      <Filter>Source\DT_ProjectFinal\Manager\PlayerController</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\DT_ProjectFinal\Manager\DTFUIManagerActor.h">
-      <Filter>Source\DT_ProjectFinal\Manager</Filter>
+    <ClInclude Include="..\..\Source\DT_ProjectFinal\Manager\PlayerController\DTFPlayerController.h">
+      <Filter>Source\DT_ProjectFinal\Manager\PlayerController</Filter>
+    </ClInclude>
+    <Filter Include="Source\DT_ProjectFinal\Manager\Spawn">
+      <UniqueIdentifier>{6B0C369B-3711-332E-9F6C-858099B4CA37}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DT_ProjectFinal\Manager\Spawn\DTFSpawnManager.cpp">
+      <Filter>Source\DT_ProjectFinal\Manager\Spawn</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT_ProjectFinal\Manager\Spawn\DTFSpawnManager.h">
+      <Filter>Source\DT_ProjectFinal\Manager\Spawn</Filter>
+    </ClInclude>
+    <Filter Include="Source\DT_ProjectFinal\Manager\UI">
+      <UniqueIdentifier>{EAB7BC28-C3CF-3B5B-B182-A292BE9B819A}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DT_ProjectFinal\Manager\UI\DTFUIManager.cpp">
+      <Filter>Source\DT_ProjectFinal\Manager\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT_ProjectFinal\Manager\UI\DTFUIManager.h">
+      <Filter>Source\DT_ProjectFinal\Manager\UI</Filter>
+    </ClInclude>
+    <Filter Include="Source\DT_ProjectFinal\UI">
+      <UniqueIdentifier>{E2D3A809-F4EB-36E3-943C-803E45373BDB}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DT_ProjectFinal\UI\DTFLineOrderWidget.cpp">
+      <Filter>Source\DT_ProjectFinal\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT_ProjectFinal\UI\DTFLineOrderWidget.h">
+      <Filter>Source\DT_ProjectFinal\UI</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
