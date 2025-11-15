@@ -1,12 +1,11 @@
 ﻿#pragma once
+
 #include "CoreMinimal.h"
-#include "GameFramework/Pawn.h"
+#include "GameFramework/Character.h"
 #include "DTFDeliveryRobot.generated.h"
 
-class UCapsuleComponent;
 class UStaticMeshComponent;
 class USceneComponent;
-class UFloatingPawnMovement;
 
 class UDTFUIManager;
 class UDTFGameInstance;
@@ -18,89 +17,88 @@ struct FPathFollowingResult;
 UENUM(BlueprintType)
 enum class ERobotState : uint8
 {
-	Idle			 UMETA(DisplayName = "IDLE"),
-	MovingToPickUp   UMETA(DisplayName = "MovingToPick Up"),
-	PickingUp		 UMETA(DisplayName = "Picking Up"),
-	MovingToDelivery UMETA(DisplayName = "Moving To Delivery"),
-	Dropping		 UMETA(DisplayName = "Dropping"),
-	Error		     UMETA(DisplayName = "Error")
+    Idle             UMETA(DisplayName = "IDLE"),
+    MovingToPickUp   UMETA(DisplayName = "MovingToPickUp"),
+    PickingUp        UMETA(DisplayName = "PickingUp"),
+    MovingToDelivery UMETA(DisplayName = "MovingToDelivery"),
+    Dropping         UMETA(DisplayName = "Dropping"),
+    Error            UMETA(DisplayName = "Error")
 };
 
 UCLASS()
-class DT_PROJECTFINAL_API ADTFDeliveryRobot : public APawn
+class DT_PROJECTFINAL_API ADTFDeliveryRobot : public ACharacter
 {
-	GENERATED_BODY()
-	
-public:	
-	ADTFDeliveryRobot();
+    GENERATED_BODY()
+    
+public:
+    ADTFDeliveryRobot();
 
-	//Public API
-	virtual void Tick(float DeltaTime) override;
+    // Public API
+    virtual void Tick(float DeltaTime) override;
 
-	void InitializeRobot(AActor* InPartsSpawnPoint, AActor* InAssignedSpawnPoint);
+    void InitializeRobot(AActor* InPartsSpawnPoint, AActor* InAssignedSpawnPoint, FName InLineName);
 
-	UFUNCTION(BlueprintCallable, Category = "State Machine")
-	void SetState(ERobotState NewState);
+    UFUNCTION(BlueprintCallable, Category = "State Machine")
+    void SetState(ERobotState NewState);
 
-	UFUNCTION(BlueprintCallable, Category = "Delivery")
-	void StartDelivery();
-	
-	void MoveToLocationAsync(const FVector& InTargetLocation);
+    FORCEINLINE void SetRobotLineName(FName InLineName) { RobotLineName = InLineName; }
 
-	void PickupParts(AActor* Parts);
-	void DropParts();
+    UFUNCTION(BlueprintCallable, Category = "Delivery")
+    void StartDelivery();
 
-	void BindToUIManager(class UDTFUIManager* UIManager);
+    void MoveToLocationAsync(const FVector& InTargetLocation);
 
-	void OnMoveCompleted(FAIRequestID RequestID, const FPathFollowingResult& Result);
+    void PickupParts(AActor* Parts);
+    void DropParts();
 
-	UFUNCTION()
-	void OnPartsSpawnedAtSpawnPoint();
+    void BindToUIManager(UDTFUIManager* UIManager);
 
-	// 블루프린트 이벤트용 함수 선언
-	UFUNCTION(BlueprintImplementableEvent, Category = "Delivery")
-	void OnPickupComplete();
+    void OnMoveCompleted(FAIRequestID RequestID, const FPathFollowingResult& Result);
 
-	UFUNCTION(BlueprintImplementableEvent, Category = "Delivery")
-	void OnDropComplete();
+    UFUNCTION()
+    void OnPartsSpawnedAtSpawnPoint(FName LineName);
+
+    // 블루프린트 이벤트용 함수
+    UFUNCTION(BlueprintImplementableEvent, Category = "Delivery")
+    void OnPickupComplete();
+
+    UFUNCTION(BlueprintImplementableEvent, Category = "Delivery")
+    void OnDropComplete();
 
 protected:
-	virtual void BeginPlay() override;
+    virtual void BeginPlay() override;
 
-	//Components
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
-	UCapsuleComponent* CapsuleComponent;
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+    UStaticMeshComponent* RobotMesh;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
-	UFloatingPawnMovement* MovementComponent;
-
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
-	USceneComponent* AttachPoint;
-
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Mesh", meta = (AllowPrivateAccess = "true"))
-	UStaticMeshComponent* RobotMesh;
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+    USceneComponent* AttachPoint;
 
 private:
-	//DeliveryState
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Delivery", meta = (AllowPrivateAccess = "true"))
-	AActor* PartsSpawnPoint;
+    // 이 로봇이 담당하는 라인 이름 (LineA / LineB / LineC)
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Delivery", meta = (AllowPrivateAccess = "true"))
+    FName RobotLineName = NAME_None;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Delivery", meta = (AllowPrivateAccess = "true"))
-	AActor* AssignedSpawnPoint;
+    // DeliveryState
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Delivery", meta = (AllowPrivateAccess = "true"))
+    AActor* PartsSpawnPoint = nullptr;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Delivery", meta = (AllowPrivateAccess = "true"))
-	ERobotState CurrentState = ERobotState::Idle;
-	
-	//CurrentParts
-	UPROPERTY()
-	AActor* CurrentParts = nullptr;
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Delivery", meta = (AllowPrivateAccess = "true"))
+    AActor* AssignedSpawnPoint = nullptr;
 
-	UPROPERTY(EditAnywhere, Category = "Delivery")
-	TArray<AActor*> DeliveryTargets;
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Delivery", meta = (AllowPrivateAccess = "true"))
+    ERobotState CurrentState = ERobotState::Idle;
 
-	int32 CurrentLineIndex = 0;
+    // 현재 들고 있는 파츠
+    UPROPERTY()
+    AActor* CurrentParts = nullptr;
 
-	bool bIsDelivering = false;
+    UPROPERTY(EditAnywhere, Category = "Delivery")
+    TArray<AActor*> DeliveryTargets;
 
-	TSubclassOf<AAIController> AIControllerClass;
+    int32 CurrentLineIndex = 0;
+
+    bool bIsDelivering = false;
+
+    TSubclassOf<AAIController> AIControllerClass;
 };

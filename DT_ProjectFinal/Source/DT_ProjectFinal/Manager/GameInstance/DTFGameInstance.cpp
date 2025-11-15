@@ -1,7 +1,6 @@
 ﻿// Fill out your copyright notice in the Description page of Project Settings.
-
 #include "Manager/GameInstance/DTFGameInstance.h"
-#include "UI/DTFLineOrderWidget.h"
+#include "Manager/UI/DTFUIManager.h"
 
 UDTFGameInstance::UDTFGameInstance() : UIManager(nullptr), TotalCompletedCars(0)
 {
@@ -12,12 +11,18 @@ void UDTFGameInstance::Init()
 {
     Super::Init();
 
-    if (UIManager == nullptr)
+    UE_LOG(LogTemp, Log, TEXT("##GameInstance::Init Called"));
+
+    if (!UIManager)
     {
-        UIManager = NewObject<UDTFUIManager>(this, UDTFUIManager::StaticClass());
+        UIManager = NewObject<UDTFUIManager>(this);
         if (UIManager)
         {
-            UE_LOG(LogTemp, Log, TEXT("###UIManager initialized in GameInstance"));
+            UE_LOG(LogTemp, Log, TEXT("##GameInstance : UIManager created"));
+        }
+        else
+        {
+            UE_LOG(LogTemp, Error, TEXT("##GameInstance : Failed to created UIManager"));
         }
     }
 }

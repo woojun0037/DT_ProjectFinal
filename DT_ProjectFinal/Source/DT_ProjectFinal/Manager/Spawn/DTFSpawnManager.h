@@ -1,13 +1,11 @@
 ﻿#pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "Manager/UI/DTFUIManager.h"
 #include "DataAsset/DTFDataAsset.h"
-#include "Component/DTFPartIdentifierComponent.h"
-#include "Kismet/GameplayStatics.h"
 #include "DTFSpawnManager.generated.h"
 
 class UDTFUIManager;
+class UDTFGameInstance;
 class ADTFDeliveryRobot;
 
 USTRUCT(BlueprintType)
@@ -26,66 +24,64 @@ class DT_PROJECTFINAL_API ADTFSpawnManager : public AActor
 	
 public:	
 	ADTFSpawnManager();
+
 protected:
 
 	virtual void BeginPlay() override;
 
-public:
 	UPROPERTY(EditDefaultsOnly, Category = "Manager")
 	UDTFUIManager* UIManager;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SpawnData")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spawn|Data")
 	UDTFDataAsset* CarPartsDataAsset;
 
-	UPROPERTY(VisibleInstanceOnly, Category = "CarFrame Spawn Points")
+	UPROPERTY(VisibleInstanceOnly, Category = "Spawn|Frame")
 	TArray<AActor*> FrameSpawnPoints;
 
-	UPROPERTY(VisibleInstanceOnly, Category = "CarParts Spawn Points")
+	UPROPERTY(VisibleInstanceOnly, Category = "Spawn|Parts")
 	TArray<AActor*> PartsSpawnPoints;
  
-	UPROPERTY(EditAnywhere, Category = "FrameParts")
+	UPROPERTY(EditAnywhere, Category = "Spawn|Frame")
 	FName FramePartsName = TEXT("SM_Car_Body");
 
-	UPROPERTY(EditAnywhere, Category = "DeliveryBots")
+	UPROPERTY(EditAnywhere, Category = "Delivery|Bots")
 	TArray<ADTFDeliveryRobot*> DeliveryRoBots;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Spawn|Parts")
 	TMap<FName, FPartActorArray> PartsMap;
 
-	UPROPERTY(BlueprintAssignable, Category = "Events")
-	FOnPartsSpawned OnPartsSpawned;
+public:
 
-	UFUNCTION()
-	void NotifyPartsSpawned();
-
-	UFUNCTION()
-	void HandlePartsSpawned();
-
-	UFUNCTION()
-	void PartsSpawnComplete();
-
-	UFUNCTION(BlueprintCallable, Category = "PartsClass")
-	TSubclassOf <AActor> GetPartsActorClass();
-
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "Spawn|Parts")
 	void SpawnCarParts(FName LineName);
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable, Category = "Delivery|Bots")
 	void AssignSpawnPointsToBots();
+	
+	UFUNCTION(BlueprintCallable, Category = "Spawn|Parts")
+	TSubclassOf <AActor> GetPartsActorClass();
 
 private:
 	static constexpr float PARTS_OFFSET_DISTANCE = 50.f;
 
 	void InitialPosition();
+
 	void ParseSpawnPointName(const FString& Name, FString& OutLine, int32& OutIndex);
 
-	FTransform CarculateSpawnTransform(const FTransform& BaseTransform, const FPartsInfo& PartsInfo, int32 Index, bool bIsFrame);
+	FTransform CalculateSpawnTransform(const FTransform& BaseTransform, const FPartsInfo& PartsInfo, int32 Index, bool bIsFrame);
 	FTransform CreateMirroedTransform (const FTransform& BaseTransform, bool bMirrorX);
 	FTransform GetOffsetTransform     (const FTransform& BaseTransform, const FPartsInfo& PartsInfo, int32 Index, float Offset);
 	
-	UClass* FrameClass;
-	UClass* PartsClass;
+	UPROPERTY()
+	UClass* FrameClass = nullptr;
+
+	UPROPERTY()
+	UClass* PartsClass = nullptr;
 
 	int32 GetLineIndexByName(FName LineName)const;
+
 	bool bSpawnAssignedToBots = false;
+
+	UPROPERTY()
+	UDTFUIManager* CachedUIManager = nullptr;
 };

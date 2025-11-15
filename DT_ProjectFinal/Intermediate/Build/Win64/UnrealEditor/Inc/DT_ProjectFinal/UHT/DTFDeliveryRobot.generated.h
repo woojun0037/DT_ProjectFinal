@@ -19,27 +19,27 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 enum class ERobotState : uint8;
 
 // ********** Begin Class ADTFDeliveryRobot ********************************************************
-#define FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_32_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_31_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execOnPartsSpawnedAtSpawnPoint); \
 	DECLARE_FUNCTION(execStartDelivery); \
 	DECLARE_FUNCTION(execSetState);
 
 
-#define FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_32_CALLBACK_WRAPPERS
+#define FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_31_CALLBACK_WRAPPERS
 DT_PROJECTFINAL_API UClass* Z_Construct_UClass_ADTFDeliveryRobot_NoRegister();
 
-#define FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_32_INCLASS_NO_PURE_DECLS \
+#define FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_31_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesADTFDeliveryRobot(); \
 	friend struct Z_Construct_UClass_ADTFDeliveryRobot_Statics; \
 	static UClass* GetPrivateStaticClass(); \
 	friend DT_PROJECTFINAL_API UClass* Z_Construct_UClass_ADTFDeliveryRobot_NoRegister(); \
 public: \
-	DECLARE_CLASS2(ADTFDeliveryRobot, APawn, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/DT_ProjectFinal"), Z_Construct_UClass_ADTFDeliveryRobot_NoRegister) \
+	DECLARE_CLASS2(ADTFDeliveryRobot, ACharacter, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/DT_ProjectFinal"), Z_Construct_UClass_ADTFDeliveryRobot_NoRegister) \
 	DECLARE_SERIALIZER(ADTFDeliveryRobot)
 
 
-#define FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_32_ENHANCED_CONSTRUCTORS \
+#define FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_31_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ADTFDeliveryRobot(ADTFDeliveryRobot&&) = delete; \
 	ADTFDeliveryRobot(const ADTFDeliveryRobot&) = delete; \
@@ -49,14 +49,14 @@ public: \
 	NO_API virtual ~ADTFDeliveryRobot();
 
 
-#define FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_29_PROLOG
-#define FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_32_GENERATED_BODY \
+#define FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_28_PROLOG
+#define FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_31_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_32_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_32_CALLBACK_WRAPPERS \
-	FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_32_INCLASS_NO_PURE_DECLS \
-	FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_32_ENHANCED_CONSTRUCTORS \
+	FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_31_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_31_CALLBACK_WRAPPERS \
+	FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_31_INCLASS_NO_PURE_DECLS \
+	FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h_31_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

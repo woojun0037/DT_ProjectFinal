@@ -150,6 +150,15 @@
     <ClInclude Include="..\..\Source\DT_ProjectFinal\Manager\UI\DTFUIManager.h">
       <Filter>Source\DT_ProjectFinal\Manager\UI</Filter>
     </ClInclude>
+    <Filter Include="Source\DT_ProjectFinal\Spline">
+      <UniqueIdentifier>{F1002F93-4E56-36D7-94E7-EFE60B10546A}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DT_ProjectFinal\Spline\DTFDeliveryPath.cpp">
+      <Filter>Source\DT_ProjectFinal\Spline</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DT_ProjectFinal\Spline\DTFDeliveryPath.h">
+      <Filter>Source\DT_ProjectFinal\Spline</Filter>
+    </ClInclude>
     <Filter Include="Source\DT_ProjectFinal\UI">
       <UniqueIdentifier>{E2D3A809-F4EB-36E3-943C-803E45373BDB}</UniqueIdentifier>
     </Filter>

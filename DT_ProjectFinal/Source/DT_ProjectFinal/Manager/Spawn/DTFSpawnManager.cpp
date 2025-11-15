@@ -1,9 +1,15 @@
 ﻿#include "Manager/Spawn/DTFSpawnManager.h"
 #include "Manager/UI/DTFUIManager.h"
-
 #include "Manager/GameInstance/DTFGameInstance.h"
+
+#include "Kismet/GameplayStatics.h"
+#include "Component/DTFPartIdentifierComponent.h"
+
 #include "CarParts/DTFCarParts.h"
 #include "DeliveryRobot/DTFDeliveryRobot.h"
+#include "Components/StaticMeshComponent.h"
+#include "Components/SceneComponent.h"
+#include "AIController.h"
 
 ADTFSpawnManager::ADTFSpawnManager()
 {
@@ -14,25 +20,21 @@ ADTFSpawnManager::ADTFSpawnManager()
 void ADTFSpawnManager::BeginPlay()
 {
 	Super::BeginPlay();
-	UWorld* World = GetWorld();
 
+	UWorld* World = GetWorld();
 	if (World)
 	{
-		UDTFGameInstance* GI = Cast<UDTFGameInstance>(UGameplayStatics::GetGameInstance(World));
-		if (GI && GI->UIManager)
+		if (UDTFGameInstance* GI = Cast<UDTFGameInstance>(UGameplayStatics::GetGameInstance(World)))
 		{
-			UIManager = GI->UIManager;
-			if (UIManager != nullptr)
+			if (GI->UIManager)
 			{
-				UIManager->OnPartsSpawned.AddDynamic(this, &ThisClass::HandlePartsSpawned);
-			}
-			else
-			{
-				UE_LOG(LogTemp, Warning, TEXT("UIManager in GameInstance nullptr"));
+				UIManager = GI->UIManager;
+				UIManager->OnSpawned.AddDynamic(this, &ThisClass::SpawnCarParts);
 			}
 		}
 	}
-	InitialPosition();
+	InitialPosition();          
+	AssignSpawnPointsToBots(); 
 }
 
 /// Soft Reference와 Hard Reference의 차이점 설명 
@@ -94,47 +96,6 @@ void ADTFSpawnManager::InitialPosition()
 	UE_LOG(LogTemp, Log, TEXT("##Found %d Parts spawn points"), PartsSpawnPoints.Num());
 }
 
-void ADTFSpawnManager::NotifyPartsSpawned()
-{
-	if (UIManager)
-	{
-		UIManager->BroadcastPartsSpawned();
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("UIManager is nullptr in ADTFSpawnManager::NotifyPartsSpawned"));
-	}
-}
-
-void ADTFSpawnManager::HandlePartsSpawned()
-{
-	AssignSpawnPointsToBots();
-	PartsSpawnComplete();
-}
-
-void ADTFSpawnManager::PartsSpawnComplete()
-{
-	UE_LOG(LogTemp, Log, TEXT("Parts Spawn Complete"));
-
-	if (!bSpawnAssignedToBots)
-	{
-		AssignSpawnPointsToBots();
-		bSpawnAssignedToBots = true;
-	}
-	else
-	{
-		UE_LOG(LogTemp, Log, TEXT("##PartsSpawnComplete called again, but bots already assigned. Ignoring"));
-	}
-
-	OnPartsSpawned.Broadcast();
-
-	if (UIManager)
-	{
-		// 3. UIManager에게 알림 (여기서 delegate 브로드캐스트)
-		UIManager->BroadcastPartsSpawned();
-	}
-}
-
 void ADTFSpawnManager::ParseSpawnPointName(const FString& Name, FString& OutLine, int32& OutIndex)
 {
 	int32 UnderScorePos;
@@ -170,6 +131,8 @@ TSubclassOf<AActor> ADTFSpawnManager::GetPartsActorClass()
 
 void ADTFSpawnManager::SpawnCarParts(FName LineName)
 {
+	UE_LOG(LogTemp, Log, TEXT("### SpawnCarParts CALLED with LineName = %s"), *LineName.ToString());
+
 	TSubclassOf<AActor> PartsActorClass = GetPartsActorClass();
 	if (PartsActorClass == nullptr)
 	{
@@ -224,7 +187,7 @@ void ADTFSpawnManager::SpawnCarParts(FName LineName)
 
 		for (int32 i = 0; i < SpawnCount; i++)
 		{
-			FTransform SpawnTransform = CarculateSpawnTransform(BaseTransform, PartsInfo, i, bIsFrame);
+			FTransform SpawnTransform = CalculateSpawnTransform(BaseTransform, PartsInfo, i, bIsFrame);
 		
 			UE_LOG(LogTemp, Warning, TEXT("##SpawnCarParts %s / %s"), *SpawnTransform.ToString(), *GetNameSafe(PartsActorClass));
 			 
@@ -273,18 +236,39 @@ void ADTFSpawnManager::SpawnCarParts(FName LineName)
 				PartsComp->Offset           = FTransform(PartsInfo.PartsOffsetTransform);
 				PartsComp->bIsMirrored      = PartsInfo.bMirrorX;
 				PartsComp->bIsFrame         = PartsInfo.bIsFrame(FramePartsName);
-				
-				UE_LOG(LogTemp, Log, TEXT("##PartComp Initialized for %s with offset %s, Mirrored : %s"), 
-				*PartsComp->PartsName.ToString(), *PartsComp->Offset.ToString(), PartsComp->bIsMirrored ? TEXT("true") : TEXT("false"));
+					
+
+				UE_LOG(LogTemp, Log,
+					TEXT("##PartComp Initialized for %s with offset %s, Mirrored: %s"),
+					*PartsComp->PartsName.ToString(),
+					*PartsComp->Offset.ToString(),
+					 PartsComp->bIsMirrored ? TEXT("true") : TEXT("false"));
+
+				PartsMap.FindOrAdd(PartsComp->PartsType).Actors.Add(SpawnedActor);
 			}
-			PartsMap.FindOrAdd(PartsComp ? PartsComp->PartsType : FName("Default")).Actors.Add(SpawnedActor);
+			else
+			{
+				PartsMap.FindOrAdd(FName("Default")).Actors.Add(SpawnedActor);
+			}
 		}
 	}
 	if (bSpawnedAnyParts)
 	{
-		PartsSpawnComplete();
+		UE_LOG(LogTemp, Log, TEXT("##Parts Spawn complete for Line %s"), *LineName.ToString());
+
+		if (CachedUIManager)
+		{
+			CachedUIManager->BroadcastPartsSpawned(LineName);
+		}
+
+		if (UIManager)
+		{
+			UIManager->BroadcastPartsSpawned(LineName);
+		}
 	}
 }
+
+static const TArray<FName> LineNames = { FName("LineA"), FName("LineB"), FName("LineC")};
 
 // 봇이 스폰 포지션을 1대1로 가지게 되는 매핑함수
 void ADTFSpawnManager::AssignSpawnPointsToBots()
@@ -296,25 +280,24 @@ void ADTFSpawnManager::AssignSpawnPointsToBots()
 		ADTFDeliveryRobot* Bot = DeliveryRoBots[i];
 		const int32 SpawnIndex = i / BotsPerPoint;
 
-		if (Bot && PartsSpawnPoints.IsValidIndex(SpawnIndex) && PartsSpawnPoints[SpawnIndex])
-		{
-			AActor* SpawnPoint = PartsSpawnPoints[SpawnIndex];
+		if (!Bot || !PartsSpawnPoints.IsValidIndex(SpawnIndex) || !PartsSpawnPoints[SpawnIndex])
+			continue;
 
-			Bot->InitializeRobot(SpawnPoint, SpawnPoint);
+		AActor* SpawnPoint = PartsSpawnPoints[SpawnIndex];
 
-			UE_LOG(LogTemp, Log, TEXT("##AssignSpawnPointsToBots : Bot %d (%s) -> SpawnPoint %d (%s)"), 
-				                           i, *GetNameSafe(Bot), SpawnIndex, *GetNameSafe(SpawnPoint));
-			Bot->StartDelivery();
-		}
-		else
-		{
-			UE_LOG(LogTemp, Warning, TEXT("##AssignSpawnPointsToBots : Invalid Index or null Pointer at Bot %d, Spawn Point %d"),
-										   i, SpawnIndex);
-		}
+		FName LineName = LineNames.IsValidIndex(SpawnIndex) ? LineNames[SpawnIndex] : NAME_None;
+
+		Bot->InitializeRobot(SpawnPoint, SpawnPoint, LineName);
+
+		UE_LOG(LogTemp, Log,
+			TEXT("##AssignSpawnPointsToBots : Bot %d (%s) -> SpawnPoint %d (%s), Line=%s"),
+			i, *GetNameSafe(Bot),
+			SpawnIndex, *GetNameSafe(SpawnPoint),
+			*LineName.ToString());
 	}
 }
 
-FTransform ADTFSpawnManager::CarculateSpawnTransform(const FTransform& BaseTransform, const FPartsInfo& PartsInfo, int32 Index, bool bIsFrame)
+FTransform ADTFSpawnManager::CalculateSpawnTransform(const FTransform& BaseTransform, const FPartsInfo& PartsInfo, int32 Index, bool bIsFrame)
 {
 	FTransform SpawnTransform = BaseTransform;
 
@@ -370,8 +353,6 @@ FTransform ADTFSpawnManager::GetOffsetTransform(const FTransform& BaseTransform,
 
 int32 ADTFSpawnManager::GetLineIndexByName(FName LineName) const
 {
-	static const TArray<FName> LineNames = { FName("LineA"), FName("LineB"), FName("LineC") };
-
 	for (int i = 0; i < LineNames.Num(); i++)
 	{
 		if (LineNames[i] == LineName)

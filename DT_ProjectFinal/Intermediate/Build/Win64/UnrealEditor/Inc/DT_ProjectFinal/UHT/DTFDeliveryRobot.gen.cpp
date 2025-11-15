@@ -16,9 +16,7 @@ DT_PROJECTFINAL_API UClass* Z_Construct_UClass_ADTFDeliveryRobot();
 DT_PROJECTFINAL_API UClass* Z_Construct_UClass_ADTFDeliveryRobot_NoRegister();
 DT_PROJECTFINAL_API UEnum* Z_Construct_UEnum_DT_ProjectFinal_ERobotState();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
-ENGINE_API UClass* Z_Construct_UClass_APawn();
-ENGINE_API UClass* Z_Construct_UClass_UCapsuleComponent_NoRegister();
-ENGINE_API UClass* Z_Construct_UClass_UFloatingPawnMovement_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 UPackage* Z_Construct_UPackage__Script_DT_ProjectFinal();
@@ -50,11 +48,11 @@ struct Z_Construct_UEnum_DT_ProjectFinal_ERobotState_Statics
 		{ "Idle.DisplayName", "IDLE" },
 		{ "Idle.Name", "ERobotState::Idle" },
 		{ "ModuleRelativePath", "DeliveryRobot/DTFDeliveryRobot.h" },
-		{ "MovingToDelivery.DisplayName", "Moving To Delivery" },
+		{ "MovingToDelivery.DisplayName", "MovingToDelivery" },
 		{ "MovingToDelivery.Name", "ERobotState::MovingToDelivery" },
-		{ "MovingToPickUp.DisplayName", "MovingToPick Up" },
+		{ "MovingToPickUp.DisplayName", "MovingToPickUp" },
 		{ "MovingToPickUp.Name", "ERobotState::MovingToPickUp" },
-		{ "PickingUp.DisplayName", "Picking Up" },
+		{ "PickingUp.DisplayName", "PickingUp" },
 		{ "PickingUp.Name", "ERobotState::PickingUp" },
 	};
 #endif // WITH_METADATA
@@ -122,14 +120,26 @@ UFunction* Z_Construct_UFunction_ADTFDeliveryRobot_OnDropComplete()
 // ********** Begin Class ADTFDeliveryRobot Function OnPartsSpawnedAtSpawnPoint ********************
 struct Z_Construct_UFunction_ADTFDeliveryRobot_OnPartsSpawnedAtSpawnPoint_Statics
 {
+	struct DTFDeliveryRobot_eventOnPartsSpawnedAtSpawnPoint_Parms
+	{
+		FName LineName;
+	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "DeliveryRobot/DTFDeliveryRobot.h" },
 	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FNamePropertyParams NewProp_LineName;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADTFDeliveryRobot_OnPartsSpawnedAtSpawnPoint_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADTFDeliveryRobot, nullptr, "OnPartsSpawnedAtSpawnPoint", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADTFDeliveryRobot_OnPartsSpawnedAtSpawnPoint_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADTFDeliveryRobot_OnPartsSpawnedAtSpawnPoint_Statics::Function_MetaDataParams)},  };
+const UECodeGen_Private::FNamePropertyParams Z_Construct_UFunction_ADTFDeliveryRobot_OnPartsSpawnedAtSpawnPoint_Statics::NewProp_LineName = { "LineName", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DTFDeliveryRobot_eventOnPartsSpawnedAtSpawnPoint_Parms, LineName), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ADTFDeliveryRobot_OnPartsSpawnedAtSpawnPoint_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ADTFDeliveryRobot_OnPartsSpawnedAtSpawnPoint_Statics::NewProp_LineName,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ADTFDeliveryRobot_OnPartsSpawnedAtSpawnPoint_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADTFDeliveryRobot_OnPartsSpawnedAtSpawnPoint_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADTFDeliveryRobot, nullptr, "OnPartsSpawnedAtSpawnPoint", Z_Construct_UFunction_ADTFDeliveryRobot_OnPartsSpawnedAtSpawnPoint_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADTFDeliveryRobot_OnPartsSpawnedAtSpawnPoint_Statics::PropPointers), sizeof(Z_Construct_UFunction_ADTFDeliveryRobot_OnPartsSpawnedAtSpawnPoint_Statics::DTFDeliveryRobot_eventOnPartsSpawnedAtSpawnPoint_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADTFDeliveryRobot_OnPartsSpawnedAtSpawnPoint_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADTFDeliveryRobot_OnPartsSpawnedAtSpawnPoint_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_ADTFDeliveryRobot_OnPartsSpawnedAtSpawnPoint_Statics::DTFDeliveryRobot_eventOnPartsSpawnedAtSpawnPoint_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_ADTFDeliveryRobot_OnPartsSpawnedAtSpawnPoint()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -141,9 +151,10 @@ UFunction* Z_Construct_UFunction_ADTFDeliveryRobot_OnPartsSpawnedAtSpawnPoint()
 }
 DEFINE_FUNCTION(ADTFDeliveryRobot::execOnPartsSpawnedAtSpawnPoint)
 {
+	P_GET_PROPERTY(FNameProperty,Z_Param_LineName);
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	P_THIS->OnPartsSpawnedAtSpawnPoint();
+	P_THIS->OnPartsSpawnedAtSpawnPoint(Z_Param_LineName);
 	P_NATIVE_END;
 }
 // ********** End Class ADTFDeliveryRobot Function OnPartsSpawnedAtSpawnPoint **********************
@@ -161,11 +172,11 @@ struct Z_Construct_UFunction_ADTFDeliveryRobot_OnPickupComplete_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Delivery" },
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "// \xeb\xb8\x94\xeb\xa3\xa8\xed\x94\x84\xeb\xa6\xb0\xed\x8a\xb8 \xec\x9d\xb4\xeb\xb2\xa4\xed\x8a\xb8\xec\x9a\xa9 \xed\x95\xa8\xec\x88\x98 \xec\x84\xa0\xec\x96\xb8\n" },
+		{ "Comment", "// \xeb\xb8\x94\xeb\xa3\xa8\xed\x94\x84\xeb\xa6\xb0\xed\x8a\xb8 \xec\x9d\xb4\xeb\xb2\xa4\xed\x8a\xb8\xec\x9a\xa9 \xed\x95\xa8\xec\x88\x98\n" },
 #endif
 		{ "ModuleRelativePath", "DeliveryRobot/DTFDeliveryRobot.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "\xeb\xb8\x94\xeb\xa3\xa8\xed\x94\x84\xeb\xa6\xb0\xed\x8a\xb8 \xec\x9d\xb4\xeb\xb2\xa4\xed\x8a\xb8\xec\x9a\xa9 \xed\x95\xa8\xec\x88\x98 \xec\x84\xa0\xec\x96\xb8" },
+		{ "ToolTip", "\xeb\xb8\x94\xeb\xa3\xa8\xed\x94\x84\xeb\xa6\xb0\xed\x8a\xb8 \xec\x9d\xb4\xeb\xb2\xa4\xed\x8a\xb8\xec\x9a\xa9 \xed\x95\xa8\xec\x88\x98" },
 #endif
 	};
 #endif // WITH_METADATA
@@ -202,7 +213,7 @@ struct Z_Construct_UFunction_ADTFDeliveryRobot_SetState_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_ADTFDeliveryRobot_SetState_Statics::NewProp_NewState_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_ADTFDeliveryRobot_SetState_Statics::NewProp_NewState = { "NewState", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DTFDeliveryRobot_eventSetState_Parms, NewState), Z_Construct_UEnum_DT_ProjectFinal_ERobotState, METADATA_PARAMS(0, nullptr) }; // 414383839
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_ADTFDeliveryRobot_SetState_Statics::NewProp_NewState = { "NewState", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DTFDeliveryRobot_eventSetState_Parms, NewState), Z_Construct_UEnum_DT_ProjectFinal_ERobotState, METADATA_PARAMS(0, nullptr) }; // 170284703
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ADTFDeliveryRobot_SetState_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ADTFDeliveryRobot_SetState_Statics::NewProp_NewState_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ADTFDeliveryRobot_SetState_Statics::NewProp_NewState,
@@ -307,19 +318,7 @@ struct Z_Construct_UClass_ADTFDeliveryRobot_Statics
 		{ "IncludePath", "DeliveryRobot/DTFDeliveryRobot.h" },
 		{ "ModuleRelativePath", "DeliveryRobot/DTFDeliveryRobot.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CapsuleComponent_MetaData[] = {
-		{ "AllowPrivateAccess", "true" },
-		{ "Category", "Components" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "//Components\n" },
-#endif
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "DeliveryRobot/DTFDeliveryRobot.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Components" },
-#endif
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MovementComponent_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_RobotMesh_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Components" },
 		{ "EditInline", "true" },
@@ -331,17 +330,22 @@ struct Z_Construct_UClass_ADTFDeliveryRobot_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "DeliveryRobot/DTFDeliveryRobot.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_RobotMesh_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_RobotLineName_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
-		{ "Category", "Mesh" },
-		{ "EditInline", "true" },
+		{ "Category", "Delivery" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// \xec\x9d\xb4 \xeb\xa1\x9c\xeb\xb4\x87\xec\x9d\xb4 \xeb\x8b\xb4\xeb\x8b\xb9\xed\x95\x98\xeb\x8a\x94 \xeb\x9d\xbc\xec\x9d\xb8 \xec\x9d\xb4\xeb\xa6\x84 (LineA / LineB / LineC)\n" },
+#endif
 		{ "ModuleRelativePath", "DeliveryRobot/DTFDeliveryRobot.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xec\x9d\xb4 \xeb\xa1\x9c\xeb\xb4\x87\xec\x9d\xb4 \xeb\x8b\xb4\xeb\x8b\xb9\xed\x95\x98\xeb\x8a\x94 \xeb\x9d\xbc\xec\x9d\xb8 \xec\x9d\xb4\xeb\xa6\x84 (LineA / LineB / LineC)" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PartsSpawnPoint_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Delivery" },
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "//DeliveryState\n" },
+		{ "Comment", "// DeliveryState\n" },
 #endif
 		{ "ModuleRelativePath", "DeliveryRobot/DTFDeliveryRobot.h" },
 #if !UE_BUILD_SHIPPING
@@ -360,11 +364,11 @@ struct Z_Construct_UClass_ADTFDeliveryRobot_Statics
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CurrentParts_MetaData[] = {
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "//CurrentParts\n" },
+		{ "Comment", "// \xed\x98\x84\xec\x9e\xac \xeb\x93\xa4\xea\xb3\xa0 \xec\x9e\x88\xeb\x8a\x94 \xed\x8c\x8c\xec\xb8\xa0\n" },
 #endif
 		{ "ModuleRelativePath", "DeliveryRobot/DTFDeliveryRobot.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "CurrentParts" },
+		{ "ToolTip", "\xed\x98\x84\xec\x9e\xac \xeb\x93\xa4\xea\xb3\xa0 \xec\x9e\x88\xeb\x8a\x94 \xed\x8c\x8c\xec\xb8\xa0" },
 #endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DeliveryTargets_MetaData[] = {
@@ -372,10 +376,9 @@ struct Z_Construct_UClass_ADTFDeliveryRobot_Statics
 		{ "ModuleRelativePath", "DeliveryRobot/DTFDeliveryRobot.h" },
 	};
 #endif // WITH_METADATA
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_CapsuleComponent;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_MovementComponent;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_AttachPoint;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_RobotMesh;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_AttachPoint;
+	static const UECodeGen_Private::FNamePropertyParams NewProp_RobotLineName;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_PartsSpawnPoint;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_AssignedSpawnPoint;
 	static const UECodeGen_Private::FBytePropertyParams NewProp_CurrentState_Underlying;
@@ -387,9 +390,9 @@ struct Z_Construct_UClass_ADTFDeliveryRobot_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_ADTFDeliveryRobot_OnDropComplete, "OnDropComplete" }, // 4172918554
-		{ &Z_Construct_UFunction_ADTFDeliveryRobot_OnPartsSpawnedAtSpawnPoint, "OnPartsSpawnedAtSpawnPoint" }, // 2344753033
-		{ &Z_Construct_UFunction_ADTFDeliveryRobot_OnPickupComplete, "OnPickupComplete" }, // 3127723999
-		{ &Z_Construct_UFunction_ADTFDeliveryRobot_SetState, "SetState" }, // 1300089
+		{ &Z_Construct_UFunction_ADTFDeliveryRobot_OnPartsSpawnedAtSpawnPoint, "OnPartsSpawnedAtSpawnPoint" }, // 2291386464
+		{ &Z_Construct_UFunction_ADTFDeliveryRobot_OnPickupComplete, "OnPickupComplete" }, // 1812800479
+		{ &Z_Construct_UFunction_ADTFDeliveryRobot_SetState, "SetState" }, // 1937674076
 		{ &Z_Construct_UFunction_ADTFDeliveryRobot_StartDelivery, "StartDelivery" }, // 1052606128
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -398,22 +401,20 @@ struct Z_Construct_UClass_ADTFDeliveryRobot_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADTFDeliveryRobot_Statics::NewProp_CapsuleComponent = { "CapsuleComponent", nullptr, (EPropertyFlags)0x00200800000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTFDeliveryRobot, CapsuleComponent), Z_Construct_UClass_UCapsuleComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CapsuleComponent_MetaData), NewProp_CapsuleComponent_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADTFDeliveryRobot_Statics::NewProp_MovementComponent = { "MovementComponent", nullptr, (EPropertyFlags)0x00200800000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTFDeliveryRobot, MovementComponent), Z_Construct_UClass_UFloatingPawnMovement_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MovementComponent_MetaData), NewProp_MovementComponent_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADTFDeliveryRobot_Statics::NewProp_AttachPoint = { "AttachPoint", nullptr, (EPropertyFlags)0x00200800000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTFDeliveryRobot, AttachPoint), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AttachPoint_MetaData), NewProp_AttachPoint_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADTFDeliveryRobot_Statics::NewProp_RobotMesh = { "RobotMesh", nullptr, (EPropertyFlags)0x00200800000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTFDeliveryRobot, RobotMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RobotMesh_MetaData), NewProp_RobotMesh_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADTFDeliveryRobot_Statics::NewProp_AttachPoint = { "AttachPoint", nullptr, (EPropertyFlags)0x00200800000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTFDeliveryRobot, AttachPoint), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AttachPoint_MetaData), NewProp_AttachPoint_MetaData) };
+const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_ADTFDeliveryRobot_Statics::NewProp_RobotLineName = { "RobotLineName", nullptr, (EPropertyFlags)0x0040000000020015, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTFDeliveryRobot, RobotLineName), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RobotLineName_MetaData), NewProp_RobotLineName_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADTFDeliveryRobot_Statics::NewProp_PartsSpawnPoint = { "PartsSpawnPoint", nullptr, (EPropertyFlags)0x0040000000020015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTFDeliveryRobot, PartsSpawnPoint), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PartsSpawnPoint_MetaData), NewProp_PartsSpawnPoint_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADTFDeliveryRobot_Statics::NewProp_AssignedSpawnPoint = { "AssignedSpawnPoint", nullptr, (EPropertyFlags)0x0040000000020015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTFDeliveryRobot, AssignedSpawnPoint), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AssignedSpawnPoint_MetaData), NewProp_AssignedSpawnPoint_MetaData) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_ADTFDeliveryRobot_Statics::NewProp_CurrentState_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ADTFDeliveryRobot_Statics::NewProp_CurrentState = { "CurrentState", nullptr, (EPropertyFlags)0x0040000000020015, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTFDeliveryRobot, CurrentState), Z_Construct_UEnum_DT_ProjectFinal_ERobotState, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CurrentState_MetaData), NewProp_CurrentState_MetaData) }; // 414383839
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ADTFDeliveryRobot_Statics::NewProp_CurrentState = { "CurrentState", nullptr, (EPropertyFlags)0x0040000000020015, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTFDeliveryRobot, CurrentState), Z_Construct_UEnum_DT_ProjectFinal_ERobotState, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CurrentState_MetaData), NewProp_CurrentState_MetaData) }; // 170284703
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADTFDeliveryRobot_Statics::NewProp_CurrentParts = { "CurrentParts", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTFDeliveryRobot, CurrentParts), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CurrentParts_MetaData), NewProp_CurrentParts_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADTFDeliveryRobot_Statics::NewProp_DeliveryTargets_Inner = { "DeliveryTargets", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_ADTFDeliveryRobot_Statics::NewProp_DeliveryTargets = { "DeliveryTargets", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTFDeliveryRobot, DeliveryTargets), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DeliveryTargets_MetaData), NewProp_DeliveryTargets_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ADTFDeliveryRobot_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTFDeliveryRobot_Statics::NewProp_CapsuleComponent,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTFDeliveryRobot_Statics::NewProp_MovementComponent,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTFDeliveryRobot_Statics::NewProp_AttachPoint,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTFDeliveryRobot_Statics::NewProp_RobotMesh,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTFDeliveryRobot_Statics::NewProp_AttachPoint,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTFDeliveryRobot_Statics::NewProp_RobotLineName,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTFDeliveryRobot_Statics::NewProp_PartsSpawnPoint,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTFDeliveryRobot_Statics::NewProp_AssignedSpawnPoint,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTFDeliveryRobot_Statics::NewProp_CurrentState_Underlying,
@@ -424,7 +425,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ADTFDeliv
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ADTFDeliveryRobot_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ADTFDeliveryRobot_Statics::DependentSingletons[])() = {
-	(UObject* (*)())Z_Construct_UClass_APawn,
+	(UObject* (*)())Z_Construct_UClass_ACharacter,
 	(UObject* (*)())Z_Construct_UPackage__Script_DT_ProjectFinal,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ADTFDeliveryRobot_Statics::DependentSingletons) < 16);
@@ -459,13 +460,13 @@ ADTFDeliveryRobot::~ADTFDeliveryRobot() {}
 struct Z_CompiledInDeferFile_FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h__Script_DT_ProjectFinal_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ ERobotState_StaticEnum, TEXT("ERobotState"), &Z_Registration_Info_UEnum_ERobotState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 414383839U) },
+		{ ERobotState_StaticEnum, TEXT("ERobotState"), &Z_Registration_Info_UEnum_ERobotState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 170284703U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ADTFDeliveryRobot, ADTFDeliveryRobot::StaticClass, TEXT("ADTFDeliveryRobot"), &Z_Registration_Info_UClass_ADTFDeliveryRobot, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADTFDeliveryRobot), 1741663154U) },
+		{ Z_Construct_UClass_ADTFDeliveryRobot, ADTFDeliveryRobot::StaticClass, TEXT("ADTFDeliveryRobot"), &Z_Registration_Info_UClass_ADTFDeliveryRobot, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADTFDeliveryRobot), 4092459120U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h__Script_DT_ProjectFinal_2766541080(TEXT("/Script/DT_ProjectFinal"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h__Script_DT_ProjectFinal_476786267(TEXT("/Script/DT_ProjectFinal"),
 	Z_CompiledInDeferFile_FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h__Script_DT_ProjectFinal_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h__Script_DT_ProjectFinal_Statics::ClassInfo),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h__Script_DT_ProjectFinal_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_BCA_PC20_Desktop_DT_ProjectFinal_DT_ProjectFinal_Source_DT_ProjectFinal_DeliveryRobot_DTFDeliveryRobot_h__Script_DT_ProjectFinal_Statics::EnumInfo));
