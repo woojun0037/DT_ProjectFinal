@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\bca-pc20\\desktop\\dt_projectfinal\\dt_projectfinal\\source\\dt_projectfinal\\manager\\delegates\\dtfdelegates.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\bca-pc20\\desktop\\dt_projectfinal\\dt_projectfinal\\intermediate\\build\\win64\\x64\\dt_projectfinaleditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\bca-pc20\\desktop\\dt_projectfinal\\dt_projectfinal\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\dt_projectfinal\\definitions.dt_projectfinal.h",
+            "c:\\users\\bca-pc20\\desktop\\dt_projectfinal\\dt_projectfinal\\source\\dt_projectfinal\\manager\\delegates\\dtfdelegates.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

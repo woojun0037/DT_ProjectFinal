@@ -1,5 +1,20 @@
 {
 	"RemapUnityFiles": 
 	{
+		"Module.DT_ProjectFinal.gen.cpp.obj": [
+			"DTFCarParts.gen.cpp.obj",
+			"DTFDataAsset.gen.cpp.obj",
+			"DTFDeliveryRobot.gen.cpp.obj",
+			"DTFDeliveryRobotManager.gen.cpp.obj",
+			"DTFGameInstance.gen.cpp.obj",
+			"DTFGameModeBase.gen.cpp.obj",
+			"DTFLineOrderWidget.gen.cpp.obj",
+			"DTFPartIdentifierComponent.gen.cpp.obj",
+			"DTFPlayerController.gen.cpp.obj",
+			"DTFSpawnManager.gen.cpp.obj",
+			"DTFUIManager.gen.cpp.obj",
+			"DT_ProjectFinal.init.gen.cpp.obj",
+			"UPartInterface.gen.cpp.obj"
+		]
 	}
 }
